@@ -1,0 +1,123 @@
+.page-hero {
+    background: linear-gradient(135deg, #f8f6ff 0%, #fefaf6 100%);
+    position: relative;
+    padding: 160px 0 80px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 60%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(96, 31, 234, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.page-hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.page-hero-content {
+    flex: 1;
+    max-width: 45%;
+}
+
+.page-hero-title {
+    font-size: var(--text-fluid-5xl);
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.page-hero-description {
+    font-size: var(--text-fluid-lg);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.page-hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.hero-btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.hero-btn-secondary {
+    background-color: white;
+    color: var(--text-dark);
+    border: 1px solid #e5e7eb;
+}
+
+.hero-btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.page-hero-image-wrapper {
+    flex: 1.2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.page-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    max-height: 450px;
+}
+
+@media (max-width: 992px) {
+    .page-hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding-top: 20px;
+    }
+
+    .page-hero-content {
+        max-width: 100%;
+    }
+
+    .page-hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .page-hero-image-wrapper {
+        justify-content: center;
+        width: 100%;
+    }
+}

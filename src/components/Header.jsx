@@ -25,7 +25,7 @@ const Header = () => {
     };
 
     return (
-        <>
+        <div className="header-wrapper">
             {/* Top Bar */}
             <div className="top-bar">
                 <div className="top-bar-container">
@@ -124,7 +124,7 @@ const Header = () => {
                     </div>
                 )}
             </header>
-        </>
+        </div>
     );
 };
 

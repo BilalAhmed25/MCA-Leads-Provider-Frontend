@@ -3,14 +3,14 @@ import './HomeHero.css';
 
 const HomeHero = () => {
     return (
-        <main className="relative w-full bg-slate-50 pt-4 pb-16 lg:pt-6 lg:pb-24 overflow-hidden home-hero -mt-[92px]">
+        <main className="relative w-full bg-slate-50 pt-[140px] pb-16 lg:pt-[180px] lg:pb-24 overflow-hidden home-hero">
             {/* Background blobs */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute -top-[10%] -right-[5%] w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]"></div>
                 <div className="absolute bottom-[-10%] left-[20%] w-[800px] h-[400px] rounded-full bg-blue-300/20 blur-[150px]"></div>
             </div>
 
-            <div className="container-custom relative z-10 flex flex-col gap-8 pt-[92px]">
+            <div className="container-custom relative z-10 flex flex-col gap-8">
 
                 {/* Top Row: Text & Image */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
