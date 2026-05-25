@@ -9,22 +9,22 @@ import './BlogDetail.css';
 const parseFaqs = (htmlContent) => {
     const faqHeaderRegex = /<h2[^>]*>(?:<strong>)?\s*FAQs\s*(?:<\/strong>)?<\/h2>/i;
     const match = htmlContent.match(faqHeaderRegex);
-    
+
     if (!match) {
         return { content: htmlContent, faqs: [] };
     }
-    
+
     const index = match.index;
     const mainContent = htmlContent.substring(0, index).trim();
     const faqSection = htmlContent.substring(index + match[0].length).trim();
-    
+
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = faqSection;
-    
+
     const pElements = Array.from(tempDiv.querySelectorAll('p'));
     const faqs = [];
     let currentFaq = null;
-    
+
     pElements.forEach(p => {
         const strong = p.querySelector('strong');
         if (strong) {
@@ -43,11 +43,11 @@ const parseFaqs = (htmlContent) => {
             }
         }
     });
-    
+
     if (currentFaq && currentFaq.question && currentFaq.answer) {
         faqs.push(currentFaq);
     }
-    
+
     return { content: mainContent, faqs };
 };
 
@@ -128,13 +128,13 @@ const BlogDetail = () => {
                 image={blog.image}
             />
 
-            <section className="py-16 lg:py-24">
+            <section className="py-8 lg:py-12">
                 <div className="container-custom">
                     <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
 
                         {/* Left Side: Table of Contents Sidebar */}
-                        <aside className="w-full lg:w-[30%] lg:sticky lg:top-28 shrink-0">
-                            <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                        <aside className="hidden lg:block w-full lg:w-[30%] lg:sticky lg:top-28 shrink-0">
+                            <div className="bg-white p-8 rounded-[2rem] border border-slate-100">
                                 <h3 className="font-extrabold text-slate-900 mb-6 text-xl">Table of Contents</h3>
                                 <ul className="space-y-4">
                                     {toc.map(item => (
@@ -152,7 +152,7 @@ const BlogDetail = () => {
                         </aside>
 
                         {/* Right Side: Main Content */}
-                        <article className="w-full lg:w-[70%] bg-white p-8 lg:p-14 rounded-[2rem] shadow-sm border border-slate-100">
+                        <article className="w-full lg:w-[70%] bg-white p-8 lg:p-14 rounded-[2rem] border border-slate-100">
                             <div
                                 className="blog-detail-content"
                                 dangerouslySetInnerHTML={{ __html: contentWithIds }}
@@ -178,7 +178,7 @@ const BlogDetail = () => {
                                                     </div>
                                                     <div className={`faq-answer-pane ${isOpen ? 'open' : ''}`}>
                                                         <div className="faq-answer-inner">
-                                                            <div 
+                                                            <div
                                                                 className="text-slate-600 text-fluid-base leading-relaxed text-left"
                                                                 dangerouslySetInnerHTML={{ __html: item.answer }}
                                                             />
