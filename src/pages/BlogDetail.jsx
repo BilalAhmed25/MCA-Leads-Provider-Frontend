@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import './BlogDetail.css';
@@ -12,7 +12,6 @@ const BlogDetail = () => {
     const [contentWithIds, setContentWithIds] = useState("");
 
     useEffect(() => {
-        setLoading(true);
         // Scroll to top when switching blogs
         window.scrollTo(0, 0);
         
