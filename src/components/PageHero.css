@@ -55,7 +55,7 @@
     align-items: center;
     justify-content: center;
     padding: 14px 28px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -102,9 +102,10 @@
 @media (max-width: 992px) {
     .page-hero-container {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         gap: 40px;
-        padding-top: 20px;
+        padding-top: 0px;
+        margin-top: -30px;
     }
 
     .page-hero-content {
@@ -112,7 +113,7 @@
     }
 
     .page-hero-buttons {
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
     }
 

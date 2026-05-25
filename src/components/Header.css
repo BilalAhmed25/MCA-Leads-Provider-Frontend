@@ -55,9 +55,8 @@
 }
 
 @media (max-width: 768px) {
-    .top-bar-container {
-        justify-content: center;
-        flex-direction: column;
+    .top-bar {
+        display: none;
     }
 }
 
@@ -121,6 +120,15 @@
 
 .header.scrolled .logo-img {
     height: 42px;
+}
+
+@media (max-width: 1024px) {
+    .logo-img {
+        height: 46px;
+    }
+    .header.scrolled .logo-img {
+        height: 36px;
+    }
 }
 
 /* Navigation */
