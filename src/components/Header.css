@@ -96,6 +96,11 @@
     padding: 1rem 3%;
     max-width: 1920px;
     margin: 0 auto;
+    transition: padding 0.3s ease;
+}
+
+.header.scrolled .header-container {
+    padding: 0.5rem 3%;
 }
 
 .logo {
@@ -106,6 +111,16 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    transition: height 0.3s ease;
+}
+
+.header.scrolled .logo-img {
+    height: 42px;
 }
 
 /* Navigation */

@@ -56,7 +56,7 @@ const Header = () => {
                 <div className="header-container">
                     {/* Logo */}
                     <Link to="/" className="logo">
-                        <img src="/logo-black.png" alt="MCA Leads Provider Logo" style={{ height: '60px', width: 'auto' }} />
+                        <img src="/logo-black.png" alt="MCA Leads Provider Logo" className="logo-img" />
                     </Link>
 
                     {/* Desktop Navigation */}
