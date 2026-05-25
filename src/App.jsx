@@ -27,6 +27,7 @@ function App() {
                     <Route path=":slug" element={<BlogDetail />} />
                 </Route>
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/:slug" element={<BlogDetail />} />
             </Routes>
             <Footer />
             <BackToTop />

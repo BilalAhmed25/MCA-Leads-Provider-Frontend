@@ -9,7 +9,7 @@
     font-weight: 800;
     color: #0f172a;
     margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
     scroll-margin-top: 100px;
 }
 
@@ -18,12 +18,12 @@
     font-weight: 700;
     color: #1e293b;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     scroll-margin-top: 100px;
 }
 
 .blog-detail-content p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
 }
 
 .blog-detail-content a {

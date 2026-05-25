@@ -2,6 +2,16 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './BlogSection.css';
 
+const stripHtmlAndTruncate = (html, maxLength = 120) => {
+    if (!html) return '';
+    const cleanText = html.replace(/<[^>]*>/g, ' ');
+    const normalized = cleanText.replace(/\s+/g, ' ').trim();
+    if (normalized.length > maxLength) {
+        return normalized.substring(0, maxLength) + '...';
+    }
+    return normalized;
+};
+
 const BlogSection = ({ limit }) => {
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -48,10 +58,9 @@ const BlogSection = ({ limit }) => {
                                     {blog.category}
                                 </div>
                                 <h3 className="blog-title">{blog.title}</h3>
-                                <div
-                                    className="blog-html-content"
-                                    dangerouslySetInnerHTML={{ __html: blog.content }}
-                                />
+                                <p className="blog-html-content">
+                                    {stripHtmlAndTruncate(blog.content)}
+                                </p>
                                 <div className="blog-footer">
                                     <div className="blog-meta">
                                         {blog.date} &bull; {blog.readTime}

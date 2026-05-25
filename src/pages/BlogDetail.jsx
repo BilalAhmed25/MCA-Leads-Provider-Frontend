@@ -1,15 +1,68 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import BlogSection from '../components/BlogSection';
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import '../components/FAQs.css';
 import './BlogDetail.css';
+
+const parseFaqs = (htmlContent) => {
+    const faqHeaderRegex = /<h2[^>]*>(?:<strong>)?\s*FAQs\s*(?:<\/strong>)?<\/h2>/i;
+    const match = htmlContent.match(faqHeaderRegex);
+    
+    if (!match) {
+        return { content: htmlContent, faqs: [] };
+    }
+    
+    const index = match.index;
+    const mainContent = htmlContent.substring(0, index).trim();
+    const faqSection = htmlContent.substring(index + match[0].length).trim();
+    
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = faqSection;
+    
+    const pElements = Array.from(tempDiv.querySelectorAll('p'));
+    const faqs = [];
+    let currentFaq = null;
+    
+    pElements.forEach(p => {
+        const strong = p.querySelector('strong');
+        if (strong) {
+            if (currentFaq && currentFaq.question && currentFaq.answer) {
+                faqs.push(currentFaq);
+            }
+            let qText = strong.innerHTML.replace(/^(?:Q|q)?\d+[\.\s\-\:]+\s*/g, '').trim();
+            currentFaq = { question: qText, answer: '' };
+        } else if (currentFaq) {
+            let aHtml = p.innerHTML;
+            aHtml = aHtml.replace(/^(?:Ans|ans)[\.\s\-\:]+\s*/g, '').trim();
+            if (currentFaq.answer) {
+                currentFaq.answer += `<p>${aHtml}</p>`;
+            } else {
+                currentFaq.answer = aHtml;
+            }
+        }
+    });
+    
+    if (currentFaq && currentFaq.question && currentFaq.answer) {
+        faqs.push(currentFaq);
+    }
+    
+    return { content: mainContent, faqs };
+};
 
 const BlogDetail = () => {
     const { slug } = useParams();
     const [blog, setBlog] = useState(null);
-    const [relatedBlogs, setRelatedBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
     const [toc, setToc] = useState([]);
     const [contentWithIds, setContentWithIds] = useState("");
+    const [faqs, setFaqs] = useState([]);
+    const [activeFaqIndex, setActiveFaqIndex] = useState(null);
+
+    const toggleFaq = (index) => {
+        setActiveFaqIndex(activeFaqIndex === index ? null : index);
+    };
 
     useEffect(() => {
         // Scroll to top when switching blogs
@@ -21,10 +74,16 @@ const BlogDetail = () => {
                 const currentBlog = data.find(b => b.slug === slug);
 
                 if (currentBlog) {
-                    // Inject IDs into headings and extract TOC
+                    // 1. Rewrite absolute URLs to relative URLs to support SPA routing
+                    let content = currentBlog.content.replace(/href=["']https?:\/\/mcaleadsprovider\.com\/?([^"']*)["']/gi, 'href="/$1"');
+
+                    // 2. Parse FAQs out of the content
+                    const parsed = parseFaqs(content);
+
+                    // 3. Inject IDs into headings and extract TOC on main content
                     let currentId = 0;
                     const extractedToc = [];
-                    const modifiedContent = currentBlog.content.replace(/<h([2-3])[^>]*>(.*?)<\/h\1>/gi, (match, level, text) => {
+                    const contentWithHeadingIds = parsed.content.replace(/<h([2-3])[^>]*>(.*?)<\/h\1>/gi, (match, level, text) => {
                         const plainText = text.replace(/<[^>]+>/g, '').trim();
                         const id = `heading-${currentId++}`;
                         extractedToc.push({ id, text: plainText, level: parseInt(level) });
@@ -32,12 +91,10 @@ const BlogDetail = () => {
                     });
 
                     setToc(extractedToc);
-                    setContentWithIds(modifiedContent);
+                    setContentWithIds(contentWithHeadingIds);
+                    setFaqs(parsed.faqs);
+                    setActiveFaqIndex(null);
                     setBlog(currentBlog);
-
-                    // Get 2 related blogs
-                    const others = data.filter(b => b.slug !== slug);
-                    setRelatedBlogs(others.slice(0, 2));
                 }
                 setLoading(false);
             })
@@ -100,6 +157,39 @@ const BlogDetail = () => {
                                 className="blog-detail-content"
                                 dangerouslySetInnerHTML={{ __html: contentWithIds }}
                             />
+
+                            {faqs && faqs.length > 0 && (
+                                <div className="blog-faqs-wrapper mt-12 pt-10 border-t border-slate-100">
+                                    <h2 className="text-2xl font-bold text-slate-900 mb-8 text-left">Frequently Asked Questions</h2>
+                                    <div className="faqs-accordion-col">
+                                        {faqs.map((item, index) => {
+                                            const isOpen = activeFaqIndex === index;
+                                            return (
+                                                <div
+                                                    key={index}
+                                                    className={`faq-item ${isOpen ? 'active' : ''}`}
+                                                    onClick={() => toggleFaq(index)}
+                                                >
+                                                    <div className="faq-question-row">
+                                                        <h3 className="faq-question-text">{item.question}</h3>
+                                                        <div className={`faq-icon-circle ${isOpen ? 'open' : ''}`}>
+                                                            {isOpen ? <FiChevronUp /> : <FiChevronDown />}
+                                                        </div>
+                                                    </div>
+                                                    <div className={`faq-answer-pane ${isOpen ? 'open' : ''}`}>
+                                                        <div className="faq-answer-inner">
+                                                            <div 
+                                                                className="text-slate-600 text-fluid-base leading-relaxed text-left"
+                                                                dangerouslySetInnerHTML={{ __html: item.answer }}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            )}
                         </article>
 
                     </div>
@@ -107,34 +197,7 @@ const BlogDetail = () => {
             </section>
 
             {/* Related Blogs Section */}
-            {relatedBlogs.length > 0 && (
-                <section className="py-20 bg-white border-t border-slate-100">
-                    <div className="container-custom">
-                        <div className="text-center mb-16">
-                            <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-slate-900">Read Other Blogs</h2>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                            {relatedBlogs.map(rb => (
-                                <Link to={`/blog/${rb.slug}`} key={rb.id} className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 flex flex-col group">
-                                    <div className="h-64 overflow-hidden relative">
-                                        <img src={rb.image} alt={rb.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                                        <div className="absolute top-4 left-4 bg-white/95 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold text-primary shadow-sm">
-                                            {rb.category}
-                                        </div>
-                                    </div>
-                                    <div className="p-8 flex flex-col flex-grow">
-                                        <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors leading-snug">{rb.title}</h3>
-                                        <div className="mt-auto flex items-center justify-between text-sm text-slate-500 font-medium">
-                                            <span>{rb.date} • {rb.readTime}</span>
-                                            <span className="font-bold text-primary group-hover:translate-x-2 transition-transform duration-300">Read more &rarr;</span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            )}
+            <BlogSection limit={3} />
         </main>
     );
 };
