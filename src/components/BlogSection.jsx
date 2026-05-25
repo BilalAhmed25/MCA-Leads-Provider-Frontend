@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './BlogSection.css';
 
 const BlogSection = ({ limit }) => {
@@ -28,10 +29,12 @@ const BlogSection = ({ limit }) => {
     return (
         <section className="blog-section">
             <div className="container-custom">
-                <div className="blog-header">
-                    <h2>Latest Insights</h2>
-                    <p>Discover tips, strategies, and stories from our expert team.</p>
-                </div>
+                {limit && (
+                    <div className="blog-header">
+                        <h2>Latest Insights</h2>
+                        <p>Discover tips, strategies, and stories from our expert team.</p>
+                    </div>
+                )}
 
                 <div className="blog-grid">
                     {blogs.map(blog => (
@@ -61,6 +64,14 @@ const BlogSection = ({ limit }) => {
                         </div>
                     ))}
                 </div>
+
+                {limit && (
+                    <div className="blog-view-more-container">
+                        <Link to="/blog" className="btn-primary">
+                            View more blogs
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );

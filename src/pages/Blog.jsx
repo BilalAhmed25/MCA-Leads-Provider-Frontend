@@ -1,11 +1,10 @@
-import ComingSoon from '../components/ComingSoon';
+import BlogSection from '../components/BlogSection';
 
 const Blog = () => {
     return (
-        <ComingSoon 
-            title="Company Blog" 
-            description="We are collecting helpful industry resources, sales tips, and lead conversion strategies to publish here shortly. Stay tuned!" 
-        />
+        <main style={{ paddingTop: '60px', backgroundColor: 'var(--white)' }}>
+            <BlogSection />
+        </main>
     );
 };
 
