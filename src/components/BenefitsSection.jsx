@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiDollarSign, FiCheckCircle, FiBarChart2, FiMail } from 'react-icons/fi';
 
 const BenefitsSection = () => {
@@ -68,12 +69,12 @@ const BenefitsSection = () => {
 
                 {/* Call to action button */}
                 <div className="text-center">
-                    <a 
-                        href="#contact" 
+                    <Link 
+                        to="/contact" 
                         className="inline-flex items-center justify-center px-10 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 shadow-[0_0_20px_rgba(96,31,234,0.4)] hover:-translate-y-1"
                     >
                         CONTACT US TODAY
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

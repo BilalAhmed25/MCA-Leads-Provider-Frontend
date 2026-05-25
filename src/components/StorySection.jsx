@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const StorySection = () => {
     return (
@@ -9,10 +10,10 @@ const StorySection = () => {
                     {/* Left: Image with Offset Background */}
                     <div className="relative w-full mx-auto lg:mx-0">
                         {/* Decorative Background Shape */}
-                        <div className="absolute -top-10 lg:-top-10 left-10 w-[80%] h-[90%] bg-primary rounded-[2.5rem]"></div>
+                        <div className="absolute -top-10 lg:-top-10 w-[80%] h-[90%] bg-primary rounded-[2.5rem]"></div>
 
                         {/* Main Image */}
-                        <div className="relative w-[90%] h-[400px] rounded-[2.5rem] overflow-hidden bg-slate-200 ml-auto">
+                        <div className="relative w-[95%] h-[400px] rounded-[2.5rem] overflow-hidden bg-slate-200 ml-auto">
                             <img
                                 src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                 alt="Professional woman working on laptop"
@@ -39,12 +40,12 @@ const StorySection = () => {
                             </p>
                         </div>
 
-                        <a
-                            href="#discover-more"
+                        <Link
+                            to="/about"
                             className="inline-flex items-center justify-center px-10 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 hover:-translate-y-1"
                         >
                             DISCOVER MORE
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

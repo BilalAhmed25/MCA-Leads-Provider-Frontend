@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PartnerSection = () => {
     return (
@@ -45,9 +46,9 @@ const PartnerSection = () => {
                             Our clients depend on us to provide working capital leads that correspond with their business objectives. From MCA leads with bank statements to exclusive MCA leads, we help you keep in touch with prospects who fit your ideal client profile.
                         </p>
 
-                        <a href="#order-leads" className="inline-flex items-center justify-center px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300">
-                            ORDER LEADS TODAY
-                        </a>
+                        <Link to="/contact" className="inline-flex items-center justify-center px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 shadow-md">
+                            ORDER LEADS
+                        </Link>
                     </div>
                 </div>
             </div>

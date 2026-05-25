@@ -1,4 +1,5 @@
 import { FiPhone, FiArrowRight, FiTrendingUp, FiCheckCircle } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import './HomeHero.css';
 
 const HomeHero = () => {
@@ -24,9 +25,9 @@ const HomeHero = () => {
                             Finding the appropriate clients can make all the difference in how well your business runs. With high-quality MCA leads, you can connect with businesses that are constantly looking for finance options. These are not random connections; they are targeted candidates who are interested in merchant cash advance offerings, increasing your chances of conversion.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-2">
-                            <a href="#get-leads" className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-base transition-all duration-300 hover:-translate-y-1">
+                            <Link to="/contact" className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-base transition-all duration-300 hover:-translate-y-1">
                                 Get your leads now
-                            </a>
+                            </Link>
                             <a href="tel:3477849496" className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-transparent border border-slate-300 hover:border-primary text-slate-800 hover:text-primary rounded-full font-bold text-fluid-base transition-all duration-300">
                                 Call us
                             </a>
