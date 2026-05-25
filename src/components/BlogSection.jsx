@@ -32,7 +32,7 @@ const BlogSection = ({ limit }) => {
                     <h2>Latest Insights</h2>
                     <p>Discover tips, strategies, and stories from our expert team.</p>
                 </div>
-                
+
                 <div className="blog-grid">
                     {blogs.map(blog => (
                         <div className="blog-card" key={blog.id}>
@@ -45,12 +45,17 @@ const BlogSection = ({ limit }) => {
                                     {blog.category}
                                 </div>
                                 <h3 className="blog-title">{blog.title}</h3>
-                                <div 
+                                <div
                                     className="blog-html-content"
                                     dangerouslySetInnerHTML={{ __html: blog.content }}
                                 />
-                                <div className="blog-meta">
-                                    {blog.date} &bull; {blog.readTime}
+                                <div className="blog-footer">
+                                    <div className="blog-meta">
+                                        {blog.date} &bull; {blog.readTime}
+                                    </div>
+                                    <a href={`#blog-${blog.id}`} className="blog-read-more">
+                                        Read more
+                                    </a>
                                 </div>
                             </div>
                         </div>
