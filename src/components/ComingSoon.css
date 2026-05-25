@@ -1,0 +1,103 @@
+.coming-soon-container {
+    background-color: var(--white);
+    color: var(--text-dark);
+    min-height: 70vh;
+    padding: 10rem 1.5rem 8rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.coming-soon-content {
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coming-soon-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(96, 31, 234, 0.07);
+    color: var(--primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: var(--text-fluid-sm);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.badge-icon {
+    font-size: 1.05rem;
+}
+
+.coming-soon-title {
+    font-size: var(--text-fluid-4xl);
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+    .coming-soon-title {
+        font-size: var(--text-fluid-5xl);
+    }
+}
+
+.coming-soon-title .highlight {
+    color: var(--primary);
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.coming-soon-description {
+    font-size: var(--text-fluid-base);
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+}
+
+.coming-soon-actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.coming-soon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-size: var(--text-fluid-base);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.coming-soon-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    font-size: 1.1rem;
+    transition: transform 0.25s ease;
+}
+
+.coming-soon-btn:hover .btn-icon {
+    transform: translateX(-4px);
+}

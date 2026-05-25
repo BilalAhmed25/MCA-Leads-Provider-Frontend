@@ -1,0 +1,324 @@
+/* Top Bar Styles */
+.top-bar {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.5rem 0;
+    font-size: var(--text-fluid-xs);
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    max-width: 1920px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.top-bar-contact {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.top-bar-link {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: opacity 0.2s ease;
+}
+
+.top-bar-link:hover {
+    opacity: 0.8;
+}
+
+.top-bar-socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-link {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.social-link:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .top-bar-container {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: var(--text-fluid-2xl);
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Navigation */
+.nav {
+    display: none;
+    /* Mobile first, hidden on small screens */
+}
+
+@media (min-width: 1024px) {
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-left: auto;
+        margin-right: 2rem;
+    }
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--text-fluid-base);
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+/* Dropdown */
+.dropdown-icon {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 180px;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: var(--text-fluid-sm);
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-light);
+    color: var(--primary);
+}
+
+/* Button */
+.cta-button {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.875rem 2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: var(--text-fluid-base);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.cta-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-dark);
+}
+
+@media (min-width: 1024px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+}
+
+.mobile-menu-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transform-origin: top;
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.mobile-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mobile-nav-item {
+    width: 100%;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--text-fluid-base);
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+    background-color: var(--bg-light);
+    color: var(--primary);
+}
+
+.mobile-cta-button {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--text-fluid-base);
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.mobile-cta-button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Active Navigation State */
+.nav-link.active {
+    color: var(--primary);
+}
+
+.mobile-nav-link.active {
+    background-color: rgba(96, 31, 234, 0.08);
+    color: var(--primary);
+}

@@ -1,0 +1,9 @@
+/* 
+  HomeHero.css
+  Most styling is handled by Tailwind CSS classes in the JSX file.
+  Any specific custom CSS that cannot be achieved with Tailwind can be placed here.
+*/
+
+.home-hero {
+  /* Example custom class if needed */
+}

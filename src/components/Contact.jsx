@@ -1,0 +1,164 @@
+import { useState } from 'react';
+import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
+import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
+import './Contact.css';
+
+const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Here you would typically integrate form submission logic
+        alert(`Thank you, ${formData.name}! Your message has been sent successfully.`);
+        setFormData({
+            name: '',
+            phone: '',
+            email: '',
+            subject: '',
+            message: ''
+        });
+    };
+
+    return (
+        <section className="contact-section" id="contact">
+            <div className="container-custom">
+                <div className="contact-wrapper-card">
+                    <div className="contact-grid">
+                        
+                        {/* Left Column: Image, Info & Socials */}
+                        <div className="contact-info-panel">
+                            <div className="contact-image-container">
+                                <img 
+                                    src="/contact_presenter.png" 
+                                    alt="Business meeting presentation" 
+                                    className="contact-image"
+                                />
+                            </div>
+                            <p className="contact-info-desc">
+                                Have questions about our MCA lead generation? Get in touch with our team of lead experts to find the perfect campaign for your funding targets.
+                            </p>
+                            
+                            <div className="contact-social-section">
+                                <span className="social-section-title">Follow Our Social Account :</span>
+                                <div className="contact-social-icons">
+                                    <a href="https://twitter.com" target="_blank" rel="noreferrer" className="contact-social-link" aria-label="Twitter">
+                                        <FaTwitter />
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/mcaleadsprovider/" target="_blank" rel="noreferrer" className="contact-social-link" aria-label="LinkedIn">
+                                        <FaLinkedinIn />
+                                    </a>
+                                    <a href="https://www.instagram.com/mcaleadsprovider/" target="_blank" rel="noreferrer" className="contact-social-link" aria-label="Instagram">
+                                        <FaInstagram />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Column: Title and Form */}
+                        <div className="contact-form-panel">
+                            <h2 className="contact-form-title">We'd Love to Hear from You</h2>
+                            
+                            <form onSubmit={handleSubmit} className="contact-form-box">
+                                <div className="form-fields-grid">
+                                    <div className="form-field">
+                                        <input 
+                                            type="text" 
+                                            name="name" 
+                                            placeholder="Full Name" 
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            required 
+                                        />
+                                    </div>
+                                    <div className="form-field">
+                                        <input 
+                                            type="tel" 
+                                            name="phone" 
+                                            placeholder="Phone" 
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                        />
+                                    </div>
+                                    <div className="form-field">
+                                        <input 
+                                            type="email" 
+                                            name="email" 
+                                            placeholder="Email Address" 
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required 
+                                        />
+                                    </div>
+                                    <div className="form-field">
+                                        <input 
+                                            type="text" 
+                                            name="subject" 
+                                            placeholder="Subject" 
+                                            value={formData.subject}
+                                            onChange={handleChange}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="form-field full-width">
+                                    <textarea 
+                                        name="message" 
+                                        placeholder="Example Text" 
+                                        rows="6"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                    ></textarea>
+                                </div>
+                                <div className="form-submit-row">
+                                    <button type="submit" className="contact-submit-btn">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                {/* Bottom Row: 3 Address Cards */}
+                <div className="contact-cards-grid">
+                    <div className="contact-detail-card">
+                        <div className="card-icon-box">
+                            <FiPhone />
+                        </div>
+                        <a href="tel:3477849496" className="card-detail-text">347-784-9496</a>
+                    </div>
+
+                    <div className="contact-detail-card">
+                        <div className="card-icon-box">
+                            <FiMail />
+                        </div>
+                        <a href="mailto:info@mcaleadsprovider.com" className="card-detail-text">info@mcaleadsprovider.com</a>
+                    </div>
+
+                    <div className="contact-detail-card">
+                        <div className="card-icon-box">
+                            <FiMapPin />
+                        </div>
+                        <span className="card-detail-text address">
+                            7901 4th St N STE 22726 St. Petersburg, FL 33702
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Contact;
