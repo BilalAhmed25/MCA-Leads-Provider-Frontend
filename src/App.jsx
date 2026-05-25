@@ -22,8 +22,10 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/pricing" element={<Pricing />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogDetail />} />
+                <Route path="/blog">
+                    <Route index element={<Blog />} />
+                    <Route path=":slug" element={<BlogDetail />} />
+                </Route>
                 <Route path="/contact" element={<ContactPage />} />
             </Routes>
             <Footer />

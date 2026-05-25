@@ -14,18 +14,18 @@ const BlogDetail = () => {
     useEffect(() => {
         // Scroll to top when switching blogs
         window.scrollTo(0, 0);
-        
+
         fetch('/blogs.json')
             .then(res => res.json())
             .then(data => {
                 const currentBlog = data.find(b => b.slug === slug);
-                
+
                 if (currentBlog) {
                     // Inject IDs into headings and extract TOC
                     let currentId = 0;
                     const extractedToc = [];
                     const modifiedContent = currentBlog.content.replace(/<h([2-3])[^>]*>(.*?)<\/h\1>/gi, (match, level, text) => {
-                        const plainText = text.replace(/<[^>]+>/g, '').trim(); 
+                        const plainText = text.replace(/<[^>]+>/g, '').trim();
                         const id = `heading-${currentId++}`;
                         extractedToc.push({ id, text: plainText, level: parseInt(level) });
                         return `<h${level} id="${id}">${text}</h${level}>`;
@@ -65,16 +65,16 @@ const BlogDetail = () => {
 
     return (
         <main className="bg-slate-50 min-h-screen">
-            <PageHero 
-                title={blog.title} 
+            <PageHero
+                title={blog.title}
                 description={`${blog.date} • ${blog.category} • ${blog.readTime}`}
-                image={blog.image} 
+                image={blog.image}
             />
 
             <section className="py-16 lg:py-24">
                 <div className="container-custom">
                     <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-                        
+
                         {/* Left Side: Table of Contents Sidebar */}
                         <aside className="w-full lg:w-[30%] lg:sticky lg:top-28 shrink-0">
                             <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
@@ -82,7 +82,7 @@ const BlogDetail = () => {
                                 <ul className="space-y-4">
                                     {toc.map(item => (
                                         <li key={item.id} className={item.level === 3 ? "ml-4" : ""}>
-                                            <a 
+                                            <a
                                                 href={`#${item.id}`}
                                                 className="text-slate-600 hover:text-primary transition-colors text-sm font-medium leading-relaxed block"
                                             >
@@ -96,7 +96,7 @@ const BlogDetail = () => {
 
                         {/* Right Side: Main Content */}
                         <article className="w-full lg:w-[70%] bg-white p-8 lg:p-14 rounded-[2rem] shadow-sm border border-slate-100">
-                            <div 
+                            <div
                                 className="blog-detail-content"
                                 dangerouslySetInnerHTML={{ __html: contentWithIds }}
                             />
