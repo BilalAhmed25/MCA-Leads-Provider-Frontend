@@ -70,62 +70,55 @@ const Testimonials = () => {
     useEffect(() => {
         if (sliderRef.current) {
             const cards = sliderRef.current.querySelectorAll('.testimonial-card-wrapper');
+            const container = sliderRef.current;
+            
             if (cards[currentIndex]) {
                 const totalOriginal = testimonialsData.length;
 
+                const scrollToCard = (index, smooth = true) => {
+                    const targetCard = cards[index];
+                    if (!targetCard) return;
+                    
+                    // Calculate center position relative to the container
+                    const scrollLeft = targetCard.offsetLeft - (container.offsetWidth / 2) + (targetCard.offsetWidth / 2);
+                    
+                    if (smooth) {
+                        container.style.scrollBehavior = 'smooth';
+                        container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                    } else {
+                        container.style.scrollBehavior = 'auto';
+                        container.scrollTo({ left: scrollLeft, behavior: 'auto' });
+                    }
+                };
+
                 // Check if we reached the 3rd set
                 if (currentIndex >= totalOriginal * 2) {
-                    sliderRef.current.style.scrollBehavior = 'smooth';
-                    cards[currentIndex].scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'nearest',
-                        inline: 'center'
-                    });
+                    scrollToCard(currentIndex, true);
 
                     // Silently jump back to the 2nd set after scroll completes
                     setTimeout(() => {
                         if (sliderRef.current) {
-                            sliderRef.current.style.scrollBehavior = 'auto';
                             const jumpIndex = currentIndex - totalOriginal;
-                            cards[jumpIndex].scrollIntoView({
-                                behavior: 'auto',
-                                block: 'nearest',
-                                inline: 'center'
-                            });
+                            scrollToCard(jumpIndex, false);
                             setCurrentIndex(jumpIndex);
                         }
                     }, 800);
-                }
+                } 
                 // Check if we jumped backwards into the 1st set (e.g. by manual dot click)
                 else if (currentIndex < totalOriginal) {
-                    sliderRef.current.style.scrollBehavior = 'smooth';
-                    cards[currentIndex].scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'nearest',
-                        inline: 'center'
-                    });
+                    scrollToCard(currentIndex, true);
 
                     setTimeout(() => {
                         if (sliderRef.current) {
-                            sliderRef.current.style.scrollBehavior = 'auto';
                             const jumpIndex = currentIndex + totalOriginal;
-                            cards[jumpIndex].scrollIntoView({
-                                behavior: 'auto',
-                                block: 'nearest',
-                                inline: 'center'
-                            });
+                            scrollToCard(jumpIndex, false);
                             setCurrentIndex(jumpIndex);
                         }
                     }, 800);
-                }
+                } 
                 // Normal scrolling inside the middle set
                 else {
-                    sliderRef.current.style.scrollBehavior = 'smooth';
-                    cards[currentIndex].scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'nearest',
-                        inline: 'center'
-                    });
+                    scrollToCard(currentIndex, true);
                 }
             }
         }
