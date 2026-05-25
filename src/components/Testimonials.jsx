@@ -71,17 +71,17 @@ const Testimonials = () => {
         if (sliderRef.current) {
             const cards = sliderRef.current.querySelectorAll('.testimonial-card-wrapper');
             const container = sliderRef.current;
-            
+
             if (cards[currentIndex]) {
                 const totalOriginal = testimonialsData.length;
 
                 const scrollToCard = (index, smooth = true) => {
                     const targetCard = cards[index];
                     if (!targetCard) return;
-                    
+
                     // Calculate center position relative to the container
                     const scrollLeft = targetCard.offsetLeft - (container.offsetWidth / 2) + (targetCard.offsetWidth / 2);
-                    
+
                     if (smooth) {
                         container.style.scrollBehavior = 'smooth';
                         container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
@@ -103,7 +103,7 @@ const Testimonials = () => {
                             setCurrentIndex(jumpIndex);
                         }
                     }, 800);
-                } 
+                }
                 // Check if we jumped backwards into the 1st set (e.g. by manual dot click)
                 else if (currentIndex < totalOriginal) {
                     scrollToCard(currentIndex, true);
@@ -115,7 +115,7 @@ const Testimonials = () => {
                             setCurrentIndex(jumpIndex);
                         }
                     }, 800);
-                } 
+                }
                 // Normal scrolling inside the middle set
                 else {
                     scrollToCard(currentIndex, true);
