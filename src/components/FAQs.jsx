@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { FiChevronDown, FiChevronUp, FiHelpCircle } from 'react-icons/fi';
 import './FAQs.css';
 
-const FAQs = () => {
+const FAQs = ({ items }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
-    const faqData = [
+    const defaultFaqData = [
         {
             question: "What type of MCA leads do you provide?",
             answer: "We provide a wide range of merchant cash advance leads, including live transfer leads, call-back leads, aged leads, and business loan leads. Each style is designed to complement various sales methods and budgets."
@@ -31,6 +31,8 @@ const FAQs = () => {
             answer: "Absolutely. All of our leads comply using TCPA-related rules and DNC filters. We promise legal compliance and ethical outreach by supplying only fully approved contact information."
         }
     ];
+
+    const faqData = items || defaultFaqData;
 
     return (
         <section className="faqs-section" id="faqs">
