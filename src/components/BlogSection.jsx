@@ -65,7 +65,7 @@ const BlogSection = ({ limit }) => {
                                     <div className="blog-meta">
                                         {blog.date} &bull; {blog.readTime}
                                     </div>
-                                    <Link to={`/blog/${blog.slug}`} className="blog-read-more">
+                                    <Link to={`/${blog.slug}`} className="blog-read-more">
                                         Read more
                                     </Link>
                                 </div>

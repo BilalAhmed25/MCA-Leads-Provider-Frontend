@@ -1,0 +1,263 @@
+.notfound-container {
+    background-color: var(--white);
+    color: var(--text-dark);
+    min-height: 80vh;
+    padding: 12rem 1.5rem 6rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.notfound-content {
+    max-width: 1920px;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Glowing background bubbles */
+.notfound-glow-1 {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(96, 31, 234, 0.12) 0%, rgba(96, 31, 234, 0) 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.notfound-glow-2 {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 70%);
+    border-radius: 50%;
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.notfound-visual {
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 5s ease-in-out infinite;
+}
+
+.notfound-code {
+    font-size: clamp(6rem, 15vw, 10rem);
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.05em;
+    filter: drop-shadow(0px 10px 20px rgba(96, 31, 234, 0.15));
+}
+
+.notfound-badge {
+    position: absolute;
+    bottom: 5px;
+    right: -10px;
+    background-color: #ef4444;
+    color: var(--white);
+    font-size: var(--text-fluid-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    transform: rotate(5deg);
+}
+
+.notfound-title {
+    font-size: var(--text-fluid-3xl);
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+    .notfound-title {
+        font-size: var(--text-fluid-4xl);
+    }
+}
+
+.notfound-description {
+    font-size: var(--text-fluid-base);
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 580px;
+}
+
+/* Action Buttons */
+.notfound-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.notfound-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.95rem 2.25rem;
+    border-radius: 50px;
+    font-size: var(--text-fluid-base);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 10px 25px -5px rgba(96, 31, 234, 0.3);
+}
+
+.notfound-primary-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgba(96, 31, 234, 0.4);
+}
+
+.notfound-primary-btn .btn-icon {
+    font-size: 1.15rem;
+    transition: transform 0.25s ease;
+}
+
+.notfound-primary-btn:hover .btn-icon {
+    transform: translateX(-4px);
+}
+
+/* Suggestions Grid */
+.notfound-suggestions {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.suggestions-title {
+    font-size: var(--text-fluid-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .suggestions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .suggestions-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.suggestion-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    background-color: var(--white);
+    border: 1px solid #f1f5f9;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    text-align: left;
+    text-decoration: none;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+}
+
+.suggestion-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96, 31, 234, 0.2);
+    box-shadow: 0 12px 20px -8px rgba(96, 31, 234, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+}
+
+.suggestion-icon-wrapper {
+    background-color: rgba(96, 31, 234, 0.06);
+    color: var(--primary);
+    padding: 0.75rem;
+    border-radius: 0.85rem;
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.suggestion-card:hover .suggestion-icon-wrapper {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.suggestion-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.suggestion-name {
+    font-weight: 700;
+    font-size: var(--text-fluid-base);
+    color: #111827;
+    line-height: 1.2;
+    transition: color 0.2s ease;
+}
+
+.suggestion-card:hover .suggestion-name {
+    color: var(--primary);
+}
+
+.suggestion-desc {
+    font-size: var(--text-fluid-xs);
+    color: var(--text-light);
+    line-height: 1.4;
+}

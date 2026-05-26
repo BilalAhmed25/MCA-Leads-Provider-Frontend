@@ -16,6 +16,7 @@ import Pricing from './pages/Pricing';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import ContactPage from './pages/ContactPage';
+import NotFound from './pages/NotFound';
 import './index.css';
 
 function App() {
@@ -34,12 +35,10 @@ function App() {
                 <Route path="/digital-marketing-leads" element={<DigitalMarketing />} />
                 <Route path="/b2b-email-lists" element={<B2BEmailLists />} />
                 <Route path="/pricing" element={<Pricing />} />
-                <Route path="/blog">
-                    <Route index element={<Blog />} />
-                    <Route path=":slug" element={<BlogDetail />} />
-                </Route>
+                <Route path="/blog" element={<Blog />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/:slug" element={<BlogDetail />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
             <BackToTop />

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import BlogSection from '../components/BlogSection';
+import NotFound from './NotFound';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import '../components/FAQs.css';
 import './BlogDetail.css';
@@ -113,11 +114,7 @@ const BlogDetail = () => {
     }
 
     if (!blog) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-slate-50">
-                <div className="text-xl font-medium text-slate-500">Blog not found.</div>
-            </div>
-        );
+        return <NotFound />;
     }
 
     return (
@@ -134,7 +131,7 @@ const BlogDetail = () => {
 
                         {/* Left Side: Table of Contents Sidebar */}
                         <aside className="hidden lg:block w-full lg:w-[30%] lg:sticky lg:top-28 shrink-0">
-                            <div className="bg-white p-8 rounded-[2rem] border border-slate-100">
+                            <div className="bg-white p-8 rounded-4xl border border-slate-100">
                                 <h3 className="font-extrabold text-slate-900 mb-6 text-xl">Table of Contents</h3>
                                 <ul className="space-y-4">
                                     {toc.map(item => (
@@ -152,7 +149,7 @@ const BlogDetail = () => {
                         </aside>
 
                         {/* Right Side: Main Content */}
-                        <article className="w-full lg:w-[70%] bg-white p-8 lg:p-14 rounded-[2rem] border border-slate-100">
+                        <article className="w-full lg:w-[70%] bg-white p-8 lg:p-14 rounded-4xl border border-slate-100">
                             <div
                                 className="blog-detail-content"
                                 dangerouslySetInnerHTML={{ __html: contentWithIds }}
