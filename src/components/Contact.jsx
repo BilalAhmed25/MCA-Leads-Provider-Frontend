@@ -3,7 +3,7 @@ import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
 import './Contact.css';
 
-const Contact = () => {
+const Contact = ({ className = "" }) => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -31,7 +31,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="contact-section" id="contact">
+        <section className={`contact-section ${className}`} id="contact">
             <div className="container-custom">
                 <div className="contact-wrapper-card">
                     <div className="contact-grid">
