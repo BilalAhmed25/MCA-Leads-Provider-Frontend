@@ -126,6 +126,7 @@
     .logo-img {
         height: 46px;
     }
+
     .header.scrolled .logo-img {
         height: 36px;
     }
@@ -189,7 +190,7 @@
     top: 100%;
     left: 0;
     background-color: var(--white);
-    min-width: 180px;
+    min-width: 250px;
     border-radius: 0.5rem;
     padding: 0.5rem 0;
     opacity: 0;

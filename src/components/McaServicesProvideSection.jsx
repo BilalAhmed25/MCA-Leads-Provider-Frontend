@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     FiPhoneCall,
     FiPhoneIncoming,
@@ -13,32 +14,38 @@ const McaServicesProvideSection = ({ className = "py-20 lg:py-28 bg-slate-950" }
         {
             icon: <FiPhoneCall className="w-6 h-6" />,
             title: "MCA Live Transfer Leads",
-            description: "Connect instantly with pre-qualified business owners who need the funding. They are eager to get financing, so it increases the likelihood of conversion."
+            description: "Connect instantly with pre-qualified business owners who need the funding. They are eager to get financing, so it increases the likelihood of conversion.",
+            link: "/live-transfers"
         },
         {
             icon: <FiPhoneIncoming className="w-6 h-6" />,
-            title: "MCA Call Back Leads",
-            description: "Obtain a list of qualified business owners who have expressed interest and requested a follow-up. Warm leads provide efficient engagement."
+            title: "MCA Callback Leads",
+            description: "Obtain a list of qualified business owners who have expressed interest and requested a follow-up. Warm leads provide efficient engagement.",
+            link: "/call-backs"
         },
         {
             icon: <FiDatabase className="w-6 h-6" />,
             title: "Aged MCA Leads",
-            description: "Get cost-effective aged leads for MCA. Reach more borrowers as this service connects lenders with merchants who were previously looking for finance."
+            description: "Get cost-effective aged leads for MCA. Reach more borrowers as this service connects lenders with merchants who were previously looking for finance.",
+            link: "/aged-leads"
         },
         {
             icon: <FiMail className="w-6 h-6" />,
             title: "B2B Email Lists",
-            description: "For focused efforts, Get access to validated business email lists. Ideal for contacting owners who require financial choices."
+            description: "For focused efforts, Get access to validated business email lists. Ideal for contacting owners who require financial choices.",
+            link: "/b2b-email-lists"
         },
         {
             icon: <FiGlobe className="w-6 h-6" />,
-            title: "Digital Marketing Leads",
-            description: "Leads with high intent are gathered via landing sites, SEO, and paid advertisements. They are always looking for ways to get money."
+            title: "MCA Digital Marketing Leads",
+            description: "Leads with high intent are gathered via landing sites, SEO, and paid advertisements. They are always looking for ways to get money.",
+            link: "/digital-marketing"
         },
         {
             icon: <FiBriefcase className="w-6 h-6" />,
             title: "Business Loan Leads",
-            description: "Get business loan leads to connect lenders and brokers with pre-qualified merchants seeking working capital."
+            description: "Get business loan leads to connect lenders and brokers with pre-qualified merchants seeking working capital.",
+            link: "/business-loans"
         }
     ];
 
@@ -70,8 +77,9 @@ const McaServicesProvideSection = ({ className = "py-20 lg:py-28 bg-slate-950" }
                 {/* Services Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {services.map((service, index) => (
-                        <div
+                        <Link
                             key={index}
+                            to={service.link}
                             className="bg-slate-900/30 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-slate-800/80 hover:border-primary/40 hover:bg-slate-900/60 hover:shadow-[0_20px_50px_-15px_rgba(96,31,234,0.25)] transition-all duration-500 group flex flex-col justify-between hover:-translate-y-1.5 relative overflow-hidden"
                         >
                             {/* Accent Glow Spot */}
@@ -92,7 +100,7 @@ const McaServicesProvideSection = ({ className = "py-20 lg:py-28 bg-slate-950" }
                                     {service.description}
                                 </p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

@@ -19,20 +19,20 @@ const Footer = () => {
                             <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#22d3ee" strokeWidth="1" />
                             <circle cx="0" cy="0" r="1.5" fill="#601fea" />
                         </pattern>
-                        
+
                         {/* Mask Gradient (Solid White on Right, Transparent Black/White on Left) */}
                         <linearGradient id="grid-mask-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
                             <stop offset="40%" stopColor="#ffffff" stopOpacity="0.15" />
                             <stop offset="100%" stopColor="#ffffff" stopOpacity="0.45" />
                         </linearGradient>
-                        
+
                         {/* Mask applying the gradient */}
                         <mask id="footer-grid-mask">
                             <rect width="100%" height="100%" fill="url(#grid-mask-gradient)" />
                         </mask>
                     </defs>
-                    
+
                     {/* Grid Rectangle using the pattern and mask */}
                     <rect width="100%" height="100%" fill="url(#footer-grid-pattern)" mask="url(#footer-grid-mask)" />
                 </svg>
@@ -48,7 +48,7 @@ const Footer = () => {
                         <p className="brand-desc text-slate-400 mb-8 leading-relaxed">
                             With over 8+ years of expertise in the MCA leads generation, we deliver high-quality leads tailored to meet your exact needs.
                         </p>
-                        
+
                         <div className="contact-info-list">
                             <div className="contact-item">
                                 <div className="icon-wrapper email-icon">
@@ -97,12 +97,12 @@ const Footer = () => {
                     <div className="footer-col links-col">
                         <h4 className="footer-title">Our Services</h4>
                         <ul className="footer-links">
-                            <li><Link to="/services"><FiChevronRight className="link-arrow" /> MCA Live Transfer Leads</Link></li>
-                            <li><Link to="/services"><FiChevronRight className="link-arrow" /> Business Loan Leads</Link></li>
-                            <li><Link to="/services"><FiChevronRight className="link-arrow" /> MCA Call Back Leads</Link></li>
-                            <li><Link to="/services"><FiChevronRight className="link-arrow" /> Aged MCA Leads</Link></li>
-                            <li><Link to="/services"><FiChevronRight className="link-arrow" /> MCA B2B Email Lists</Link></li>
-                            <li><Link to="/services"><FiChevronRight className="link-arrow" /> MCA Digital Marketing Leads</Link></li>
+                            <li><Link to="/mca-live-transfer-leads"><FiChevronRight className="link-arrow" /> MCA Live Transfer Leads</Link></li>
+                            <li><Link to="/mca-callback-leads"><FiChevronRight className="link-arrow" /> MCA Callback Leads</Link></li>
+                            <li><Link to="/aged-mca-leads"><FiChevronRight className="link-arrow" /> Aged MCA Leads</Link></li>
+                            <li><Link to="/b2b-email-lists"><FiChevronRight className="link-arrow" /> MCA B2B Email Lists</Link></li>
+                            <li><Link to="/digital-marketing-leads"><FiChevronRight className="link-arrow" /> MCA Digital Marketing Leads</Link></li>
+                            <li><Link to="/business-loan-leads"><FiChevronRight className="link-arrow" /> Business Loan Leads</Link></li>
                         </ul>
                     </div>
 

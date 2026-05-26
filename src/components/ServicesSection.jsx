@@ -11,7 +11,7 @@ const ServicesSection = () => {
         },
         {
             icon: <FiPhoneIncoming className="w-7 h-7" />,
-            title: "MCA Call Back Leads",
+            title: "MCA Callback Leads",
             description: "Our call-back leads connect lenders with prospective merchants who have sought contact. Your chances of a successful follow-up are increased because these leads are ready to proceed and have already worked with finance offers."
         },
         {
@@ -21,7 +21,7 @@ const ServicesSection = () => {
         },
         {
             icon: <FiMessageSquare className="w-7 h-7" />,
-            title: "Digital Marketing Leads",
+            title: "MCA Digital Marketing Leads",
             description: "Our MCA digital marketing lead generation service connects you with qualified MCA sales leads, including aged, live transfer, and callback types. With the correct data and intent, you can buy leads for MCA that meet your sales objectives while also reaching out to businesses looking for finance."
         }
     ];

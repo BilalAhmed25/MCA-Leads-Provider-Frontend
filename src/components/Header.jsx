@@ -75,9 +75,12 @@ const Header = () => {
                                 </NavLink>
                                 {/* Dropdown Menu */}
                                 <div className="dropdown-menu">
-                                    <Link to="/services" className="dropdown-item">MCA Leads</Link>
-                                    <Link to="/services" className="dropdown-item">Aged Data</Link>
-                                    <Link to="/services" className="dropdown-item">Live Transfers</Link>
+                                    <Link to="/live-transfers" className="dropdown-item">MCA Live Transfer Leads</Link>
+                                    <Link to="/call-backs" className="dropdown-item">MCA Callback Leads</Link>
+                                    <Link to="/aged-leads" className="dropdown-item">Aged MCA Leads</Link>
+                                    <Link to="/b2b-email-lists" className="dropdown-item">B2B Email Lists</Link>
+                                    <Link to="/digital-marketing" className="dropdown-item">MCA Digital Marketing Leads</Link>
+                                    <Link to="/business-loans" className="dropdown-item">Business Loan Leads</Link>
                                 </div>
                             </li>
                             <li className="nav-item">
