@@ -129,39 +129,45 @@ const Contact = ({ className = "" }) => {
                         </div>
 
                     </div>
+                    {/* Bottom Row: 3 Address Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mt-18">
+                        {/* Phone Card */}
+                        <div className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30">
+                            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <FiPhone className="w-5 h-5" />
+                            </div>
+                            <div className="text-left">
+                                <h4 className="text-sm font-bold text-slate-900 mb-0.5">Call Us</h4>
+                                <a href="tel:3477849496" className="text-sm text-slate-600 hover:text-primary transition-colors duration-300 font-medium">347-784-9496</a>
+                            </div>
+                        </div>
+
+                        {/* Email Card */}
+                        <div className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30">
+                            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <FiMail className="w-5 h-5" />
+                            </div>
+                            <div className="text-left">
+                                <h4 className="text-sm font-bold text-slate-900 mb-0.5">Email Us</h4>
+                                <a href="mailto:info@mcaleadsprovider.com" className="text-sm text-slate-600 hover:text-primary transition-colors duration-300 font-medium break-all">info@mcaleadsprovider.com</a>
+                            </div>
+                        </div>
+
+                        {/* Address Card */}
+                        <div className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30">
+                            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <FiMapPin className="w-5 h-5" />
+                            </div>
+                            <div className="text-left">
+                                <h4 className="text-sm font-bold text-slate-900 mb-0.5">Location</h4>
+                                <span className="text-sm text-slate-600 leading-snug font-medium block">
+                                    7901 4th St N STE 22726 St. Petersburg, FL 33702
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Bottom Row: 3 Address Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-8">
-                    {/* Phone Card */}
-                    <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group border border-slate-100">
-                        <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                            <FiPhone className="w-8 h-8" />
-                        </div>
-                        <h4 className="text-lg font-bold text-slate-900 mb-2">Call Us</h4>
-                        <a href="tel:3477849496" className="text-fluid-base text-slate-600 hover:text-primary transition-colors duration-300 font-medium">347-784-9496</a>
-                    </div>
-
-                    {/* Email Card */}
-                    <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group border border-slate-100">
-                        <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                            <FiMail className="w-8 h-8" />
-                        </div>
-                        <h4 className="text-lg font-bold text-slate-900 mb-2">Email Us</h4>
-                        <a href="mailto:info@mcaleadsprovider.com" className="text-fluid-base text-slate-600 hover:text-primary transition-colors duration-300 font-medium">info@mcaleadsprovider.com</a>
-                    </div>
-
-                    {/* Address Card */}
-                    <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group border border-slate-100">
-                        <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                            <FiMapPin className="w-8 h-8" />
-                        </div>
-                        <h4 className="text-lg font-bold text-slate-900 mb-2">Location</h4>
-                        <span className="text-sm text-slate-600 leading-relaxed font-medium">
-                            7901 4th St N STE 22726<br />St. Petersburg, FL 33702
-                        </span>
-                    </div>
-                </div>
             </div>
         </section>
     );
