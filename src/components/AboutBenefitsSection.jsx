@@ -41,9 +41,12 @@ const AboutBenefitsSection = () => {
             <div className="container-custom relative z-10">
                 {/* Header Section */}
                 <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-20">
-                    <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-white mb-6 leading-tight">
+                    <h3 className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary-light border border-primary/30 text-xs font-semibold uppercase tracking-wider mb-3 shadow-lg">
+                        Our Benefits
+                    </h3>
+                    <h3 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-white mb-6 leading-tight">
                         Benefits Of Purchasing <span className="text-primary">MCA Leads</span> From Us
-                    </h2>
+                    </h3>
                     <p className="text-fluid-base text-slate-300 leading-relaxed max-w-3xl mx-auto">
                         Our lead generation process is designed to help lenders achieve better results, reduce wasteful outreach, and attract more qualified borrowers. Here's how our service helps you go forward more quickly:
                     </p>
@@ -59,7 +62,7 @@ const AboutBenefitsSection = () => {
                             <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 {benefit.icon}
                             </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-4">{benefit.title}</h3>
+                            <h4 className="text-xl font-bold text-slate-900 mb-4">{benefit.title}</h4>
                             <p className="text-sm text-slate-600 leading-relaxed">
                                 {benefit.description}
                             </p>

@@ -68,10 +68,10 @@ const DifferentiationSection = ({ className = "py-20 lg:py-28 bg-gradient-to-b f
                     <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase mb-3 shadow-xs border border-primary/5">
                         Our Differentiators
                     </span>
-                    <h2 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
+                    <h3 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
                         Factors That Differ Us <br className="hidden sm:block" />
                         <span className="bg-gradient-to-r from-primary to-violet-600 bg-clip-text text-transparent">From the Rest</span>
-                    </h2>
+                    </h3>
                     <p className="text-fluid-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
                         Our merchant cash advance leads are intended to put you in touch with legitimate merchants that are looking for working capital.
                     </p>
@@ -93,9 +93,9 @@ const DifferentiationSection = ({ className = "py-20 lg:py-28 bg-gradient-to-b f
                             </div>
 
                             {/* Card Content */}
-                            <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300">
+                            <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-300">
                                 {card.title}
-                            </h3>
+                            </h4>
                             <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
                                 {card.description}
                             </p>

@@ -24,9 +24,9 @@ const AboutStorySection = () => {
 
                     {/* Right: Text Content */}
                     <div className="flex flex-col items-start text-left">
-                        <h4 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-primary mb-6 leading-tight">
+                        <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-primary mb-6 leading-tight">
                             Our Story
-                        </h4>
+                        </h2>
 
                         <div className="space-y-6 text-fluid-sm lg:text-fluid-base text-slate-700 leading-relaxed mb-10">
                             <p>
