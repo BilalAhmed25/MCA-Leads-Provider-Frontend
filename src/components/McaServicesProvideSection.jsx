@@ -65,7 +65,7 @@ const McaServicesProvideSection = ({ className = "py-20 lg:py-28 bg-slate-950" }
             <div className="container-custom relative z-10">
                 {/* Section Header */}
                 <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-20">
-                    <span className="inline-block py-1.5 px-4 rounded-full bg-primary/20 text-primary-light border border-primary/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block shadow-lg">
+                    <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary-light border border-primary/30 text-xs font-semibold uppercase tracking-wider mb-3 shadow-lg">
                         Service Offerings
                     </span>
                     <h2 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-white mb-6 leading-tight tracking-tight uppercase">

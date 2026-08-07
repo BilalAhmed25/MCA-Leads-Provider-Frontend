@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './BlogSection.css';
 
-const stripHtmlAndTruncate = (html, maxLength = 120) => {
+const stripHtmlAndTruncate = (html, maxLength = 160) => {
     if (!html) return '';
     const cleanText = html.replace(/<[^>]*>/g, ' ');
     const normalized = cleanText.replace(/\s+/g, ' ').trim();
@@ -40,9 +40,13 @@ const BlogSection = ({ limit }) => {
         <section className="blog-section">
             <div className="container-custom">
                 {limit && (
-                    <div className="blog-header">
-                        <h2>Latest Insights</h2>
-                        <p>Discover tips, strategies, and stories from our expert team.</p>
+                    <div className="blog-header max-w-4xl mx-auto text-center mb-12">
+                        <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase mb-3">
+                            Our Blogs
+                        </span>
+                        <h4 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-slate-900 leading-tight">
+                            Insights & Tips for Growing Your MCA Business
+                        </h4>
                     </div>
                 )}
 
@@ -53,18 +57,11 @@ const BlogSection = ({ limit }) => {
                                 <img src={blog.image} alt={blog.title} className="blog-image" />
                             </div>
                             <div className="blog-content-wrapper">
-                                <div className="blog-category-badge">
-                                    <span className="blog-category-dot"></span>
-                                    {blog.category}
-                                </div>
-                                <h3 className="blog-title">{blog.title}</h3>
+                                <h5 className="blog-title">{blog.title}</h5>
                                 <p className="blog-html-content">
                                     {stripHtmlAndTruncate(blog.content)}
                                 </p>
                                 <div className="blog-footer">
-                                    <div className="blog-meta">
-                                        {blog.date} &bull; {blog.readTime}
-                                    </div>
                                     <Link to={`/${blog.slug}`} className="blog-read-more">
                                         Read more
                                     </Link>
@@ -75,8 +72,11 @@ const BlogSection = ({ limit }) => {
                 </div>
 
                 {limit && (
-                    <div className="blog-view-more-container">
-                        <Link to="/blog" className="btn-primary">
+                    <div className="blog-view-more-container mt-12 flex justify-center text-center">
+                        <Link
+                            to="/blog"
+                            className="inline-flex items-center justify-center px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-base transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                        >
                             View more blogs
                         </Link>
                     </div>

@@ -14,7 +14,7 @@ const PartnerSection = ({
         "Our clients depend on us to provide working capital leads that correspond with their business objectives. From MCA leads with bank statements to exclusive MCA leads, we help you keep in touch with prospects who fit your ideal client profile."
     ],
     buttonText = "ORDER LEADS",
-    buttonLink = "/contact",
+    buttonLink = "/contact-us/",
     image1 = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     image2 = "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     className = "bg-white"
@@ -51,7 +51,7 @@ const PartnerSection = ({
                     {/* Right: Text Content */}
                     <div className="flex flex-col items-start text-left">
                         {preHeading && (
-                            <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-sm tracking-widest uppercase mb-4">
+                            <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase mb-3">
                                 {preHeading}
                             </span>
                         )}

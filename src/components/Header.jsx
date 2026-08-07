@@ -31,12 +31,12 @@ const Header = () => {
                 <div className="top-bar-container">
                     <div className="top-bar-contact">
                         <a href="tel:3477849496" className="top-bar-link">
-                            <FiPhone />
-                            347-784-9496
+                            <FiPhone className="top-bar-icon" />
+                            <span>347-784-9496</span>
                         </a>
                         <a href="mailto:info@mcaleadsprovider.com" className="top-bar-link">
-                            <FiMail />
-                            info@mcaleadsprovider.com
+                            <FiMail className="top-bar-icon" />
+                            <span>info@mcaleadsprovider.com</span>
                         </a>
                     </div>
                     <div className="top-bar-socials">
@@ -90,13 +90,13 @@ const Header = () => {
                                 <NavLink to="/blog" className="nav-link">Blog</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/contact" className="nav-link">Contact</NavLink>
+                                <NavLink to="/contact-us/" className="nav-link">Contact</NavLink>
                             </li>
                         </ul>
                     </nav>
 
                     {/* CTA Button */}
-                    <Link to="/contact" className="cta-button">
+                    <Link to="/contact-us/" className="cta-button">
                         Get your leads now
                     </Link>
 
@@ -119,9 +119,9 @@ const Header = () => {
                             <li className="mobile-nav-item"><NavLink to="/services" className="mobile-nav-link" onClick={toggleMobileMenu}>Services</NavLink></li>
                             <li className="mobile-nav-item"><NavLink to="/pricing" className="mobile-nav-link" onClick={toggleMobileMenu}>Pricing</NavLink></li>
                             <li className="mobile-nav-item"><NavLink to="/blog" className="mobile-nav-link" onClick={toggleMobileMenu}>Blog</NavLink></li>
-                            <li className="mobile-nav-item"><NavLink to="/contact" className="mobile-nav-link" onClick={toggleMobileMenu}>Contact</NavLink></li>
+                            <li className="mobile-nav-item"><NavLink to="/contact-us/" className="mobile-nav-link" onClick={toggleMobileMenu}>Contact</NavLink></li>
                         </ul>
-                        <Link to="/contact" className="mobile-cta-button" onClick={toggleMobileMenu}>
+                        <Link to="/contact-us/" className="mobile-cta-button" onClick={toggleMobileMenu}>
                             Get your leads now
                         </Link>
                     </div>

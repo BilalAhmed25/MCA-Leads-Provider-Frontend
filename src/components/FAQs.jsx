@@ -45,9 +45,9 @@ const FAQs = ({ items }) => {
                             <FiHelpCircle className="badge-icon" />
                             <span>Frequently asked questions</span>
                         </div>
-                        <h2 className="faqs-heading">
+                        <h5 className="faqs-heading">
                             Frequently asked <span className="highlight">questions</span>
-                        </h2>
+                        </h5>
                         <p className="faqs-subtext">
                             We understand that choosing the right merchant cash advance leads provider is a major decision for your business. Here are answers to the most common queries about our lead generation, qualification, and compliance standards.
                         </p>
@@ -64,7 +64,7 @@ const FAQs = ({ items }) => {
                                     onClick={() => toggleFAQ(index)}
                                 >
                                     <div className="faq-question-row">
-                                        <h3 className="faq-question-text">{item.question}</h3>
+                                        <p className="faq-question-text">{item.question}</p>
                                         <div className={`faq-icon-circle ${isOpen ? 'open' : ''}`}>
                                             {isOpen ? <FiChevronUp /> : <FiChevronDown />}
                                         </div>

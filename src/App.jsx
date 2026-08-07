@@ -36,7 +36,7 @@ function App() {
                 <Route path="/b2b-email-lists" element={<B2BEmailLists />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/blog" element={<Blog />} />
-                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/contact-us" element={<ContactPage />} />
                 <Route path="/:slug" element={<BlogDetail />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>

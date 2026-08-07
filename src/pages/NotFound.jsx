@@ -61,7 +61,7 @@ const NotFound = () => {
                                 </div>
                             </Link>
 
-                            <Link to="/contact" className="suggestion-card">
+                            <Link to="/contact-us/" className="suggestion-card">
                                 <div className="suggestion-icon-wrapper">
                                     <FiPhoneCall />
                                 </div>

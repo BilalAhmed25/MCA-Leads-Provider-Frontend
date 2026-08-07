@@ -35,14 +35,14 @@ const WhyChooseUsSection = () => {
 
             <div className="container-custom relative z-10">
                 {/* Header Section */}
-                <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-20">
-                    <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-sm tracking-widest uppercase mb-4">
+                <div className="max-w-5xl mx-auto text-center mb-16 lg:mb-20">
+                    <h3 className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase mb-3">
                         Why Choose Us
-                    </span>
-                    <h2 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                    </h3>
+                    <h3 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-slate-900 mb-6 leading-tight">
                         Trusted <span className="text-primary">Business Loan Leads</span> To Grow Your Business Faster
-                    </h2>
-                    <p className="text-fluid-base text-slate-600 leading-relaxed max-w-4xl mx-auto">
+                    </h3>
+                    <p className="text-fluid-base text-slate-600 leading-relaxed max-w-6xl mx-auto">
                         In the lending business, trust is just as important as speed. Our leads for MCA are therefore based on both. We provide accurate, up-to-date, and conversion-ready merchant cash advance leads. We help you connect with merchants that are actually in need of assistance, whether you are a funding organization or an individual lender. Finding business owners who have expressed interest in funding is the main goal of our MCA lead generation strategies. Our solution allows you to buy MCA leads that are filtered by geography, business type, revenue range, or funding amount for those seeking to enhance their lead generation through MCA-focused targeting. The outcome? Better leads, quicker closes, and a reliable pipeline that keeps expanding.
                     </p>
                 </div>
@@ -59,7 +59,7 @@ const WhyChooseUsSection = () => {
                                     {feature.icon}
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
+                            <h4 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h4>
                             <p className="text-sm text-slate-600 leading-relaxed">
                                 {feature.description}
                             </p>

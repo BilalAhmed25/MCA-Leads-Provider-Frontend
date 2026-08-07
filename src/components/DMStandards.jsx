@@ -31,8 +31,8 @@ const DMStandards = () => {
             <div className="container-custom relative z-10">
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-10 gap-6">
                     <div className="max-w-4xl text-left">
-                        <span className="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary font-semibold text-fluid-xs tracking-widest uppercase mb-3">
-                            Quality Standards
+                        <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase mb-3">
+                            Strict Verification
                         </span>
                         <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-slate-900 leading-tight">
                             Digital Marketing Lead <span className="text-primary">Quality Criteria</span>
@@ -43,7 +43,7 @@ const DMStandards = () => {
                     </div>
                     <div className="shrink-0 flex">
                         <Link
-                            to="/contact"
+                            to="/contact-us/"
                             className="inline-flex items-center justify-center px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-primary/20 hover:shadow-xl group"
                         >
                             GET LEADS NOW

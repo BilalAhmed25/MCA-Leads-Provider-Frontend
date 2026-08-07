@@ -51,7 +51,7 @@ const LiveTransfers = () => {
                     </>
                 ]}
                 buttonText="Order Live Transfers"
-                buttonLink="/contact"
+                buttonLink="/contact-us/"
             />
 
             <LiveTransfersFeatures />

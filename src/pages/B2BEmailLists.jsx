@@ -51,7 +51,7 @@ const B2BEmailLists = () => {
                     </>
                 ]}
                 buttonText="Order B2B Email Lists"
-                buttonLink="/contact"
+                buttonLink="/contact-us/"
             />
 
             <B2BFeatures />

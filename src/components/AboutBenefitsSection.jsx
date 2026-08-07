@@ -2,27 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiDollarSign, FiCheckCircle, FiBarChart2, FiMail } from 'react-icons/fi';
 
-const BenefitsSection = () => {
+const AboutBenefitsSection = () => {
     const benefits = [
         {
             icon: <FiDollarSign className="w-8 h-8" />,
             title: "Growth Opportunities",
-            description: "We provide business loan leads to assist you in reaching businesses that are actively seeking funding. Each lead represents an opportunity to close agreements and expand your portfolio without the typical delays or cold starts."
+            description: "Our leads have the goal to help your finance business develop. By targeting businesses that fulfill your particular lending requirements, we increase your chances of closing agreements swiftly and consistently."
         },
         {
             icon: <FiCheckCircle className="w-8 h-8" />,
-            title: "100% Verified",
-            description: "Our in-house team is available 24/7 to contact retailers, verify interest, and confirm eligibility. The end result is a list of MCA leads for sale that are unique, current, and ready for engagement."
+            title: "Cross Verified",
+            description: "We utilize a comprehensive process to verify each lead we provide. This approach ensures speaking with qualified prospects who have shown a sincere interest in financial choices."
         },
         {
             icon: <FiBarChart2 className="w-8 h-8" />,
             title: "UCC Lists",
-            description: "We supply MCA UCC leads based on actual business filings. These leads provide lenders with information about previous funding activity and assist in establishing secure lending prospects supported by UCC filings on borrower assets."
+            description: "We give detailed UCC (Uniform Commercial Code) lists of businesses that have previously taken out merchant cash advances. Our UCC leads are great for retargeting and remarketing campaigns."
         },
         {
             icon: <FiMail className="w-8 h-8" />,
-            title: "Proven & Tested Mail",
-            description: "We employ proven messaging to engage qualified businesses and generate working capital leads via email contact that converts. These are actual inquiries, not scraped lists."
+            title: "TCPA Compliant & DNC Filtered",
+            description: "For complete peace of mind, all our leads adhere to TCPA and DNC compliance standards. Each lead is diligently pre-qualified, extensively checked, and cross-verified, ensuring you receive only high-quality, actionable contacts."
         }
     ];
 
@@ -42,7 +42,7 @@ const BenefitsSection = () => {
                 {/* Header Section */}
                 <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-20">
                     <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-white mb-6 leading-tight">
-                        Benefits Of Purchasing <span className="text-primary">Business Loan Leads</span> From <span className="text-primary">MCA Leads Provider</span>
+                        Benefits Of Purchasing <span className="text-primary">MCA Leads</span> From Us
                     </h2>
                     <p className="text-fluid-base text-slate-300 leading-relaxed max-w-3xl mx-auto">
                         Our lead generation process is designed to help lenders achieve better results, reduce wasteful outreach, and attract more qualified borrowers. Here's how our service helps you go forward more quickly:
@@ -81,4 +81,4 @@ const BenefitsSection = () => {
     );
 };
 
-export default BenefitsSection;
+export default AboutBenefitsSection;

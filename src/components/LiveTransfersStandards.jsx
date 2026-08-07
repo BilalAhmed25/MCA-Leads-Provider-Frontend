@@ -33,24 +33,24 @@ const LiveTransfersStandards = () => {
                 {/* Full-width Header with CTA button aligned right on desktop */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-10 gap-6">
                     <div className="max-w-4xl text-left">
-                        <span className="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary font-semibold text-fluid-xs tracking-widest uppercase mb-3">
+                        <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase mb-3">
                             Strict Verification
                         </span>
-                        
+
                         <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-slate-900 leading-tight">
                             Live Transfer Lead <span className="text-primary">Qualification Standards</span>
                         </h2>
-                        
+
                         <p className="text-fluid-sm text-slate-600 leading-relaxed mt-3">
                             We maintain rigorous qualification protocols to ensure every transfer connects you with high-intent funding candidates matching your business criteria.
                         </p>
                     </div>
                     <div className="shrink-0 flex">
                         <Link
-                            to="/contact"
+                            to="/contact-us/"
                             className="inline-flex items-center justify-center px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-primary/20 hover:shadow-xl group"
                         >
-                            GET LEADS NOW 
+                            GET LEADS NOW
                             <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                     </div>
@@ -58,7 +58,7 @@ const LiveTransfersStandards = () => {
 
                 {/* Grid layout covering full width: 2/3 for criteria checklist card, 1/3 for pricing card */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-                    
+
                     {/* Left Column (spans 2 columns on lg): Verification Criteria Checklist Grid */}
                     <div className="lg:col-span-2 bg-white p-8 lg:p-10 rounded-[2.5rem] border border-slate-100/80 shadow-xs flex flex-col justify-between text-left">
                         <div>
@@ -70,12 +70,12 @@ const LiveTransfersStandards = () => {
                                     Verification Criteria
                                 </h3>
                             </div>
-                            
+
                             {/* Checklist displayed in 2 or 3 columns to span full width and reduce height */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                                 {leftCriteria.map((item, index) => (
-                                    <div 
-                                        key={index} 
+                                    <div
+                                        key={index}
                                         className="flex items-center gap-3 p-4 bg-slate-50/50 hover:bg-white rounded-2xl border border-slate-100 hover:border-primary/20 hover:shadow-xs transition-all duration-200"
                                     >
                                         <div className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">

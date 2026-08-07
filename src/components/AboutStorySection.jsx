@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const StorySection = () => {
+const AboutStorySection = () => {
     return (
         <section className="py-20 lg:py-28 bg-white overflow-hidden">
             <div className="container-custom">
@@ -30,13 +30,10 @@ const StorySection = () => {
 
                         <div className="space-y-6 text-fluid-sm lg:text-fluid-base text-slate-700 leading-relaxed mb-10">
                             <p>
-                                MCA Leads Provider was formed with one objective in mind: to make it easier for lenders to connect with businesses looking for funding. With 9+ years of experience in the finance and lead generation industries, we witnessed the issues that lenders faced, including wasted time, unconfirmed data, and missed opportunities.
+                                MCA Leads Provider was formed with one clear objective in mind: to provide businesses in the merchant cash advance marketplace with consistent, high-converting leads. We realized the growing need for <a style={{ color: "#601FEA" }} href="/">reliable MCA leads</a> and resolved to fill it with detail, professionalism, and performance. We’ve assisted lenders, funding companies, and brokers in connecting with eligible merchants for immediate financial solutions.
                             </p>
                             <p>
-                                We designed our service to address all of these. By focusing on real-time merchant cash advance leads, verified connections, and correct data, we’ve helped lenders around the United States close more deals and reach out to serious borrowers faster. We’ve created a solution that works for both small businesses asking for working capital and lenders looking for MCA leads using bank statements or UCC data.
-                            </p>
-                            <p>
-                                What began as a small operation has since developed into a reliable source for MCA lead generation. We combine industry knowledge, hands-on research, and responsive service to ensure that every client receives the help and leads they require to move forward every time.
+                                Over the years, our team has established an impeccable track record for supplying MCA leads that are tailored to individual client needs. Whether you’re looking for <a style={{ color: "#601FEA" }} href="/">UCC leads</a>, <a style={{ color: "#601FEA" }} href="/aged-mca-leads/">aged MCA</a>, or <a style={{ color: "#601FEA" }} href="/mca-live-transfer-leads/">MCA live transfers</a>, we design each campaign to your specific business objectives. Our tried-and-true tactics and reliable data gathering keep you one step ahead in the competitive finance arena.
                             </p>
 
                         </div>
@@ -45,7 +42,7 @@ const StorySection = () => {
                             to="/about"
                             className="inline-flex items-center justify-center px-10 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 hover:-translate-y-1"
                         >
-                            Discover More
+                            Contact Us Today
                         </Link>
                     </div>
                 </div>
@@ -54,4 +51,4 @@ const StorySection = () => {
     );
 };
 
-export default StorySection;
+export default AboutStorySection;

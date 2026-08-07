@@ -51,7 +51,7 @@ const CallbacksGeneration = () => {
                         </div>
 
                         <Link
-                            to="/contact"
+                            to="/contact-us/"
                             className="inline-flex items-center justify-center px-10 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-base transition-all duration-300 hover:-translate-y-1 shadow-md self-start"
                         >
                             I WANT LEADS

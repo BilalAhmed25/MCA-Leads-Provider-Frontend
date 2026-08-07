@@ -22,16 +22,8 @@
 
 @media (min-width: 1024px) {
     .footer-grid {
-        grid-template-columns: 2.2fr 1fr 1.3fr 1fr;
+        grid-template-columns: 1.8fr 1fr 1.3fr 0.9fr 1.5fr;
         gap: 2rem;
-    }
-}
-
-@media (min-width: 1480px) {
-    .footer-grid {
-        max-width: 70%;
-        gap: 2.5rem;
-        /* Keep all footer content on the left side on widescreen desktop */
     }
 }
 
@@ -272,12 +264,6 @@
 /* Bottom Bar */
 .footer-bottom {
     margin-top: 4rem;
-}
-
-@media (min-width: 1280px) {
-    .footer-bottom {
-        max-width: 70%;
-    }
 }
 
 .footer-divider {

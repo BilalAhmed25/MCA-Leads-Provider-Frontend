@@ -9,7 +9,7 @@ const PageHero = ({ title, description, image }) => {
                     <h1 className="page-hero-title">{title}</h1>
                     <p className="page-hero-description">{description}</p>
                     <div className="page-hero-buttons">
-                        <Link to="/contact" className="hero-btn-primary">Get Started</Link>
+                        <Link to="/contact-us/" className="hero-btn-primary">Get Started</Link>
                         <Link to="/services" className="hero-btn-secondary">Learn More</Link>
                     </div>
                 </div>

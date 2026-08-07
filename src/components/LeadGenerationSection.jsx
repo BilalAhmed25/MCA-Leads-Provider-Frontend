@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiCheckCircle } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const LeadGenerationSection = () => {
     return (
@@ -24,7 +25,7 @@ const LeadGenerationSection = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Social Media Marketing</h4>
+                                        <h3 className="text-lg font-bold mb-2">Social Media Marketing</h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             We use targeted advertising on Social Media to reach out to small company owners interested in finance possibilities. These ads are intended to capture intent and increase interaction among company decision-makers. What was the result? Merchant cash advance leads are developed by active users who are already looking for financial services.
                                         </p>
@@ -33,7 +34,7 @@ const LeadGenerationSection = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Email Marketing</h4>
+                                        <h3 className="text-lg font-bold mb-2">Email Marketing</h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             Our email marketing targets prospects who have an interest in loans, advances, or working capital. These emails feature compelling messaging and clear calls to action, encouraging them to respond or apply. This method is used to generate MCA leads with bank statements and related business data, increasing the likelihood of direct conversions.
                                         </p>
@@ -42,7 +43,7 @@ const LeadGenerationSection = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Search Engine Optimization (SEO)</h4>
+                                        <h3 className="text-lg font-bold mb-2">Search Engine Optimization (SEO)</h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             We rank for important search terms or keywords on Google. We draw inbound traffic for people who are actively seeking finance options. Our content, landing pages, and forms are optimized to capture leads with high purchasing intent, making SEO a long-term and cost-effective component of our MCA lead generation strategy.
                                         </p>
@@ -56,9 +57,9 @@ const LeadGenerationSection = () => {
                     <div className="lg:col-span-6 flex flex-col gap-8">
                         {/* White Card */}
                         <div className="bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-xl border border-slate-100">
-                            <h3 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
+                            <h2 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
                                 Why Buy Business Loan Leads From Us?
-                            </h3>
+                            </h2>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed mb-8">
                                 When it comes to funding and loan services, selecting the correct lead supplier has a direct impact on your success. At MCA Leads Provider, we provide business loan leads that can help you close deals quickly and confidently to grow your business. Here's what makes us stand out:
                             </p>
@@ -69,7 +70,7 @@ const LeadGenerationSection = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Return on Investment</h4>
+                                        <h3 className="text-base font-bold text-slate-900 mb-2">Return on Investment</h3>
                                         <p className="text-sm text-slate-600 leading-relaxed">
                                             Every lead we send is intended to improve your bottom line. We assist you in lowering buying expenses and increasing close rates by providing designed MCA leads for sale, including real-time MCA leads and exclusive MCA leads.
                                         </p>
@@ -80,7 +81,7 @@ const LeadGenerationSection = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Quality Leads</h4>
+                                        <h3 className="text-base font-bold text-slate-900 mb-2">Quality Leads</h3>
                                         <p className="text-sm text-slate-600 leading-relaxed">
                                             We think that successful results begin with reliable information. That's why all of our business loan leads are validated, pre-qualified, and tailored to your requirements. From MCA leads with bank statements to working capital leads, our data is well-organized and up to date.
                                         </p>
@@ -108,6 +109,16 @@ const LeadGenerationSection = () => {
                         </div>
                     </div>
 
+                </div>
+
+                {/* Centered Action Button */}
+                <div className="mt-12 lg:mt-16 flex justify-center text-center">
+                    <Link
+                        to="/contact-us/"
+                        className="inline-flex items-center justify-center px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-base transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    >
+                        I Want Leads
+                    </Link>
                 </div>
             </div>
         </section>

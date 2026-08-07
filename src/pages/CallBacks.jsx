@@ -35,12 +35,12 @@ const callbackFaqs = [
 const CallBacks = () => {
     return (
         <main>
-            <PageHero 
+            <PageHero
                 title="MCA Call Back Leads To Generate Quality Outcomes"
                 description="Get MCA callback leads to connect with qualified merchants actively seeking funding solutions, and increase your conversion rates. We specialize in providing the best MCA callback leads, ensuring your connection with potential merchants to help you achieve your revenue goals."
                 image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
             />
-            
+
             <PartnerSection
                 preHeading="Our Service Approach"
                 heading="Best MCA Call Back Leads For Your Funding Business"
@@ -51,7 +51,7 @@ const CallBacks = () => {
                     </>
                 ]}
                 buttonText="Order Call Back Leads"
-                buttonLink="/contact"
+                buttonLink="/contact-us/"
             />
 
             <CallbacksFeatures />
@@ -69,9 +69,9 @@ const CallBacks = () => {
             <CallbacksIncluded />
 
             <FAQs items={callbackFaqs} />
-            
+
             <Contact />
-            
+
             <div className='pb-20 mt-[-100px]'>
                 <Testimonials />
             </div>

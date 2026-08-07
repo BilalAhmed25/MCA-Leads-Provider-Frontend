@@ -24,8 +24,11 @@ const HomeHero = () => {
                         <p className="text-fluid-lg text-slate-600 mb-8 leading-relaxed">
                             Finding the appropriate clients can make all the difference in how well your business runs. With high-quality MCA leads, you can connect with businesses that are constantly looking for finance options. These are not random connections; they are targeted candidates who are interested in merchant cash advance offerings, increasing your chances of conversion.
                         </p>
+                        <p className="text-fluid-lg text-slate-600 mb-8 leading-relaxed">
+                            We help you focus on leads that are more likely to convert, whether they are real-time merchant cash advance leads or leads with bank statements. By prioritizing reliable opportunities instead of cold lists, this supports the steady growth of your organization.
+                        </p>
                         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-2">
-                            <Link to="/contact" className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-base transition-all duration-300 hover:-translate-y-1">
+                            <Link to="/contact-us/" className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-base transition-all duration-300 hover:-translate-y-1">
                                 Get your leads now
                             </Link>
                             <a href="tel:3477849496" className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-transparent border border-slate-300 hover:border-primary text-slate-800 hover:text-primary rounded-full font-bold text-fluid-base transition-all duration-300">
@@ -66,7 +69,7 @@ const HomeHero = () => {
                         {/* Decorative glow inside dark card */}
                         <div className="absolute right-0 top-0 w-64 h-64 bg-primary/30 blur-[80px] rounded-full mix-blend-screen"></div>
 
-                        <h3 className="text-fluid-xl lg:text-fluid-2xl font-bold mb-3 z-10">High-Converting Prospects</h3>
+                        <h2 className="text-fluid-xl lg:text-fluid-4xl font-bold mb-3 z-10">Increase Your Conversions! Get Access Today!</h2>
                         <p className="text-fluid-sm lg:text-fluid-base text-white/80 leading-relaxed z-10">
                             We help you focus on leads that are more likely to convert, whether they are real-time merchant cash advance leads or leads with bank statements. By prioritizing reliable opportunities instead of cold lists, this supports the steady growth of your organization.
                         </p>

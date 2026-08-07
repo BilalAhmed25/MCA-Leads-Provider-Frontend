@@ -40,62 +40,32 @@ const Footer = () => {
 
             <div className="container-custom relative z-10">
                 <div className="footer-grid">
-                    {/* Column 1: Brand Info & Contact */}
+                    {/* Column 1: Brand Info */}
                     <div className="footer-col brand-col">
                         <Link to="/" className="footer-logo mb-6">
                             <img src="/logo.png" alt="MCA Leads Provider Logo" style={{ height: '50px', width: 'auto' }} />
                         </Link>
-                        <p className="brand-desc text-slate-400 mb-8 leading-relaxed">
+                        <p className="brand-desc text-slate-400 leading-relaxed">
                             With over 8+ years of expertise in the MCA leads generation, we deliver high-quality leads tailored to meet your exact needs.
                         </p>
-
-                        <div className="contact-info-list">
-                            <div className="contact-item">
-                                <div className="icon-wrapper email-icon">
-                                    <FiMail className="icon" />
-                                </div>
-                                <div className="contact-text">
-                                    <span className="contact-label">Email</span>
-                                    <a href="mailto:info@mcaleadsprovider.com" className="contact-link">info@mcaleadsprovider.com</a>
-                                </div>
-                            </div>
-                            <div className="contact-item">
-                                <div className="icon-wrapper phone-icon">
-                                    <FiPhone className="icon" />
-                                </div>
-                                <div className="contact-text">
-                                    <span className="contact-label">Call us</span>
-                                    <a href="tel:3477849496" className="contact-link">347-784-9496</a>
-                                </div>
-                            </div>
-                            <div className="contact-item">
-                                <div className="icon-wrapper address-icon">
-                                    <FiMapPin className="icon" />
-                                </div>
-                                <div className="contact-text">
-                                    <span className="contact-label">Address</span>
-                                    <span className="contact-val">7901 4th St N STE 22726 St. Petersburg, FL 33702</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     {/* Column 2: Useful Links */}
                     <div className="footer-col links-col">
-                        <h4 className="footer-title">Useful Links</h4>
+                        <p className="footer-title">Useful Links</p>
                         <ul className="footer-links">
                             <li><Link to="/"><FiChevronRight className="link-arrow" /> Home</Link></li>
                             <li><Link to="/about"><FiChevronRight className="link-arrow" /> About Us</Link></li>
                             <li><Link to="/services"><FiChevronRight className="link-arrow" /> Services</Link></li>
                             <li><Link to="/pricing"><FiChevronRight className="link-arrow" /> Pricing</Link></li>
                             <li><Link to="/blog"><FiChevronRight className="link-arrow" /> Blogs</Link></li>
-                            <li><Link to="/contact"><FiChevronRight className="link-arrow" /> Contact Us</Link></li>
+                            <li><Link to="/contact-us/"><FiChevronRight className="link-arrow" /> Contact Us</Link></li>
                         </ul>
                     </div>
 
                     {/* Column 3: Our Services */}
                     <div className="footer-col links-col">
-                        <h4 className="footer-title">Our Services</h4>
+                        <p className="footer-title">Our Services</p>
                         <ul className="footer-links">
                             <li><Link to="/mca-live-transfer-leads"><FiChevronRight className="link-arrow" /> MCA Live Transfer Leads</Link></li>
                             <li><Link to="/mca-callback-leads"><FiChevronRight className="link-arrow" /> MCA Callback Leads</Link></li>
@@ -108,7 +78,7 @@ const Footer = () => {
 
                     {/* Column 4: Follow Us */}
                     <div className="footer-col follow-col">
-                        <h4 className="footer-title">Follow</h4>
+                        <p className="footer-title">Follow</p>
                         <div className="social-links-list">
                             <a href="https://www.facebook.com/mcaleadsprovider" target="_blank" rel="noreferrer" className="social-item-row" aria-label="Facebook">
                                 <div className="social-icon-box fb-box">
@@ -128,6 +98,40 @@ const Footer = () => {
                                 </div>
                                 <span className="social-label">LinkedIn</span>
                             </a>
+                        </div>
+                    </div>
+
+                    {/* Column 5: Contact Us */}
+                    <div className="footer-col contact-col">
+                        <p className="footer-title">Contact Us</p>
+                        <div className="contact-info-list">
+                            <div className="contact-item">
+                                <div className="icon-wrapper email-icon">
+                                    <FiMail className="icon" />
+                                </div>
+                                <div className="contact-text">
+                                    <h6 className="contact-label">Email</h6>
+                                    <a href="mailto:info@mcaleadsprovider.com" className="contact-link">info@mcaleadsprovider.com</a>
+                                </div>
+                            </div>
+                            <div className="contact-item">
+                                <div className="icon-wrapper phone-icon">
+                                    <FiPhone className="icon" />
+                                </div>
+                                <div className="contact-text">
+                                    <h6 className="contact-label">Call us</h6>
+                                    <a href="tel:3477849496" className="contact-link">347-784-9496</a>
+                                </div>
+                            </div>
+                            <div className="contact-item">
+                                <div className="icon-wrapper address-icon">
+                                    <FiMapPin className="icon" />
+                                </div>
+                                <div className="contact-text">
+                                    <h6 className="contact-label">Address</h6>
+                                    <span className="contact-val">7901 4th St N STE 22726 St. Petersburg, FL 33702</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

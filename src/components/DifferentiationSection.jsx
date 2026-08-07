@@ -65,7 +65,7 @@ const DifferentiationSection = ({ className = "py-20 lg:py-28 bg-gradient-to-b f
             <div className="container-custom relative z-10">
                 {/* Header Block */}
                 <div className="max-w-3xl mx-auto text-center mb-16 lg:mb-20">
-                    <span className="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary font-bold text-xs md:text-sm tracking-wider uppercase mb-4 shadow-sm border border-primary/5">
+                    <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase mb-3 shadow-xs border border-primary/5">
                         Our Differentiators
                     </span>
                     <h2 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">

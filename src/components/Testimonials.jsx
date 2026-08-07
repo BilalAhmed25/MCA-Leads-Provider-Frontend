@@ -4,52 +4,69 @@ import './Testimonials.css';
 const testimonialsData = [
     {
         id: 1,
-        name: "Lena Pearce",
+        name: "Sarah M.",
         position: "CEO",
-        text: "The quality of MCA leads provided transformed our conversion rates. We closed three major funding deals in our first week alone!",
+        text: "The live transfer leads from MCA Leads Provider are excellent. Our contact-to-close ratio has noticeably improved. Their support crew is responsive and ready whenever needed.",
         image: "https://i.pravatar.cc/150?img=32",
         bgColor: "#0ea5e9" // blue-ish
     },
     {
         id: 2,
-        name: "Sophia Bach",
+        name: "Brian T.",
         position: "Marketing",
-        text: "Finding reliable merchants looking for cash advances used to be our biggest hurdle. Now, we have a steady stream of highly qualified prospects.",
+        text: "We’ve used some lead providers over the years, but MCA Leads Provider consistently gives high-quality results. The leads have been thoroughly reviewed, and our agents no longer waste time making cold calls.",
         image: "https://i.pravatar.cc/150?img=44",
         bgColor: "#4ade80" // green-ish
     },
     {
+
         id: 3,
-        name: "Arielle Copper",
+        name: " Amanda L.",
         position: "Developer",
-        text: "Their lead generation system is incredibly efficient. We've scaled our lending operations by 40% since partnering with them.",
+        text: "I was impressed by the leads’ accuracy. Every contact provided pertinent business information and was eager to discuss funding. It’s made my workflow significantly more efficient.",
         image: "https://i.pravatar.cc/150?img=5",
         bgColor: "#2dd4bf" // teal-ish
     },
     {
         id: 4,
-        name: "John Doe",
+        name: "David K.",
         position: "Designer",
-        text: "The data accuracy is top-notch. Unlike other providers, these merchants actually pick up the phone and are actively seeking working capital.",
+        text: "The callback leads allowed us to engage potential candidates who had previously expressed interest. It’s a lot easier to follow up and close business when the groundwork is already laid. Very satisfied.",
         image: "https://i.pravatar.cc/150?img=11",
         bgColor: "#f43f5e" // rose
     },
     {
         id: 5,
-        name: "Jane Smith",
+        name: "Kevin S.",
         position: "Product Manager",
-        text: "Exceptional service and unparalleled lead quality. Our ROI has never been better. Highly recommended for any MCA broker.",
-        image: "https://i.pravatar.cc/150?img=16",
+        text: "The exclusive leads have changed everything. We have a unique benefit over competitors because we are the only ones reaching out to such companies.",
+        image: "https://i.pravatar.cc/150?img=60",
         bgColor: "#a855f7" // purple
     },
     {
         id: 6,
-        name: "Mike Johnson",
+        name: "Olivia H.",
         position: "Sales",
-        text: "We stopped wasting time on dead-end calls. The exclusive leads provided here have significantly shortened our sales cycle.",
-        image: "https://i.pravatar.cc/150?img=12",
+        text: "They have attracted a very interested clientele with their email and SEO-based lead creation tactics. We now have a more reliable and effective sales pipeline.",
+        image: "https://i.pravatar.cc/150?img=47",
         bgColor: "#eab308" // yellow
-    }
+    },
+    {
+        id: 7,
+        name: "Mike D.",
+        position: "Sales",
+        text: "To try them out, I purchased a batch of aged leads, and to my surprise, they continued to convert. It’s not common. demonstrates that their data is authentic and well-maintained.",
+        image: "https://i.pravatar.cc/150?img=15",
+        bgColor: "#4ade80" // green
+    },
+    {
+        id: 8,
+        name: "Jessica R.",
+        position: "Sales",
+        text: "What I like the most is their concentration on compliance. The leads are TCPA compliant, so you can contact them with confidence. They prioritize quality over quantity.",
+        image: "https://i.pravatar.cc/150?img=28",
+        bgColor: "#f43f5e" // rose
+    },
 ];
 
 const displayData = [...testimonialsData, ...testimonialsData, ...testimonialsData];
@@ -132,8 +149,15 @@ const Testimonials = () => {
     return (
         <section className="testimonials-section container-custom">
             <div className="testimonials-header">
-                <h2>TESTIMONIALS</h2>
-                <p>Hear from top brokers and funding specialists who have accelerated their business growth with our exclusive, high-converting MCA leads.</p>
+                <h4 className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase mb-3">
+                    Testimonials
+                </h4>
+                <h4 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                    See What Our Clients Think About Us!
+                </h4>
+                <p className="text-fluid-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
+                    MCA Leads Provider strives to give the finest client experience to consumers. We prioritize client satisfaction and welcome comments.
+                </p>
             </div>
 
             <div className="testimonials-slider-container">
