@@ -5,6 +5,7 @@ import PartnerSection from '../components/PartnerSection';
 import DifferentiationSection from '../components/DifferentiationSection';
 import McaServicesProvideSection from '../components/McaServicesProvideSection';
 import Contact from '../components/Contact';
+import Testimonials from '../components/Testimonials';
 
 const Services = () => {
     return (
@@ -31,6 +32,7 @@ const Services = () => {
             />
             <DifferentiationSection className="py-12 md:py-16 bg-gradient-to-b from-slate-50 via-white to-slate-50" />
             <McaServicesProvideSection className="py-12 md:py-16 bg-slate-950" />
+            <Testimonials title="Trusted By MCA Lenders & Brokers Nationwide" />
             <Contact className="!py-12 md:!py-16" />
         </main>
     );

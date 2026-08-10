@@ -12,6 +12,7 @@ import DMIncluded from '../components/DMIncluded';
 import FAQs from '../components/FAQs';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
+import { digitalMarketingTestimonials } from '../data/testimonialsData';
 
 const digitalMarketingFaqs = [
     {
@@ -68,13 +69,11 @@ const DigitalMarketing = () => {
 
             <DMIncluded />
 
+            <Testimonials items={digitalMarketingTestimonials} title="What Clients Say About Digital Marketing Leads" />
+
             <FAQs items={digitalMarketingFaqs} />
 
             <Contact />
-
-            <div className='pb-20 mt-[-100px]'>
-                <Testimonials />
-            </div>
         </main>
     );
 };

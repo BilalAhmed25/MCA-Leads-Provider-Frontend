@@ -57,7 +57,7 @@ const LiveTransfersProcess = () => {
 
                 {/* Grid Split */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-                    
+
                     {/* Left Column: Timeline Steps */}
                     <div className="lg:col-span-7 relative flex flex-col gap-8">
                         {/* Connecting Line (for timeline design) */}
@@ -66,33 +66,23 @@ const LiveTransfersProcess = () => {
                         {steps.map((step, index) => (
                             <React.Fragment key={index}>
                                 <div
-                                    className="relative flex flex-col sm:flex-row items-start gap-6 bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 hover:border-primary/20 hover:shadow-lg transition-all duration-300 z-10"
+                                    className="relative flex flex-col sm:flex-row items-start gap-6 bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 hover:border-primary/30 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 z-10 group"
                                 >
-                                    {/* Step Indicator Wrapper */}
-                                    <div className="flex items-center gap-4 sm:shrink-0">
-                                        {/* Circle Icon */}
-                                        <div className="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center text-xl shadow-md shadow-primary/20">
-                                            {step.icon}
-                                        </div>
-                                        {/* Number (visible on mobile only) */}
-                                        <span className="text-fluid-lg font-black text-slate-300 sm:hidden">
-                                            Step {step.number}
-                                        </span>
+                                    {/* Step Icon Circle */}
+                                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-hover text-white flex items-center justify-center text-xl shadow-md shadow-primary/25 shrink-0 group-hover:scale-105 transition-transform duration-300">
+                                        {step.icon}
                                     </div>
 
                                     {/* Step Content */}
-                                    <div className="text-left grow">
-                                        <div className="hidden sm:flex justify-between items-center mb-2">
-                                            <h3 className="text-fluid-lg font-extrabold text-slate-900">
+                                    <div className="text-left grow w-full">
+                                        <div className="flex items-center justify-between gap-3 mb-2 flex-wrap sm:flex-nowrap">
+                                            <h3 className="text-fluid-lg font-extrabold text-slate-900 group-hover:text-primary transition-colors duration-200">
                                                 {step.title}
                                             </h3>
-                                            <span className="text-fluid-base font-black text-slate-300">
-                                                Step {step.number}
+                                            <span className="text-4xl sm:text-5xl font-black text-slate-200 group-hover:text-primary/25 transition-colors duration-300 select-none tracking-tighter leading-none shrink-0">
+                                                {step.number}
                                             </span>
                                         </div>
-                                        <h3 className="text-fluid-lg font-extrabold text-slate-900 mb-2 sm:hidden">
-                                            {step.title}
-                                        </h3>
                                         <p className="text-fluid-sm text-slate-600 leading-relaxed">
                                             {step.description}
                                         </p>
@@ -115,7 +105,7 @@ const LiveTransfersProcess = () => {
                             {/* Decorative ambient bubble inside card */}
                             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
 
-                            <h3 className="text-fluid-xl lg:text-fluid-2xl font-black text-slate-900 mb-6 leading-tight relative z-10">
+                            <h3 className="text-fluid-xl lg:text-fluid-3xl font-black text-slate-900 mb-6 leading-tight relative z-10">
                                 The Criteria We Use To Ensure <span className="text-primary">MCA Live Transfers</span>
                             </h3>
 

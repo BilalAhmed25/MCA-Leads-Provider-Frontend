@@ -12,23 +12,25 @@ import CallbacksIncluded from '../components/CallbacksIncluded';
 import FAQs from '../components/FAQs';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
+import { callbacksTestimonials } from '../data/testimonialsData';
+import LiveTransfersCTA from '../components/LiveTransfersCTA';
 
 const callbackFaqs = [
     {
-        question: "What are MCA Callback Leads?",
-        answer: "MCA callback leads are pre-qualified leads from business owners who have expressed interest in a merchant cash advance and requested a callback to discuss funding options. These leads expect a call from your sales team."
+        question: "What criteria do you use to qualify MCA Call Back Leads?",
+        answer: "We qualify leads on the basis of criteria such as businesses operating for 6+ months, a minimum monthly revenue of $15,000, an active business bank account, no recent bankruptcies, and a clear intent for business funding."
     },
     {
-        question: "How are callback leads qualified?",
-        answer: "Each lead is qualified based on criteria such as monthly revenue (minimum $15,000), time in business (6+ months), active business bank account, and no recent bankruptcies. We verify their intent and contact details before delivery."
+        question: "How do you generate quality leads?",
+        answer: "We use proper verification processes to make sure we provide quality leads to our clients. Our team performs targeted prospecting and filtering for the best lead generation."
     },
     {
-        question: "Are the callback leads exclusive?",
-        answer: "Yes, we provide 100% exclusive MCA callback leads. Once a lead is assigned to your business, it is not shared with any other lenders or marketing firms."
+        question: "Why should I purchase Call Back MCA Leads from your service?",
+        answer: "Our leads have a high probability of conversion due to pre-screening. You can receive a favorable return on investment with our verified leads."
     },
     {
-        question: "How fast are callback leads delivered?",
-        answer: "Callback leads are generated and delivered in real-time or near-real-time to ensure you contact the merchants while their interest is at its peak, typically within minutes of interest verification."
+        question: "Can you explain your lead delivery process?",
+        answer: "Our 3-step process involves Lead Identification and Qualification, Initial Contact and Interest Verification by experienced representatives, and Warm Transfer with Follow-Up Support to your team."
     }
 ];
 
@@ -41,13 +43,22 @@ const CallBacks = () => {
                 image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
             />
 
+            <LiveTransfersCTA
+                heading="Contact Us Today and Get Exclusive Leads!"
+                buttonText="GET LEADS NOW"
+                showIcon={true}
+                className="mt-4 sm:mt-12 lg:mt-0 mb-6 sm:mb-8 relative z-20"
+            />
+
             <PartnerSection
                 preHeading="Our Service Approach"
                 heading="Best MCA Call Back Leads For Your Funding Business"
                 paragraphs={[
                     "Our complete approach that generates merchant cash advance callback leads focuses on quality over quantity. We make sure that every lead we deliver has a genuine interest in funding solutions. Our team uses modern targeting methods and multi-channel verification processes to identify businesses that need capital. The approach helps us develop a pipeline of pre-qualified callback leads for MCA. We monitor market trends and business needs to offer the most relevant prospects.",
                     <>
-                        MCA Leads Provider combines quantitative analytics with our own outreach strategies to make sure that all callback <Link to="/" className="text-primary hover:underline font-semibold">MCA leads</Link> give a real opportunity for your business to close deals and generate revenue. Our approach has helped numerous lenders increase their returns and make strong relationships with merchants who need working capital.
+
+
+                        <Link to="/" className="text-primary hover:underline font-semibold">MCA Leads Provider</Link> combines quantitative analytics with our own outreach strategies to make sure that all MCA callback leads give a real opportunity for your business to close deals and generate revenue. Our approach has helped numerous lenders increase their returns and make strong relationships with merchants who need working capital.
                     </>
                 ]}
                 buttonText="Order Call Back Leads"
@@ -57,6 +68,11 @@ const CallBacks = () => {
             <CallbacksFeatures />
 
             <CallbacksWhyChoose />
+            <LiveTransfersCTA
+                heading="Give Us a Call and Let’s Discuss Leads Today!"
+                buttonText="GET LEADS NOW"
+                showIcon={true}
+            />
 
             <CallbacksBenefits />
 
@@ -68,13 +84,11 @@ const CallBacks = () => {
 
             <CallbacksIncluded />
 
+            <Testimonials items={callbacksTestimonials} title="What Lenders Say About Our Call Back Leads" />
+
             <FAQs items={callbackFaqs} />
 
             <Contact />
-
-            <div className='pb-20 mt-[-100px]'>
-                <Testimonials />
-            </div>
         </main>
     );
 };

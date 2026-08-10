@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero';
 import PartnerSection from '../components/PartnerSection';
 import LiveTransfersFeatures from '../components/LiveTransfersFeatures';
 import LiveTransfersWhyChoose from '../components/LiveTransfersWhyChoose';
+import LiveTransfersCTA from '../components/LiveTransfersCTA';
 import LiveTransfersBenefits from '../components/LiveTransfersBenefits';
 import LiveTransfersProcess from '../components/LiveTransfersProcess';
 import LiveTransfersStandards from '../components/LiveTransfersStandards';
@@ -12,6 +13,7 @@ import LiveTransfersIncluded from '../components/LiveTransfersIncluded';
 import FAQs from '../components/FAQs';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
+import { liveTransfersTestimonials } from '../data/testimonialsData';
 
 const liveTransferFaqs = [
     {
@@ -41,6 +43,13 @@ const LiveTransfers = () => {
                 image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
             />
 
+            <LiveTransfersCTA
+                heading="Contact Us Today and Get Your Exclusive Live Transfers"
+                buttonText="GET LEADS NOW"
+                showIcon={true}
+                className="mt-4 sm:mt-12 lg:mt-0 mb-6 sm:mb-8 relative z-20"
+            />
+
             <PartnerSection
                 preHeading="Our Service Approach"
                 heading="Trusted MCA Live Transfers For Your Funding Business"
@@ -58,6 +67,8 @@ const LiveTransfers = () => {
 
             <LiveTransfersWhyChoose />
 
+            <LiveTransfersCTA />
+
             <LiveTransfersBenefits />
 
             <LiveTransfersProcess />
@@ -68,11 +79,10 @@ const LiveTransfers = () => {
 
             <LiveTransfersIncluded />
 
+            <Testimonials items={liveTransfersTestimonials} title="What Clients Say About MCA Live Transfers" />
+
             <FAQs items={liveTransferFaqs} />
             <Contact />
-            <div className='pb-20 mt-[-100px]'>
-                <Testimonials />
-            </div>
         </main>
     );
 };

@@ -21,7 +21,7 @@ const LiveTransfersWhyChoose = () => {
     ];
 
     return (
-        <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+        <section className="pt-20 pb-12 lg:pt-28 lg:pb-16 bg-white relative overflow-hidden">
             {/* Ambient decorative background glows */}
             <div className="absolute top-[20%] right-0 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="absolute bottom-[20%] left-0 w-80 h-80 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>

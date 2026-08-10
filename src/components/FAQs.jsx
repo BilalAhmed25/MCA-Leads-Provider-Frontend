@@ -46,7 +46,7 @@ const FAQs = ({ items }) => {
                             <span>Frequently asked questions</span>
                         </div>
                         <h5 className="faqs-heading">
-                            Frequently asked <span className="highlight">questions</span>
+                            Frequently Asked <span className="highlight">Questions</span>
                         </h5>
                         <p className="faqs-subtext">
                             We understand that choosing the right merchant cash advance leads provider is a major decision for your business. Here are answers to the most common queries about our lead generation, qualification, and compliance standards.

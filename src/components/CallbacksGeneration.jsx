@@ -19,10 +19,10 @@ const CallbacksGeneration = () => {
                                 Strategic Generation
                             </span>
                             <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-slate-900 leading-tight mb-6">
-                                MCA Call Back Leads That <span className="text-primary">Expand Your Business!</span>
+                                Our Commitment To Best <span className="text-primary">MCA Call Back Leads</span>
                             </h2>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed">
-                                We offer a complete range of MCA lead generation solutions that maximize your MCA business potential. Each service delivers the best results and drives sustainable growth for your organization.
+                                We put all our efforts into generating quality leads. We use the best strategies that focus on precision and relevance.
                             </p>
                         </div>
 
@@ -32,18 +32,18 @@ const CallbacksGeneration = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Better Relationships With Merchants</h4>
+                                        <h4 className="text-lg font-bold mb-2">Reliable Lead Generation</h4>
                                         <p className="text-sm text-slate-300 leading-relaxed">
-                                            Our pre-qualified leads have trust and genuine interest, so it becomes easy for you to build lasting partnerships with merchants.
+                                            We use ethical lead generation strategies to maintain a consistent and predictable flow of quality prospects.
                                         </p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Higher Revenue</h4>
+                                        <h4 className="text-lg font-bold mb-2">Exclusivity</h4>
                                         <p className="text-sm text-slate-300 leading-relaxed">
-                                            You can get more revenue growth through our high-converting leads that are targeted to match your lending criteria.
+                                            We present exclusive leads so that you do not have to compete with multiple providers for the same opportunity.
                                         </p>
                                     </div>
                                 </li>
@@ -63,10 +63,10 @@ const CallbacksGeneration = () => {
                         {/* White Card */}
                         <div className="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-xl border border-slate-100/80">
                             <h3 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
-                                Why Purchase Callbacks From <span className="text-primary">MCA Leads Provider</span>?
+                                MCA Call Back Leads At <span className="text-primary">Our Company Come With</span>:
                             </h3>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed mb-8">
-                                When you buy MCA callback leads from MCA Leads Provider, you're working with a team that values quality, timeliness, and pre-screened outreach. We understand that your sales staff requires warm contacts who are ready to discuss funding options. Our screening ensures each merchant matches standard cash advance parameters, allowing you to bypass cold outreach. You spend less time searching and more time closing.
+                                You invest in a complete solution when you partner with us. We aim for the best outcomes when we provide you with our leads. Our complete approach presents quality results that drive long-term success and growth for your MCA business.
                             </p>
 
                             <ul className="space-y-6">
@@ -75,9 +75,9 @@ const CallbacksGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Custom Underwriting Filters</h4>
+                                        <h4 className="text-base font-bold text-slate-900 mb-2">Better Relationships With Merchants</h4>
                                         <p className="text-sm text-slate-600 leading-relaxed">
-                                            We apply industry-specific filters to match you with leads that are relevant to your company's underwriting focuses, resulting in improved conversion potential.
+                                            Our pre-qualified leads have trust and genuine interest, so it becomes easy for you to build lasting partnerships with merchants.
                                         </p>
                                     </div>
                                 </li>
@@ -86,9 +86,9 @@ const CallbacksGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Exclusive Lead Assignment</h4>
+                                        <h4 className="text-base font-bold text-slate-900 mb-2">Higher Revenue</h4>
                                         <p className="text-sm text-slate-600 leading-relaxed">
-                                            Our business callback leads are exclusive; once a callback request is routed to your team, it is not shared with any other funders or brokers.
+                                            You can get more revenue growth through our high-converting leads that are targeted to match your lending criteria.
                                         </p>
                                     </div>
                                 </li>
@@ -107,7 +107,7 @@ const CallbacksGeneration = () => {
                                 <div className="text-[10px] font-semibold text-slate-400 mb-2">YEAR OF 2026</div>
                                 <div className="relative w-24 h-24 rounded-full border-[6px] border-slate-100 flex items-center justify-center mb-3">
                                     <div className="absolute inset-0 rounded-full border-[6px] border-t-primary border-r-primary border-b-transparent border-l-transparent transform rotate-45"></div>
-                                    <span className="text-xl font-black text-slate-900">18,450</span>
+                                    <span className="text-xl font-black text-slate-900">21,950</span>
                                 </div>
                                 <div className="text-[10px] text-slate-500 font-medium">You're doing great!</div>
                             </div>

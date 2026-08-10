@@ -12,6 +12,7 @@ import B2BIncluded from '../components/B2BIncluded';
 import FAQs from '../components/FAQs';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
+import { b2bEmailTestimonials } from '../data/testimonialsData';
 
 const b2bEmailFaqs = [
     {
@@ -68,13 +69,11 @@ const B2BEmailLists = () => {
 
             <B2BIncluded />
 
+            <Testimonials items={b2bEmailTestimonials} title="What Clients Say About B2B Email Lists" />
+
             <FAQs items={b2bEmailFaqs} />
 
             <Contact />
-
-            <div className='pb-20 mt-[-100px]'>
-                <Testimonials />
-            </div>
         </main>
     );
 };

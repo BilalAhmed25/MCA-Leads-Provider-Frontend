@@ -1,23 +1,28 @@
 import React from 'react';
-import { FiActivity, FiDatabase, FiShield } from 'react-icons/fi';
+import { FiActivity, FiDatabase, FiMail, FiShield } from 'react-icons/fi';
 
 const CallbacksBenefits = () => {
     const commitments = [
         {
             icon: <FiActivity />,
-            title: "Reliable Lead Generation",
-            description: "We use ethical lead generation strategies to maintain a consistent and predictable flow of quality prospects."
+            title: "Targeted Outreach",
+            description: "Our targeted outreach campaigns connect you with businesses that match your lending criteria and need funding solutions. We use advanced demographic and psychographic data so that your message reaches the right decision-makers at the correct time."
         },
         {
             icon: <FiDatabase />,
-            title: "Lead Filtering Processes",
-            description: "Our filtering mechanisms eliminate unqualified prospects to save your time and resources."
+            title: "Qualified Leads",
+            description: "The real-time lead qualification with our qualified leads service delivers the prospects immediately. Our trained specialists pre-screen every lead through phone conversations so that you get only the most promising opportunities."
         },
         {
             icon: <FiShield />,
-            title: "Exclusivity",
-            description: "We present exclusive leads so that you do not have to compete with multiple providers for the same opportunity."
-        }
+            title: "UCC Lists",
+            description: "Access complete UCC filing databases to identify businesses that have existing liens and their financing patterns. Our regularly updated UCC lists give proper details about merchant financial histories and help you make informed lending decisions."
+        },
+        {
+            icon: <FiMail />,
+            title: "High Performing E-Mail",
+            description: "Increase your response rates with our email campaigns that capture the attention of the recipient. We combine compelling creative content with precise targeting to generate maximum impact and conversions."
+        },
     ];
 
     return (
@@ -28,24 +33,24 @@ const CallbacksBenefits = () => {
 
             <div className="container-custom relative z-10">
                 {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
+                <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24">
                     <span className="inline-block py-1.5 px-4 rounded-full bg-white/10 border border-white/10 text-purple-200 font-semibold text-fluid-xs tracking-widest uppercase mb-4 backdrop-blur-xs">
                         Our Commitment
                     </span>
-                    
-                    <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-white leading-tight">
-                        Our Commitment To Best <span className="bg-linear-to-r from-primary via-purple-400 to-blue-400 bg-clip-text text-transparent">MCA Call Back Leads</span>
+
+                    <h2 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-white leading-tight">
+                        MCA Call Back Leads That <span className="bg-linear-to-r from-primary via-purple-400 to-blue-400 bg-clip-text text-transparent">Expand Your Business!</span>
                     </h2>
-                    
-                    <p className="text-fluid-sm text-slate-300 leading-relaxed mt-6">
-                        We put all our efforts into generating quality leads. We use the best strategies that focus on precision and relevance.
+
+                    <p className="text-fluid-md text-slate-300 leading-relaxed mt-6">
+                        We offer a complete range of <a href="/" className="text-primary hover:underline">MCA lead generation solutions</a> that maximize your MCA business potential. Each service delivers the best results and drives sustainable growth for your organization.
                     </p>
-                    
+
                     <div className="h-1 w-20 bg-linear-to-r from-primary to-blue-500 rounded-full mx-auto mt-6"></div>
                 </div>
 
                 {/* Glassmorphic Grid Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {commitments.map((item, index) => (
                         <div
                             key={index}

@@ -12,6 +12,7 @@ import AgedIncluded from '../components/AgedIncluded';
 import FAQs from '../components/FAQs';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
+import { agedLeadsTestimonials } from '../data/testimonialsData';
 
 const agedLeadsFaqs = [
     {
@@ -68,11 +69,10 @@ const AgedLeads = () => {
 
             <AgedIncluded />
 
+            <Testimonials items={agedLeadsTestimonials} title="What Clients Say About Aged MCA Leads" />
+
             <FAQs items={agedLeadsFaqs} />
             <Contact />
-            <div className='pb-20 mt-[-100px]'>
-                <Testimonials />
-            </div>
         </main>
     );
 };

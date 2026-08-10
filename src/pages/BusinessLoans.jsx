@@ -2,6 +2,8 @@ import React from 'react';
 import PageHero from '../components/PageHero';
 import DriveResultsSection from '../components/DriveResultsSection';
 import Contact from '../components/Contact';
+import Testimonials from '../components/Testimonials';
+import { businessLoansTestimonials } from '../data/testimonialsData';
 
 const BusinessLoans = () => {
     return (
@@ -22,6 +24,8 @@ const BusinessLoans = () => {
                 buttonText="Order Business Loan Leads"
                 buttonLink="/contact-us/"
             />
+
+            <Testimonials items={businessLoansTestimonials} title="What Clients Say About Business Loan Leads" />
 
             <Contact />
         </main>
