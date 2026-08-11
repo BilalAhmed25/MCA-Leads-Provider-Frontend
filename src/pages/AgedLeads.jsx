@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero';
 import PartnerSection from '../components/PartnerSection';
 import AgedFeatures from '../components/AgedFeatures';
 import AgedWhyChoose from '../components/AgedWhyChoose';
+import AgedOverview from '../components/AgedOverview';
 import AgedBenefits from '../components/AgedBenefits';
 import AgedProcess from '../components/AgedProcess';
 import AgedStandards from '../components/AgedStandards';
@@ -13,6 +14,7 @@ import FAQs from '../components/FAQs';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
 import { agedLeadsTestimonials } from '../data/testimonialsData';
+import LiveTransfersCTA from '../components/LiveTransfersCTA';
 
 const agedLeadsFaqs = [
     {
@@ -42,13 +44,21 @@ const AgedLeads = () => {
                 image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
             />
 
+            <LiveTransfersCTA
+                heading="Contact Us Today and Get Exclusive Leads!"
+                buttonText="GET LEADS NOW"
+                showIcon={true}
+                className="mt-4 sm:mt-12 lg:mt-0 mb-6 sm:mb-8 relative z-20"
+            />
+
             <PartnerSection
                 preHeading="Our Service Approach"
                 heading="Trusted Aged Leads to Grow Your Business Faster"
                 paragraphs={[
-                    "Trusted, aged MCA leads provide a realistic alternative for firms trying to grow without overpaying for marketing. These business loan leads are made up of contacts who have previously expressed an interest in merchant cash advance, making them an excellent choice for targeted outreach. While not current, the data is still valuable for businesses with the correct follow-up approach.",
+
                     <>
-                        Many funding providers rely on aging <Link to="/" className="text-primary hover:underline font-semibold">MCA leads</Link> to ensure a consistent flow of prospects, lower acquisition expenses, and long-term business growth. Using these leads efficiently can result in higher conversion rates for a cheaper investment.
+
+                        Trusted, aged MCA leads provide a realistic alternative for firms trying to grow without overpaying for marketing. These <Link to="/" className="text-primary hover:underline font-semibold">business loan leads</Link> are made up of contacts who have previously expressed an interest in merchant cash advance, making them an excellent choice for targeted outreach. While not current, the data is still valuable for businesses with the correct follow-up approach. Many funding providers rely on aging leads MCA to ensure a consistent flow of prospects, lower acquisition expenses, and long-term business growth. Using these leads efficiently can result in higher conversion rates for a cheaper investment.
                     </>
                 ]}
                 buttonText="Order Aged Leads"
@@ -58,18 +68,22 @@ const AgedLeads = () => {
             <AgedFeatures />
 
             <AgedWhyChoose />
+            <LiveTransfersCTA heading="Give Us a Call and
+Let’s Talk Leads Today!" buttonText="GET LEADS NOW" />
+
+            <AgedOverview />
 
             <AgedBenefits />
 
             <AgedProcess />
 
-            <AgedStandards />
+            {/* <AgedStandards /> */}
 
             <AgedGeneration />
 
             <AgedIncluded />
 
-            <Testimonials items={agedLeadsTestimonials} title="What Clients Say About Aged MCA Leads" />
+            <Testimonials items={agedLeadsTestimonials} title="See What Our Clients Say About Us!" />
 
             <FAQs items={agedLeadsFaqs} />
             <Contact />

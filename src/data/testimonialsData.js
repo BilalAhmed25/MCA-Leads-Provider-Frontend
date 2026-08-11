@@ -204,52 +204,68 @@ export const callbacksTestimonials = [
 export const agedLeadsTestimonials = [
     {
         id: 301,
-        name: "Mike D.",
+        name: "James T.",
         position: "Lead Buyer",
-        text: "I bought a batch of aged MCA leads to test them out, and to my surprise, they continued to convert at an impressive rate. Highly authentic and clean data.",
+        text: "I received the exact leads that I’ve been looking for. Thanks to them, we’ve seen more conversions compared with our previous one.",
         image: "https://i.pravatar.cc/150?img=15",
         bgColor: "#4ade80"
     },
     {
         id: 302,
-        name: "Robert P.",
+        name: "Sarah L.",
         position: "Campaign Manager",
-        text: "Aged leads from MCA Leads Provider offer incredible value for money. Perfect for keeping our outbound campaign team busy with verified business contacts.",
+        text: "I’ve dealt with a lot of providers, but the MCA Leads Provider came out the best for me. I was able to concentrate on the industries I know the best, thanks to the filtering options.",
         image: "https://i.pravatar.cc/150?img=59",
         bgColor: "#0ea5e9"
     },
     {
         id: 303,
-        name: "Rachel G.",
+        name: "Marcus R.",
         position: "Outreach Lead",
-        text: "Clean, updated aged MCA lead lists with verified numbers. Our agents turned multiple aged contacts into funded deals in our very first week.",
+        text: "To be honest, I didn’t anticipate that aged data would transfer this smoothly. Excellent value for the money, and help was prompt right away.",
         image: "https://i.pravatar.cc/150?img=45",
         bgColor: "#f43f5e"
     },
     {
         id: 304,
-        name: "Thomas E.",
+        name: "Danielle M.",
         position: "Lending Group VP",
-        text: "Most aged data on the market is dead, but their aged MCA leads are fresh enough to deliver solid monthly returns at a fraction of the cost.",
+        text: "With these leads, our closure rate increased by 25%. Compared to other providers we’ve tried, the accuracy and intent were much superior.",
         image: "https://i.pravatar.cc/150?img=51",
         bgColor: "#601FEA"
     },
     {
         id: 305,
-        name: "Daniel F.",
+        name: "Arman S.",
         position: "Sales Supervisor",
-        text: "Cost-effective solution to keep our dialers loaded with real business owners who previously requested MCA funding and still need capital.",
+        text: "I must admit that as a first-time customer, I was pleasantly surprised by how easy the process was. In a week, I had several clients approved. This is definitely not an ordinary list.",
         image: "https://i.pravatar.cc/150?img=18",
         bgColor: "#a855f7"
     },
     {
         id: 306,
-        name: "Emily H.",
+        name: "Rachel K.",
         position: "Partner",
-        text: "Extremely affordable data that still yields great deals when worked properly by an energetic sales team. We re-order every month!",
+        text: "I had previously been burned by old leads, but this source fixed that. Clear information, direct communication, and tangible outcomes.",
         image: "https://i.pravatar.cc/150?img=20",
         bgColor: "#2dd4bf"
-    }
+    },
+    {
+        id: 307,
+        name: "Omar D.",
+        position: "Partner",
+        text: "We have a strong return on investment by using these leads regularly. These days, they play a crucial role in our outreach plan.",
+        image: "https://i.pravatar.cc/150?img=20",
+        bgColor: "#f43f5e"
+    },
+    {
+        id: 308,
+        name: "Nia P.",
+        position: "Partner",
+        text: "No phony entries or unrelated interactions. As opposed to feeling like filler, each lead appears like a genuine possibility. We have already closed deals more quickly because of their aged leads.",
+        image: "https://i.pravatar.cc/150?img=20",
+        bgColor: "#601FEA"
+    },
 ];
 
 export const digitalMarketingTestimonials = [
@@ -357,50 +373,66 @@ export const b2bEmailTestimonials = [
 export const businessLoansTestimonials = [
     {
         id: 601,
-        name: "Chris B.",
+        name: "David Paul",
         position: "Loan Brokerage Director",
-        text: "Top-tier business loan leads! Every prospect meets our minimum revenue and business tenure requirements for term loan financing.",
+        text: "Compared to other providers, we had fewer unqualified submissions. The screening criteria were consistent with our lending requirements. This saved time for our underwriting and sales teams.",
         image: "https://i.pravatar.cc/150?img=68",
         bgColor: "#601FEA"
     },
     {
         id: 602,
-        name: "Nicole D.",
+        name: "Jason King",
         position: "VP Commercial Lending",
-        text: "High intent business loan applicants transferred directly to our underwriting team. Closing deals has never been smoother.",
+        text: "We like the flexibility in lead volume and delivery type. It allowed us to alter the intake based on team availability. That level of control simplified planning.",
         image: "https://i.pravatar.cc/150?img=47",
         bgColor: "#0ea5e9"
     },
     {
         id: 603,
-        name: "Edward M.",
+        name: "Michael Robert",
         position: "Financial Advisor",
-        text: "We’ve expanded our term loan and lines of credit client base substantially thanks to MCA Leads Provider's pre-screened business loan data.",
+        text: "We’ve been buying business loan leads for months, and the results have been consistent. The contact information is clear, and the financing requests are credible. It’s worked nicely with our current sales procedure.",
         image: "https://i.pravatar.cc/150?img=12",
         bgColor: "#4ade80"
     },
     {
         id: 604,
-        name: "Hannah T.",
+        name: "Sarah Alexander",
         position: "Senior Account Exec",
-        text: "Clean financial profiles with accurate deposit figures and credit score ranges. Saves us hours of initial qualification time.",
+        text: "The live transfer leads allowed us to speak with business owners at the appropriate time. Calls were routed fast, which helped our initial talks. This narrowed the gap between inquiry and follow-up.",
         image: "https://i.pravatar.cc/150?img=25",
         bgColor: "#f43f5e"
     },
     {
         id: 605,
-        name: "Gregory S.",
+        name: "Amanda Louis",
         position: "SBA Funding Specialist",
-        text: "Their business loan leads consistently connect us with serious business owners seeking growth capital and equipment financing.",
+        text: "Exclusive leads helped to minimize the recurrent approach to the same prospects. This gave our staff a clearer pipeline to work with. Conversations seemed more constructive from the start.",
         image: "https://i.pravatar.cc/150?img=60",
         bgColor: "#2dd4bf"
     },
     {
         id: 606,
-        name: "Rachel W.",
+        name: "Robert Morgan",
         position: "Broker Partner",
-        text: "Responsive customer service and reliable lead quality. MCA Leads Provider is our top choice for commercial business loan leads.",
+        text: "The business information presented was well-structured and easy to understand. Our team could follow up without seeking missing information. They are the best business loan leads; this improved the total response time.",
         image: "https://i.pravatar.cc/150?img=32",
         bgColor: "#a855f7"
-    }
+    },
+    {
+        id: 607,
+        name: "Daniel Hale",
+        position: "Broker Partner",
+        text: "Communication and setup were obvious from the start. The delivery terms were clearly defined. They made onboarding simple.",
+        image: "https://i.pravatar.cc/150?img=32",
+        bgColor: "#f43f5e"
+    },
+    {
+        id: 608,
+        name: "Emily Stephen",
+        position: "Broker Partner",
+        text: "Business loan lead generation was consistent for both real-time and scheduled batches. We did not encounter any serious data difficulties or delays. This helped to maintain consistent outreach.",
+        image: "https://i.pravatar.cc/150?img=32",
+        bgColor: "#0ea5e9"
+    },
 ];

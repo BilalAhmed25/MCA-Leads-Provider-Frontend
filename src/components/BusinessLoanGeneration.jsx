@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiCheckCircle } from 'react-icons/fi';
 
-const AgedGeneration = () => {
+const BusinessLoanGeneration = () => {
     return (
         <section className="py-12 lg:py-16 bg-white relative overflow-hidden">
             {/* Soft backdrop glows */}
@@ -19,40 +19,40 @@ const AgedGeneration = () => {
                                 Strategic Advantages
                             </span>
                             <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-slate-900 leading-tight mb-6">
-                                Our Aged MCA Leads Turn Into Sales: <span className="text-primary">Let's Show You How</span>
+                                Why Buy Business Loan Leads From  <span className="text-primary">MCA Leads Provider?</span>
                             </h2>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed">
-                                We obtain MCA aged leads from previous campaign data and high-intent fundraising queries. To improve conversion rates, every lead is validated, examined, and matched to your company's requirements.
+                                We dedicate all resources and generate premium leads. We implement proven strategies that can bring more conversions.
                             </p>
                         </div>
-                        <h3 className="text-fluid-xl lg:text-fluid-3xl font-black text-slate-900 mb-2 leading-tight relative z-10">Strategic Advantages of Aged MCA Leads</h3>
+
                         {/* Dark Card */}
                         <div className="bg-linear-to-br from-slate-900 via-[#13113C] to-slate-950 rounded-[2.5rem] p-8 lg:p-10 shadow-2xl text-white">
                             <ul className="space-y-8">
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Targeted Lead Investment</h4>
+                                        <h4 className="text-lg font-bold mb-2">Data Quality Assurance</h4>
                                         <p className="text-sm text-slate-300 leading-relaxed">
-                                            Allocate your marketing budget intelligently, focusing on MCA aged leads with better engagement potential. Prioritizing leads based on industry, revenue, or historical funding interest reduces waste and increases ROI.
+                                            Our quality control processes remove disqualified leads and outdated contact information that helps you to increase sales flow.
                                         </p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Optimized Workflow</h4>
+                                        <h4 className="text-lg font-bold mb-2">Fresh and Exclusive Contact</h4>
                                         <p className="text-sm text-slate-300 leading-relaxed">
-                                            The sales process turns into a smooth activity if you integrate dated leads into a CRM or dialer system. This method increases the effectiveness and timing of your outreach effort by decreasing manual labor and enabling quicker follow-ups.
+                                            We provide unique databases to help you access fresh contacts without any competition with multiple providers for the same prospects.
                                         </p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Performance Based Scaling</h4>
+                                        <h4 className="text-lg font-bold mb-2">Sustainable Growth</h4>
                                         <p className="text-sm text-slate-300 leading-relaxed">
-                                            With our aged MCA leads, you can effectively monitor conversion rates and analyze what works best for your team. This data-driven approach allows you to confidently scale up your successful campaigns, ensuring continuous improvement and smarter investment in your outreach efforts.
+                                            We use ethical data acquisition practices to generate reliable leads so that you can have a trustworthy list.
                                         </p>
                                     </div>
                                 </li>
@@ -72,10 +72,10 @@ const AgedGeneration = () => {
                         {/* White Card */}
                         <div className="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-xl border border-slate-100/80">
                             <h3 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
-                                Why Buy Aged MCA Leads From the <span className="text-primary">MCA Leads Provider</span>?
+                                Live Transfer and <span className="text-primary">Aged Business Loan Leads</span>To Generate Revenue
                             </h3>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed mb-8">
-                                We specialize in providing aged MCA leads that are both affordable and conversion-ready. MCA Leads Provider enables you to acquire solid leads that fit with your funding goals without the high cost.
+                                We offer exclusive business loan leads specifically for lenders and brokers who require constant access to business owners looking for funding. Our strategy focuses on lead accuracy, regulated distribution, and pre-qualified leads standards to support everyday sales activities.
                             </p>
 
                             <ul className="space-y-6">
@@ -84,9 +84,9 @@ const AgedGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">100% Verified</h4>
+                                        <h4 className="text-base font-bold text-slate-900 mb-2">Industry-Aligned Lead Criteria</h4>
                                         <p className="text-sm text-slate-600 leading-relaxed">
-                                            100% validated aged data for accurate outreach and higher response rates.
+                                            Business loan lead generation is based on common company funding methods such as time in business, revenue range, and funding goal. This ensures that outreach efforts are directed toward the most relevant candidates.
                                         </p>
                                     </div>
                                 </li>
@@ -95,9 +95,9 @@ const AgedGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Personalized</h4>
+                                        <h4 className="text-base font-bold text-slate-900 mb-2">Reliable Data Handling</h4>
                                         <p className="text-sm text-slate-600 leading-relaxed">
-                                            Customizable lead packages based on industry, volume, or location preferences.
+                                            Before delivery, each lead is checked for legitimate contact information and basic business information. This decreases the amount of incorrect data and allows for better follow-up.
                                         </p>
                                     </div>
                                 </li>
@@ -129,4 +129,4 @@ const AgedGeneration = () => {
     );
 };
 
-export default AgedGeneration;
+export default BusinessLoanGeneration;
