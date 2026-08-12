@@ -33,7 +33,7 @@ function App() {
                 <Route path="/aged-mca-leads" element={<AgedLeads />} />
                 <Route path="/business-loan-leads" element={<BusinessLoans />} />
                 <Route path="/digital-marketing-leads" element={<DigitalMarketing />} />
-                <Route path="/b2b-email-leads" element={<B2BEmailLists />} />
+                <Route path="/b2b-email-lists" element={<B2BEmailLists />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/contact-us" element={<ContactPage />} />

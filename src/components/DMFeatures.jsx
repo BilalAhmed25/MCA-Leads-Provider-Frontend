@@ -18,11 +18,7 @@ const DMFeatures = () => {
             title: "Lead Authenticity",
             description: "Each lead is sourced totally from our internal efforts, with no recycling or third-party data, resulting in clean, exclusive prospects."
         },
-        {
-            icon: <FiZap />,
-            title: "Real-Time Delivery",
-            description: "Leads are supplied in real time once they have passed our verification procedure, allowing you to contact interested prospects immediately."
-        }
+
     ];
 
     return (
@@ -41,7 +37,7 @@ const DMFeatures = () => {
                     <div className="h-1.5 w-20 bg-primary rounded-full mx-auto mt-6"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((item, index) => (
                         <div
                             key={index}

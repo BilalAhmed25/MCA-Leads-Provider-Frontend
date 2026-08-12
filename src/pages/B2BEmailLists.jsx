@@ -13,6 +13,7 @@ import FAQs from '../components/FAQs';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
 import { b2bEmailTestimonials } from '../data/testimonialsData';
+import LiveTransfersCTA from '../components/LiveTransfersCTA';
 
 const b2bEmailFaqs = [
     {
@@ -42,13 +43,21 @@ const B2BEmailLists = () => {
                 image="https://images.unsplash.com/photo-1557200134-90327ee9fafa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
             />
 
+            <LiveTransfersCTA
+                heading="Contact Us Today and Get Exclusive Leads!"
+                buttonText="GET LEADS NOW"
+                showIcon={true}
+                className="mt-4 sm:mt-12 lg:mt-0 mb-6 sm:mb-8 relative z-20"
+            />
+
             <PartnerSection
                 preHeading="Our Service Approach"
                 heading="Email Marketing B2B Lead Generation"
                 paragraphs={[
                     "Our complete strategy that generates MCA B2B email leads prioritizes precision targeting and data accuracy. Our team verifies that every email contact we provide represents a genuine business opportunity. We have advanced database and email verification technologies to identify businesses across multiple industries that require capital.",
                     <>
-                        Our approach helps us to make an advantageous database of pre-validated B2B email lists USA for <Link to="/" className="text-primary hover:underline font-semibold">MCA leads</Link> providers. We update our databases and track industry developments on a regular basis to present the most current and actionable business contacts. MCA Leads Provider uses data management systems with strategic email marketing insights so that all B2B email marketing leads represent authentic opportunities for your business.
+                        Our approach helps us to make an advantageous database of pre-validated B2B email lists USA for MCA providers. We update our databases and track industry developments on a regular basis to present the most current and actionable business contacts. <Link to="/" className="text-primary hover:underline font-semibold">MCA Leads</Link> Provider uses data management systems with strategic email marketing insights so that all B2B email marketing leads represent authentic opportunities for your business. You can increase your client base and earn higher returns through targeted email outreach.
+
                     </>
                 ]}
                 buttonText="Order B2B Email Lists"
@@ -58,18 +67,19 @@ const B2BEmailLists = () => {
             <B2BFeatures />
 
             <B2BWhyChoose />
+            <LiveTransfersCTA heading="Give Us a Call and
+Let’s Talk Leads Today!" buttonText="GET LEADS NOW" />
 
             <B2BBenefits />
 
             <B2BProcess />
 
-            <B2BStandards />
 
             <B2BGeneration />
 
             <B2BIncluded />
 
-            <Testimonials items={b2bEmailTestimonials} title="What Clients Say About B2B Email Lists" />
+            <Testimonials items={b2bEmailTestimonials} title="Happy Clients About Our Email Marketing B2B Lead Generation" />
 
             <FAQs items={b2bEmailFaqs} />
 

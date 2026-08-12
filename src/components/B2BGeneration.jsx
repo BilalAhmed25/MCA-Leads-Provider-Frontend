@@ -116,9 +116,9 @@ const B2BGeneration = () => {
                                 <div className="text-[10px] font-semibold text-slate-400 mb-2">YEAR OF 2026</div>
                                 <div className="relative w-24 h-24 rounded-full border-[6px] border-slate-100 flex items-center justify-center mb-3">
                                     <div className="absolute inset-0 rounded-full border-[6px] border-t-primary border-r-primary border-b-transparent border-l-transparent transform rotate-45"></div>
-                                    <span className="text-xl font-black text-slate-900">8+yrs</span>
+                                    <span className="text-xl font-black text-slate-900">21,950</span>
                                 </div>
-                                <div className="text-[10px] text-slate-500 font-medium">Industry Experience</div>
+                                <div className="text-[10px] text-slate-500 font-medium">You're doing good</div>
                             </div>
                         </div>
                     </div>

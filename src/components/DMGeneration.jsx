@@ -14,44 +14,49 @@ const DMGeneration = () => {
                     {/* Left Column */}
                     <div className="lg:col-span-6 flex flex-col gap-8 text-left">
                         <div>
-                            <span className="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary font-semibold text-fluid-xs tracking-widest uppercase mb-4">
-                                Why Choose Us
-                            </span>
+
                             <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-slate-900 leading-tight mb-6">
-                                Why Buy Digital Marketing Leads From <span className="text-primary">MCA Leads Provider?</span>
+                                How Do We Generate the Best
+                                <span className="text-primary"> Digital Marketing Leads For MCA?</span>
                             </h2>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed">
-                                We dedicate all resources to generate premium digital marketing leads. Our in-house campaigns are built to bring more qualified conversations and higher conversions for your funding business.
+                                We use a combination of paid advertisements, SEO, and email marketing to produce the best MCA digital marketing leads. By addressing specific business audiences who are actively looking for finance, paid advertising lets us drive high-intent visitors to our landing sites. By ranking for relevant funding-related searches, we utilize SEO to attract organic traffic and ensure a consistent stream of incoming MCA prospects. Our email marketing campaigns help re-engage and convert them, producing steady, qualified MCA digital marketing leads.
                             </p>
                         </div>
 
                         {/* Dark Card */}
                         <div className="bg-linear-to-br from-slate-900 via-[#13113C] to-slate-950 rounded-[2.5rem] p-8 lg:p-10 shadow-2xl text-white">
+                            <h2 className="text-fluid-3xl lg:text-fluid-4xl font-extrabold text-slate-100 leading-tight mb-6">
+                                Our Approach To High-Converting MCA Leads
+
+                            </h2>
                             <ul className="space-y-8">
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">100% In-House Lead Generation</h4>
+                                        <h4 className="text-lg font-bold mb-2">Recognize the Needs Of the Business
+                                        </h4>
                                         <p className="text-sm text-slate-300 leading-relaxed">
-                                            We produce all of our leads in-house through focused digital campaigns, ensuring accuracy, intent, and exclusivity — with no recycling or third-party data.
+                                            We examine each lead's funding objective to make sure it fits your loan requirements and financial solutions.
                                         </p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Customizable Lead Selection</h4>
+                                        <h4 className="text-lg font-bold mb-2">Make the Correct Connections
+                                        </h4>
                                         <p className="text-sm text-slate-300 leading-relaxed">
-                                            We provide alternatives based on business size, industry, and funding history, allowing you to choose the digital marketing MCA leads you receive.
+                                            By providing leads that fit your ideal client profile, our digital marketing initiatives enable you to concentrate on companies that have the highest conversion rates.
                                         </p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Transparent Reporting</h4>
+                                        <h4 className="text-lg font-bold mb-2">Encourage Smart Financing Choices</h4>
                                         <p className="text-sm text-slate-300 leading-relaxed">
-                                            We provide full visibility into your lead campaigns with detailed reporting so you always know exactly what you are getting and how your investment is performing.
+                                            Our leads provide you with the information you need to present the appropriate MCA product at the appropriate moment, according to precise data and precise purpose.
                                         </p>
                                     </div>
                                 </li>
@@ -70,10 +75,11 @@ const DMGeneration = () => {
                     <div className="lg:col-span-6 flex flex-col gap-8 text-left">
                         <div className="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-xl border border-slate-100/80">
                             <h3 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
-                                Advantages Of <span className="text-primary">MCA Digital Marketing Leads</span>
+                                Why Buy MCA Digital Marketing Leads From <span className="text-primary">MCA Leads Provider?</span>
                             </h3>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed mb-8">
-                                If you are a fund provider looking for the most effective digital marketing leads, MCA Leads Provider is here at your service. We give you leads that can bring real growth to your MCA business through targeted, intent-driven campaigns.
+                                Getting MCA digital marketing leads from us gives you direct access to merchants who are looking for finance. Our leads are produced using targeted internet advertising, as opposed to generic data lists. You save your team time and increase your chances of closing more business by using our tried-and-true methods to generate qualified MCA prospects who are prepared for follow-up visits.
+
                             </p>
                             <ul className="space-y-6">
                                 <li className="flex items-start gap-4">
@@ -81,9 +87,10 @@ const DMGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Experienced Digital Marketing Team</h4>
+                                        <h4 className="text-base font-bold text-slate-900 mb-2">Real Time Qualified Prospects
+                                        </h4>
                                         <p className="text-sm text-slate-600 leading-relaxed">
-                                            Our team specializes in MCA industry digital marketing, providing campaign guidance and ongoing support throughout your lead generation journey.
+                                            Our MCA digital marketing leads are sourced from actual campaigns targeting organizations for funding, giving you access to prospects that are ready to interact.
                                         </p>
                                     </div>
                                 </li>
@@ -92,9 +99,10 @@ const DMGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Proven Multi-Channel Methods</h4>
+                                        <h4 className="text-base font-bold text-slate-900 mb-2">No Guesswork or Cold Outreach
+                                        </h4>
                                         <p className="text-sm text-slate-600 leading-relaxed">
-                                            Our digital acquisition methods combining SEO, PPC, and social media have produced excellent results for lenders across the country.
+                                            Each lead is created through digital channels with proven interest in merchant cash advances, eliminating the need for cold calling and increasing closing rates.
                                         </p>
                                     </div>
                                 </li>
@@ -112,9 +120,9 @@ const DMGeneration = () => {
                                 <div className="text-[10px] font-semibold text-slate-400 mb-2">YEAR OF 2026</div>
                                 <div className="relative w-24 h-24 rounded-full border-[6px] border-slate-100 flex items-center justify-center mb-3">
                                     <div className="absolute inset-0 rounded-full border-[6px] border-t-primary border-r-primary border-b-transparent border-l-transparent transform rotate-45"></div>
-                                    <span className="text-xl font-black text-slate-900">8+yrs</span>
+                                    <span className="text-xl font-black text-slate-900">21,950</span>
                                 </div>
-                                <div className="text-[10px] text-slate-500 font-medium">Industry Experience</div>
+                                <div className="text-[10px] text-slate-500 font-medium">You're doing good</div>
                             </div>
                         </div>
                     </div>

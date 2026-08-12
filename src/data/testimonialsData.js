@@ -271,103 +271,135 @@ export const agedLeadsTestimonials = [
 export const digitalMarketingTestimonials = [
     {
         id: 401,
-        name: "Olivia H.",
+        name: "Jason M.",
         position: "Marketing VP",
-        text: "Their SEO and paid ad digital marketing lead creation tactics bring in high-intent merchants actively seeking funding online.",
+        text: "We have experimented with many lead suppliers, but MCA Leads Provider always produces the highest caliber. We were able to acquire several new customer accounts because of the responsive and active digital marketing leads we obtained.",
         image: "https://i.pravatar.cc/150?img=47",
         bgColor: "#eab308"
     },
     {
         id: 402,
-        name: "Carlos M.",
+        name: "Sarah T.",
         position: "Senior Broker",
-        text: "Inbound digital marketing MCA leads convert much faster because the merchant took action online first. Highly recommended service!",
+        text: "They deliver on their promises of authenticated and high-intent digital marketing leads. After using their lists, my team’s call-back rates increased by 30%. Strongly advised for ROI-focused agencies.",
         image: "https://i.pravatar.cc/150?img=57",
         bgColor: "#601FEA"
     },
     {
         id: 403,
-        name: "Stephanie W.",
+        name: "Syed R.",
         position: "Funding Executive",
-        text: "Consistent flow of exclusive digital leads. The quality of business owners coming through their digital marketing campaigns is impressive.",
+        text: "It was difficult to find the right clientele as a startup. Our breakthrough was aided by the MCA Leads Provider. We closed our first business in three days, and the leads fit our niche.",
         image: "https://i.pravatar.cc/150?img=24",
         bgColor: "#0ea5e9"
     },
     {
         id: 404,
-        name: "Daniel F.",
+        name: "Lily B.",
         position: "Growth Lead",
-        text: "The digital marketing MCA leads have given us a steady, reliable stream of web-form applications every week. Very clean data.",
+        text: "Email marketing relies heavily on clean data, and the leads we received were sorted and prepared for entry into our CRM. Only reliable prospects—no phony contacts or false information.",
         image: "https://i.pravatar.cc/150?img=18",
         bgColor: "#2dd4bf"
     },
     {
         id: 405,
-        name: "Brandon T.",
+        name: "David K.",
         position: "Business Manager",
-        text: "Targeted online leads that match our strict underwriting criteria. High revenue merchants looking for growth capital.",
+        text: "Reliable data, consistent delivery, and excellent assistance. We tried both aged and live leads and produced the highest conversion rates compared to the past month.",
         image: "https://i.pravatar.cc/150?img=52",
         bgColor: "#f43f5e"
     },
     {
         id: 406,
-        name: "Karen S.",
+        name: "Aly A.",
         position: "Marketing Specialist",
-        text: "Clear visibility and high intent. Digital leads are the cornerstone of our acquisition strategy now thanks to MCA Leads Provider.",
+        text: "MCA Leads Provider provided us with specialized leads for local SEO clients. The relevancy was dead on, and our clients were pleased with the quick results. It’s now our go-to resource.",
         image: "https://i.pravatar.cc/150?img=36",
         bgColor: "#a855f7"
-    }
+    },
+    {
+        id: 407,
+        name: "Carlos D.",
+        position: "Business Manager",
+        text: "The targeting was what most impressed me. We specifically requested personalized data, and we got it. We saved money and time because of the accuracy.",
+        image: "https://i.pravatar.cc/150?img=52",
+        bgColor: "#f43f5e"
+    },
+    {
+        id: 408,
+        name: "Megan H.",
+        position: "Marketing Specialist",
+        text: "We’ve noticed a significant decrease in rejection rates after employing MCA’s digital marketing leads. Most of our calls are now converted into actual conversations, making my team’s job much easier.",
+        image: "https://i.pravatar.cc/150?img=36",
+        bgColor: "#0ea5e9"
+    },
 ];
 
 export const b2bEmailTestimonials = [
     {
         id: 501,
-        name: "Ethan W.",
+        name: "Michelle Garcia",
         position: "Email Strategist",
-        text: "The B2B email lists provided excellent deliverability. We saw high open rates and immediate replies from verified decision makers.",
+        text: "A professional team that provides accurate email contacts for MCA campaigns. I will work with the MCA Leads Provider again in the future.",
         image: "https://i.pravatar.cc/150?img=65",
         bgColor: "#0ea5e9"
     },
     {
         id: 502,
-        name: "Laura K.",
+        name: "Rachel Thompson",
         position: "Marketing Lead",
-        text: "Targeted B2B email data helped us reach specific industries needing MCA funding. Crisp, accurate, and clean contact records.",
+        text: "They have a quality email database that has improved our marketing campaigns entirely.",
         image: "https://i.pravatar.cc/150?img=29",
         bgColor: "#4ade80"
     },
     {
         id: 503,
-        name: "Andrew B.",
+        name: "Steven Rodriguez",
         position: "Campaign Director",
-        text: "Our cold email marketing campaigns became 3x more effective after switching to MCA Leads Provider's B2B email lists.",
+        text: "We can see an increase in our email response rates since we started using MCA Leads Provider’s B2B email leads.",
         image: "https://i.pravatar.cc/150?img=14",
         bgColor: "#601FEA"
     },
     {
         id: 504,
-        name: "Samantha C.",
+        name: "Patricia Clark",
         position: "Sales Manager",
-        text: "Accurate decision-maker email addresses with very low bounce rates. A crucial tool for our B2B outreach and email sequences.",
+        text: "Quality service and expertise – they know how to bring the best B2B email leads.",
         image: "https://i.pravatar.cc/150?img=41",
         bgColor: "#f43f5e"
     },
     {
         id: 505,
-        name: "Patrick L.",
+        name: "James Mitchell",
         position: "Outreach Lead",
-        text: "Verified decision maker emails allowed us to build direct relationships with business owners across the US without spam filters.",
+        text: "Most valuable investment for our funding business – the MCA B2B email lists quality is the best.",
         image: "https://i.pravatar.cc/150?img=54",
         bgColor: "#2dd4bf"
     },
     {
         id: 506,
-        name: "Victoria N.",
+        name: "Christopher Lee",
         position: "Head of Business Dev",
-        text: "Solid data accuracy and excellent support. Our cold email conversion rates went up immediately upon implementing their lists.",
+        text: "Their email databases are perfectly segmented – it saves us so much time in campaign preparation.",
         image: "https://i.pravatar.cc/150?img=43",
         bgColor: "#a855f7"
-    }
+    },
+    {
+        id: 507,
+        name: "Angela",
+        position: "Marketing Director",
+        text: "I am really happy with the ROI. Their customer support team guides and supports properly.",
+        image: "https://i.pravatar.cc/150?img=58",
+        bgColor: "#601FEA"
+    },
+    {
+        id: 508,
+        name: "Daniel Brown",
+        position: "Marketing Director",
+        text: "A partnership that has improved our email marketing strategy and increased our conversion rates. Loved working with the MCA Leads Provider.",
+        image: "https://i.pravatar.cc/150?img=58",
+        bgColor: "#f43f5e"
+    },
 ];
 
 export const businessLoansTestimonials = [

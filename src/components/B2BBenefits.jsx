@@ -40,8 +40,8 @@ const B2BBenefits = () => {
                     <h2 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-white leading-tight">
                         Benefits Of Buying <span className="bg-clip-text text-transparent bg-linear-to-r from-primary-light to-blue-400">MCA Email Marketing B2B Leads</span>
                     </h2>
-                    <p className="text-fluid-base text-slate-300 leading-relaxed max-w-3xl mx-auto mt-6">
-                        Our company gives the best lead generation solutions that maximize your MCA business outreach potential. Each service gives quality results and drives growth for your organization.
+                    <p className="text-fluid-base text-slate-300 leading-relaxed max-w-5xl mx-auto mt-6">
+                        Our company gives the best lead generation solutions that maximize your MCA business outreach potential. Each service gives quality results and drives growth for your organization. Our services present great value to fund providers. We support lenders and deliver the highest quality email contact databases.
                     </p>
                 </div>
 

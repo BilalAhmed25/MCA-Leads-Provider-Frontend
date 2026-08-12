@@ -80,7 +80,7 @@ const Header = () => {
                                     <Link to="/aged-mca-leads" className="dropdown-item">Aged MCA Leads</Link>
                                     <Link to="/business-loan-leads" className="dropdown-item">Business Loan Leads</Link>
                                     <Link to="/digital-marketing-leads" className="dropdown-item">MCA Digital Marketing Leads</Link>
-                                    <Link to="/b2b-email-leads" className="dropdown-item">B2B Email Leads</Link>
+                                    <Link to="/b2b-email-lists" className="dropdown-item">B2B Email Leads</Link>
 
                                 </div>
                             </li>
