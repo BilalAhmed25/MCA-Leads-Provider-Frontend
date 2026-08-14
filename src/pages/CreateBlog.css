@@ -1,0 +1,79 @@
+.create-blog-page {
+    background-color: #f8fafc;
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+/* Metadata Form Inputs */
+.styled-form-input {
+    width: 100%;
+    padding: 14px 20px;
+    padding-left: 48px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #0f172a;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.styled-form-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(96, 31, 234, 0.1);
+}
+
+.input-with-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-left-icon,
+.input-left-text {
+    position: absolute;
+    left: 20px;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+/* Upload Cloud Button */
+.upload-cloud-btn {
+    background-color: var(--primary);
+}
+
+.upload-cloud-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Dark Editor Textarea */
+.dark-editor-textarea {
+    min-height: 380px;
+    line-height: 1.6;
+}
+
+/* Preview Content Styling */
+.preview-html-content h1,
+.preview-html-content h2,
+.preview-html-content h3 {
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.preview-html-content p {
+    color: #334155;
+    line-height: 1.6;
+}
+
+.preview-html-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+/* Publish Big Button */
+.publish-blog-dark-btn {
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+}

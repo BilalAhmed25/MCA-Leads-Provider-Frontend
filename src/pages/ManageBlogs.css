@@ -1,0 +1,222 @@
+.manage-blogs-page {
+    background-color: #f8fafc;
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+/* Search Bar & Create Button Bar */
+.search-input-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 14px 20px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input-box:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(96, 31, 234, 0.1);
+}
+
+.search-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.create-blog-btn {
+    background-color: var(--primary); /* Uses MCA Leads Provider header primary theme color */
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(96, 31, 234, 0.35);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.create-blog-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(96, 31, 234, 0.45);
+}
+
+/* Table Card Styles */
+.table-card-wrapper {
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.table-overflow-container {
+    overflow-x: auto;
+}
+
+.blogs-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.blogs-table thead tr {
+    background: var(--primary); /* Uses MCA Leads Provider header primary theme color */
+    color: #ffffff;
+}
+
+.blogs-table th {
+    padding: 20px 24px;
+    font-size: 0.825rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.blogs-table th:last-child {
+    border-right: none;
+}
+
+.th-blog-post {
+    width: 48%;
+}
+
+.th-status {
+    width: 17%;
+}
+
+.th-created {
+    width: 17%;
+}
+
+.th-actions {
+    width: 18%;
+}
+
+.blog-row {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.15s ease;
+}
+
+.blog-row:hover {
+    background-color: #f8fafc;
+}
+
+.blogs-table td {
+    padding: 20px 24px;
+    vertical-align: middle;
+    border-right: 1px solid #e2e8f0;
+}
+
+.blogs-table td:last-child {
+    border-right: none;
+}
+
+/* Blog Info Flex Layout */
+.blog-info-flex {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.blog-thumbnail-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+    background-color: #f1f5f9;
+    flex-shrink: 0;
+}
+
+.blog-title-text {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #0f172a;
+    line-height: 1.3;
+    margin-bottom: 2px;
+}
+
+.blog-slug-text {
+    font-size: 0.775rem;
+    color: #94a3b8;
+    font-weight: 500;
+    font-family: monospace;
+    word-break: break-all;
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+
+.badge-published {
+    background-color: #f0fdf4;
+    color: #16a34a;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #22c55e;
+}
+
+/* Created Date Text */
+.created-date-text {
+    font-size: 0.875rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+/* Action Buttons Group */
+.action-buttons-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #94a3b8;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    transform: scale(1.15);
+}
+
+.view-btn:hover {
+    color: #2563eb;
+}
+
+.edit-btn:hover {
+    color: #059669;
+}
+
+.delete-btn:hover {
+    color: #dc2626;
+}

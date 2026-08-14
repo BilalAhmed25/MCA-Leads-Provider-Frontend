@@ -21,20 +21,27 @@
     scroll-margin-top: 100px;
 }
 
-.blog-detail-content p {
-    margin-bottom: 1.5rem;
-}
-
 .blog-detail-content a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
+    color: #601FEA !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    transition: color 0.2s ease !important;
 }
 
-.blog-detail-content a:hover {
-    color: var(--primary-hover);
-    text-decoration: underline;
+.blog-detail-content a:hover,
+.blog-detail-content a:focus {
+    color: #4a15ba !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
 }
 
 .blog-detail-content ul {
@@ -50,6 +57,258 @@
 .blog-detail-content strong {
     font-weight: 700;
     color: #0f172a;
+}
+
+/* Explicit Blog CTA Card & Button Styles */
+.blog-detail-content .blog-cta-card {
+    background-color: rgba(96, 31, 234, 0.06) !important;
+    border: 1px solid rgba(96, 31, 234, 0.15) !important;
+    border-radius: 24px !important;
+    padding: 32px !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.blog-detail-content .blog-cta-card h3 {
+    color: #1E1B4B !important;
+    font-size: 1.65rem !important;
+    font-weight: 800 !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+    line-height: 1.3 !important;
+}
+
+.blog-detail-content .blog-cta-card p {
+    color: #475569 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 20px !important;
+    max-width: 100% !important;
+}
+
+/* Primary CTA Button Override inside .blog-cta-card */
+.blog-detail-content .blog-cta-card a.bg-\[\#601FEA\],
+.blog-detail-content .blog-cta-card a.bg-blue-900,
+.blog-detail-content .blog-cta-card .flex a:first-child {
+    background-color: #601FEA !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 12px 28px !important;
+    border-radius: 9999px !important;
+    font-weight: 800 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 14px rgba(96, 31, 234, 0.3) !important;
+    transition: all 0.2s ease !important;
+}
+
+.blog-detail-content .blog-cta-card a.bg-\[\#601FEA\]:hover,
+.blog-detail-content .blog-cta-card .flex a:first-child:hover {
+    background-color: #4a15ba !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Secondary CTA Button Override inside .blog-cta-card */
+.blog-detail-content .blog-cta-card a.bg-white,
+.blog-detail-content .blog-cta-card .flex a:nth-child(2) {
+    background-color: #ffffff !important;
+    color: #601FEA !important;
+    border: 2px solid #601FEA !important;
+    text-decoration: none !important;
+    padding: 10px 26px !important;
+    border-radius: 9999px !important;
+    font-weight: 800 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+}
+
+.blog-detail-content .blog-cta-card a.bg-white:hover,
+.blog-detail-content .blog-cta-card .flex a:nth-child(2):hover {
+    background-color: #f3e8ff !important;
+    color: #4a15ba !important;
+}
+
+/* Dark CTA Section Banner & Buttons (e.g. Access Premium MCA Leads) */
+.blog-detail-content section {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 20px !important;
+    padding: 36px 28px !important;
+    margin: 2.5rem 0 !important;
+    text-align: center !important;
+}
+
+.blog-detail-content section h2 {
+    color: #ffffff !important;
+    font-size: 1.65rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 10px !important;
+}
+
+.blog-detail-content section p {
+    color: #cbd5e1 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 24px !important;
+}
+
+/* Primary Button in Dark Section (Get Leads Now) */
+.blog-detail-content section a:first-of-type,
+.blog-detail-content section a[href*="contact"] {
+    background-color: #601FEA !important;
+    color: #ffffff !important;
+    padding: 12px 28px !important;
+    border-radius: 9999px !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 6px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(96, 31, 234, 0.4) !important;
+    transition: all 0.2s ease !important;
+}
+
+.blog-detail-content section a:first-of-type:hover,
+.blog-detail-content section a[href*="contact"]:hover {
+    background-color: #4a15ba !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Secondary Button in Dark Section (Call Now) */
+.blog-detail-content section a:nth-of-type(2),
+.blog-detail-content section a[href*="tel:"] {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #601FEA !important;
+    padding: 10px 26px !important;
+    border-radius: 9999px !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 6px !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.blog-detail-content section a:nth-of-type(2):hover,
+.blog-detail-content section a[href*="tel:"]:hover {
+    background-color: #601FEA !important;
+    color: #ffffff !important;
+}
+
+/* Inline FAQ Item Styling inside HTML content */
+.blog-detail-content .faq-item {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+}
+
+.blog-detail-content .faq-item h4 {
+    font-weight: 800;
+    color: #0f172a;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+/* Explicit FAQ Section Overrides to match reference image */
+.blog-faqs-wrapper {
+    margin-top: 3rem !important;
+    padding-top: 2.5rem !important;
+    border-top: 1px solid #f1f5f9 !important;
+}
+
+.blog-faqs-wrapper .faq-item {
+    background-color: #f9fafb !important;
+    border: 1px solid #f3f4f6 !important;
+    border-radius: 24px !important;
+    padding: 1.5rem 2rem !important;
+    margin-bottom: 1.25rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.blog-faqs-wrapper .faq-item.active {
+    background-color: #ffffff !important;
+    border-color: rgba(96, 31, 234, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(96, 31, 234, 0.06) !important;
+}
+
+.blog-faqs-wrapper .faq-question-text {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+}
+
+.blog-faqs-wrapper .faq-icon-circle {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    border-radius: 50% !important;
+    background-color: #f3e8ff !important;
+    color: #601FEA !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.25s ease !important;
+}
+
+.blog-faqs-wrapper .faq-icon-circle.open {
+    background-color: #601FEA !important;
+    color: #ffffff !important;
+}
+
+.blog-faqs-wrapper .faq-answer-inner {
+    border-top: 1px dotted #e2e8f0 !important;
+    padding-top: 1.25rem !important;
+    margin-top: 1.25rem !important;
+}
+
+.blog-faqs-wrapper .faq-answer-inner p,
+.blog-faqs-wrapper .faq-answer-inner div {
+    color: #64748b !important;
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+}
+
+
+/* Table of Contents Clean Text-Only Hover */
+.toc-clean-link {
+    color: #475569 !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    display: block !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    border: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+.toc-clean-link:hover,
+.toc-clean-link:focus,
+.toc-clean-link:active {
+    color: #601FEA !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    border: none !important;
+    outline: none !important;
+    text-decoration: none !important;
 }
 
 @media (max-width: 768px) {

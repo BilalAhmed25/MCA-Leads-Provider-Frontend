@@ -371,12 +371,50 @@
     background-color: var(--primary-hover);
 }
 
-/* Active Navigation State */
-.nav-link.active {
-    color: var(--primary);
+/* User Profile Avatar & Dropdown Styles */
+.profile-avatar-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+    font-size: 1.1rem;
+    border: 3px solid rgba(96, 31, 234, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.mobile-nav-link.active {
-    background-color: rgba(96, 31, 234, 0.08);
-    color: var(--primary);
+.profile-avatar-btn:hover .profile-avatar-circle {
+    transform: scale(1.05);
+    box-shadow: 0 4px 14px rgba(96, 31, 234, 0.4);
 }
+
+.profile-chevron-icon {
+    font-size: 1rem;
+    color: #475569;
+}
+
+.profile-popover-menu {
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(15, 23, 42, 0.05);
+}
+
+.menu-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    color: #475569;
+    border-radius: 12px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.profile-menu-item:hover .menu-icon-box {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+
+.signout-btn {
+    border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.signout-btn:hover {
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+}

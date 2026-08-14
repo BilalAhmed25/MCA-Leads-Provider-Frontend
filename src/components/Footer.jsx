@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import { FiPhone, FiMail, FiMapPin, FiChevronRight } from 'react-icons/fi';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { useAuth } from '../context/AuthContext';
 import './Footer.css';
 
 const Footer = () => {
+    const { user, logout } = useAuth();
+
     return (
         <footer className="footer-section">
             {/* Ambient Background Glows */}
@@ -55,11 +58,23 @@ const Footer = () => {
                         <p className="footer-title">Useful Links</p>
                         <ul className="footer-links">
                             <li><Link to="/"><FiChevronRight className="link-arrow" /> Home</Link></li>
-                            <li><Link to="/about"><FiChevronRight className="link-arrow" /> About Us</Link></li>
-                            <li><Link to="/services"><FiChevronRight className="link-arrow" /> Services</Link></li>
-                            <li><Link to="/pricing"><FiChevronRight className="link-arrow" /> Pricing</Link></li>
-                            <li><Link to="/blog"><FiChevronRight className="link-arrow" /> Blogs</Link></li>
+                            <li><Link to="/about/"><FiChevronRight className="link-arrow" /> About Us</Link></li>
+                            <li><Link to="/services/"><FiChevronRight className="link-arrow" /> Services</Link></li>
+                            <li><Link to="/pricing/"><FiChevronRight className="link-arrow" /> Pricing</Link></li>
+                            <li><Link to="/blog/"><FiChevronRight className="link-arrow" /> Blogs</Link></li>
                             <li><Link to="/contact-us/"><FiChevronRight className="link-arrow" /> Contact Us</Link></li>
+                            {user ? (
+                                <li>
+                                    <button onClick={logout} className="text-red-400 hover:text-red-300 font-semibold cursor-pointer text-left flex items-center gap-1">
+                                        <FiChevronRight className="link-arrow" /> Logout ({user.name})
+                                    </button>
+                                </li>
+                            ) : (
+                                <>
+                                    <li><Link to="/login/"><FiChevronRight className="link-arrow" /> Login</Link></li>
+                                    <li><Link to="/register/"><FiChevronRight className="link-arrow" /> Register</Link></li>
+                                </>
+                            )}
                         </ul>
                     </div>
 
@@ -67,12 +82,12 @@ const Footer = () => {
                     <div className="footer-col links-col">
                         <p className="footer-title">Our Services</p>
                         <ul className="footer-links">
-                            <li><Link to="/mca-live-transfer-leads"><FiChevronRight className="link-arrow" /> MCA Live Transfer Leads</Link></li>
-                            <li><Link to="/mca-callback-leads"><FiChevronRight className="link-arrow" /> MCA Callback Leads</Link></li>
-                            <li><Link to="/aged-mca-leads"><FiChevronRight className="link-arrow" /> Aged MCA Leads</Link></li>
-                            <li><Link to="/b2b-email-lists"><FiChevronRight className="link-arrow" /> MCA B2B Email Lists</Link></li>
-                            <li><Link to="/digital-marketing-leads"><FiChevronRight className="link-arrow" /> MCA Digital Marketing Leads</Link></li>
-                            <li><Link to="/business-loan-leads"><FiChevronRight className="link-arrow" /> Business Loan Leads</Link></li>
+                            <li><Link to="/mca-live-transfer-leads/"><FiChevronRight className="link-arrow" /> MCA Live Transfer Leads</Link></li>
+                            <li><Link to="/mca-callback-leads/"><FiChevronRight className="link-arrow" /> MCA Callback Leads</Link></li>
+                            <li><Link to="/aged-mca-leads/"><FiChevronRight className="link-arrow" /> Aged MCA Leads</Link></li>
+                            <li><Link to="/b2b-email-lists/"><FiChevronRight className="link-arrow" /> MCA B2B Email Lists</Link></li>
+                            <li><Link to="/digital-marketing-leads/"><FiChevronRight className="link-arrow" /> MCA Digital Marketing Leads</Link></li>
+                            <li><Link to="/business-loan-leads/"><FiChevronRight className="link-arrow" /> Business Loan Leads</Link></li>
                         </ul>
                     </div>
 

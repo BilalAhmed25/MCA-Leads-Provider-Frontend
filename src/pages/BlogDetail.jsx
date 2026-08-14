@@ -1,42 +1,66 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import BlogSection from '../components/BlogSection';
 import NotFound from './NotFound';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { API_BASE_URL } from '../config';
 import '../components/FAQs.css';
 import './BlogDetail.css';
 
 const parseFaqs = (htmlContent) => {
-    const faqHeaderRegex = /<h2[^>]*>(?:<strong>)?\s*FAQs\s*(?:<\/strong>)?<\/h2>/i;
+    const faqHeaderRegex = /<h2[^>]*>(?:<strong>)?\s*(?:Frequently Asked Questions|FAQs)\s*(?:<\/strong>)?<\/h2>/i;
     const match = htmlContent.match(faqHeaderRegex);
 
-    if (!match) {
-        return { content: htmlContent, faqs: [] };
+    let mainContent = htmlContent;
+    let faqSection = '';
+
+    if (match) {
+        const index = match.index;
+        mainContent = htmlContent.substring(0, index).trim();
+        faqSection = htmlContent.substring(index + match[0].length).trim();
+    } else {
+        // Check if there are inline div.faq-item blocks in the HTML
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = htmlContent;
+        const faqItems = tempDiv.querySelectorAll('.faq-item');
+        if (faqItems.length > 0) {
+            const faqs = [];
+            faqItems.forEach(item => {
+                const qEl = item.querySelector('h4, h3, strong, p');
+                const aEl = item.querySelector('p:last-child, div');
+                let qText = qEl ? qEl.innerHTML.replace(/^(?:Q|q)?\d*[\.\s\-\:]+\s*/g, '').trim() : '';
+                let aText = aEl ? aEl.innerHTML.replace(/^(?:Ans|A|a)?[\.\s\-\:]+\s*/g, '').trim() : '';
+                if (qText) faqs.push({ question: qText, answer: aText });
+            });
+            // Remove div.faq-item elements from mainContent
+            faqItems.forEach(el => el.remove());
+            return { content: tempDiv.innerHTML, faqs };
+        }
     }
 
-    const index = match.index;
-    const mainContent = htmlContent.substring(0, index).trim();
-    const faqSection = htmlContent.substring(index + match[0].length).trim();
+    if (!faqSection) {
+        return { content: htmlContent, faqs: [] };
+    }
 
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = faqSection;
 
-    const pElements = Array.from(tempDiv.querySelectorAll('p'));
+    const pElements = Array.from(tempDiv.querySelectorAll('p, div.faq-item'));
     const faqs = [];
     let currentFaq = null;
 
     pElements.forEach(p => {
-        const strong = p.querySelector('strong');
+        const strong = p.querySelector('strong, h4, h3');
         if (strong) {
             if (currentFaq && currentFaq.question && currentFaq.answer) {
                 faqs.push(currentFaq);
             }
-            let qText = strong.innerHTML.replace(/^(?:Q|q)?\d+[\.\s\-\:]+\s*/g, '').trim();
+            let qText = strong.innerHTML.replace(/^(?:Q|q)?\d*[\.\s\-\:]+\s*/g, '').trim();
             currentFaq = { question: qText, answer: '' };
         } else if (currentFaq) {
             let aHtml = p.innerHTML;
-            aHtml = aHtml.replace(/^(?:Ans|ans)[\.\s\-\:]+\s*/g, '').trim();
+            aHtml = aHtml.replace(/^(?:Ans|A|a)[\.\s\-\:]+\s*/g, '').trim();
             if (currentFaq.answer) {
                 currentFaq.answer += `<p>${aHtml}</p>`;
             } else {
@@ -53,9 +77,13 @@ const parseFaqs = (htmlContent) => {
 };
 
 const BlogDetail = () => {
-    const { slug } = useParams();
+    const { slug: rawSlug } = useParams();
+    const slug = (rawSlug || '').replace(/^\/+|\/+$/g, '');
+    const location = useLocation();
+    const prefetched = location.state?.prefetchedBlog;
+
     const [blog, setBlog] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(!prefetched);
     const [toc, setToc] = useState([]);
     const [contentWithIds, setContentWithIds] = useState("");
     const [faqs, setFaqs] = useState([]);
@@ -65,51 +93,170 @@ const BlogDetail = () => {
         setActiveFaqIndex(activeFaqIndex === index ? null : index);
     };
 
+    const processBlogData = (currentBlog) => {
+        if (!currentBlog) return;
+
+        // Ensure date formatting
+        let formattedDate = currentBlog.date;
+        if (!formattedDate && currentBlog.published_date) {
+            const d = new Date(currentBlog.published_date);
+            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            formattedDate = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+        }
+
+        const cleanTitle = (currentBlog.title || '').replace(/&amp;/g, '&');
+        const cleanExcerpt = (currentBlog.excerpt || '').replace(/&amp;/g, '&');
+
+        const blogObj = {
+            ...currentBlog,
+            title: cleanTitle,
+            excerpt: cleanExcerpt,
+            date: formattedDate || "Recent",
+            category: currentBlog.category || "MCA Leads",
+            readTime: currentBlog.readTime || "5 min read",
+            image: currentBlog.image || currentBlog.featured_image || "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop"
+        };
+
+        // 1. Rewrite absolute URLs to relative URLs and clean &amp; entities
+        let content = (blogObj.content || '').replace(/&amp;/g, '&').replace(/href=["']https?:\/\/mcaleadsprovider\.com\/?([^"']*)["']/gi, 'href="/$1"');
+
+        // 2. Parse FAQs out of the content
+        const parsed = parseFaqs(content);
+
+        // 3. Inject IDs into headings and extract TOC on main content
+        let currentId = 0;
+        const extractedToc = [];
+        const contentWithHeadingIds = parsed.content.replace(/<h([2-3])[^>]*>(.*?)<\/h\1>/gi, (match, level, text) => {
+            const plainText = text.replace(/<[^>]+>/g, '').trim();
+            const id = `heading-${currentId++}`;
+            extractedToc.push({ id, text: plainText, level: parseInt(level) });
+            return `<h${level} id="${id}">${text}</h${level}>`;
+        });
+
+        setToc(extractedToc);
+        setContentWithIds(contentWithHeadingIds);
+        setFaqs(parsed.faqs);
+        setActiveFaqIndex(null);
+        setBlog(blogObj);
+
+        // Update Document Title
+        document.title = `${blogObj.title} | MCA Leads Provider`;
+
+        // Update Meta Description
+        let metaDescriptionTag = document.querySelector('meta[name="description"]');
+        if (!metaDescriptionTag) {
+            metaDescriptionTag = document.createElement('meta');
+            metaDescriptionTag.setAttribute('name', 'description');
+            document.head.appendChild(metaDescriptionTag);
+        }
+        metaDescriptionTag.setAttribute('content', blogObj.excerpt || `Read ${blogObj.title} on MCA Leads Provider.`);
+
+        // Update OpenGraph Title & Description
+        let ogTitleTag = document.querySelector('meta[property="og:title"]');
+        if (!ogTitleTag) {
+            ogTitleTag = document.createElement('meta');
+            ogTitleTag.setAttribute('property', 'og:title');
+            document.head.appendChild(ogTitleTag);
+        }
+        ogTitleTag.setAttribute('content', `${blogObj.title} | MCA Leads Provider`);
+
+        let ogDescTag = document.querySelector('meta[property="og:description"]');
+        if (!ogDescTag) {
+            ogDescTag = document.createElement('meta');
+            ogDescTag.setAttribute('property', 'og:description');
+            document.head.appendChild(ogDescTag);
+        }
+        ogDescTag.setAttribute('content', blogObj.excerpt || `Read ${blogObj.title} on MCA Leads Provider.`);
+
+        // Update Canonical Link
+        let canonicalTag = document.querySelector('link[rel="canonical"]');
+        if (!canonicalTag) {
+            canonicalTag = document.createElement('link');
+            canonicalTag.setAttribute('rel', 'canonical');
+            document.head.appendChild(canonicalTag);
+        }
+        const canonicalUrl = `https://mcaleadsprovider.com/${(blogObj.slug || slug || '').replace(/^\/+|\/+$/g, '')}/`;
+        canonicalTag.setAttribute('href', canonicalUrl);
+    };
+
     useEffect(() => {
         // Scroll to top when switching blogs
         window.scrollTo(0, 0);
 
-        fetch('/blogs.json')
+        const cleanPrefetchedSlug = (prefetched?.slug || '').replace(/^\/+|\/+$/g, '');
+        if (prefetched && (cleanPrefetchedSlug === slug || prefetched.id === slug)) {
+            processBlogData(prefetched);
+            setLoading(false);
+            return;
+        }
+
+        setLoading(true);
+        fetch(`${API_BASE_URL}/noAuth/mca-blogs/${slug}`)
             .then(res => res.json())
             .then(data => {
-                const currentBlog = data.find(b => b.slug === slug);
-
-                if (currentBlog) {
-                    // 1. Rewrite absolute URLs to relative URLs to support SPA routing
-                    let content = currentBlog.content.replace(/href=["']https?:\/\/mcaleadsprovider\.com\/?([^"']*)["']/gi, 'href="/$1"');
-
-                    // 2. Parse FAQs out of the content
-                    const parsed = parseFaqs(content);
-
-                    // 3. Inject IDs into headings and extract TOC on main content
-                    let currentId = 0;
-                    const extractedToc = [];
-                    const contentWithHeadingIds = parsed.content.replace(/<h([2-3])[^>]*>(.*?)<\/h\1>/gi, (match, level, text) => {
-                        const plainText = text.replace(/<[^>]+>/g, '').trim();
-                        const id = `heading-${currentId++}`;
-                        extractedToc.push({ id, text: plainText, level: parseInt(level) });
-                        return `<h${level} id="${id}">${text}</h${level}>`;
-                    });
-
-                    setToc(extractedToc);
-                    setContentWithIds(contentWithHeadingIds);
-                    setFaqs(parsed.faqs);
-                    setActiveFaqIndex(null);
-                    setBlog(currentBlog);
+                if (data.success && data.blog) {
+                    processBlogData(data.blog);
+                    setLoading(false);
+                } else {
+                    throw new Error("Blog not found in database");
                 }
-                setLoading(false);
             })
             .catch(err => {
-                console.error("Failed to load blog", err);
+                console.error("Failed to fetch blog from database API:", err);
+                setBlog(null);
                 setLoading(false);
             });
-    }, [slug]);
+    }, [slug, prefetched]);
+
+    const handleTocClick = (e, headingId) => {
+        e.preventDefault();
+        const targetEl = document.getElementById(headingId);
+        if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
 
     if (loading) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-slate-50">
-                <div className="text-xl font-medium text-slate-500">Loading blog...</div>
-            </div>
+            <main className="bg-slate-50 min-h-screen">
+                <section className="page-hero bg-slate-900/90 py-16">
+                    <div className="container-custom page-hero-container flex flex-col md:flex-row items-center gap-8">
+                        <div className="w-full md:w-1/2 space-y-4">
+                            <div className="skeleton-box h-10 w-3/4 bg-slate-700/60 rounded-xl"></div>
+                            <div className="skeleton-box h-5 w-1/2 bg-slate-700/40 rounded-lg"></div>
+                        </div>
+                        <div className="w-full md:w-1/2 h-64">
+                            <div className="skeleton-box w-full h-full bg-slate-700/50 rounded-3xl"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="py-8 lg:py-12">
+                    <div className="container-custom">
+                        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+                            <aside className="hidden lg:block w-full lg:w-[30%] shrink-0">
+                                <div className="bg-white p-8 rounded-4xl border border-slate-100 space-y-4">
+                                    <div className="skeleton-box h-6 w-1/2 mb-6"></div>
+                                    <div className="skeleton-box h-4 w-5/6"></div>
+                                    <div className="skeleton-box h-4 w-4/6"></div>
+                                    <div className="skeleton-box h-4 w-5/6"></div>
+                                    <div className="skeleton-box h-4 w-3/4"></div>
+                                </div>
+                            </aside>
+
+                            <article className="w-full lg:w-[70%] bg-white p-8 lg:p-14 rounded-4xl border border-slate-100 space-y-4">
+                                <div className="skeleton-box h-8 w-2/3 mb-6"></div>
+                                <div className="skeleton-box h-4 w-full"></div>
+                                <div className="skeleton-box h-4 w-full"></div>
+                                <div className="skeleton-box h-4 w-4/5"></div>
+                                <div className="skeleton-box h-4 w-full mt-6"></div>
+                                <div className="skeleton-box h-4 w-11/12"></div>
+                                <div className="skeleton-box h-4 w-3/4"></div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </main>
         );
     }
 
@@ -138,7 +285,8 @@ const BlogDetail = () => {
                                         <li key={item.id} className={item.level === 3 ? "ml-4" : ""}>
                                             <a
                                                 href={`#${item.id}`}
-                                                className="text-slate-600 hover:text-primary transition-colors text-sm font-medium leading-relaxed block"
+                                                onClick={(e) => handleTocClick(e, item.id)}
+                                                className="toc-clean-link cursor-pointer"
                                             >
                                                 {item.text}
                                             </a>
