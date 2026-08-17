@@ -10,7 +10,7 @@ const PageHero = ({ title, description, image }) => {
                     <p className="page-hero-description">{description}</p>
                     <div className="page-hero-buttons">
                         <Link to="/contact-us/" className="hero-btn-primary">Get Started</Link>
-                        <Link to="/services" className="hero-btn-secondary">Learn More</Link>
+                        <Link to="/services/" className="hero-btn-secondary">Learn More</Link>
                     </div>
                 </div>
                 <div className="page-hero-image-wrapper">

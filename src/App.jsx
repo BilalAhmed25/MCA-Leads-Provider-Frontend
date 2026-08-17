@@ -25,7 +25,6 @@ import ManageBlogs from './pages/ManageBlogs';
 import CreateBlog from './pages/CreateBlog';
 import AddLeads from './pages/AddLeads';
 import ContactPage from './pages/ContactPage';
-import SitemapXml from './pages/SitemapXml';
 import NotFound from './pages/NotFound';
 import { AuthProvider } from './context/AuthContext';
 import './index.css';
@@ -81,8 +80,6 @@ function App() {
                 <Route path="/edit-blog/:id/" element={<CreateBlog />} />
                 <Route path="/contact-us" element={<ContactPage />} />
                 <Route path="/contact-us/" element={<ContactPage />} />
-                <Route path="/sitemap.xml" element={<SitemapXml />} />
-                <Route path="/sitemap" element={<SitemapXml />} />
                 <Route path="/:slug" element={<BlogDetail />} />
                 <Route path="/:slug/" element={<BlogDetail />} />
                 <Route path="*" element={<NotFound />} />

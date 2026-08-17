@@ -63,7 +63,7 @@ const ServicesSection = () => {
                             </p>
                         </div>
                         
-                        <Link to="/services" className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 shadow-[0_0_20px_rgba(96,31,234,0.4)] hover:-translate-y-1">
+                        <Link to="/services/" className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 shadow-[0_0_20px_rgba(96,31,234,0.4)] hover:-translate-y-1">
                             EXPLORE MORE LEADS
                         </Link>
                     </div>

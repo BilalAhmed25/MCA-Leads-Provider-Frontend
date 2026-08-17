@@ -1,0 +1,13 @@
+
+User-agent: *
+Disallow: /?s=
+Disallow: /page/*/?s=
+Disallow: /search/
+Disallow: /wp-json/
+Disallow: /?rest_route=
+
+User-agent: AdsBot
+Disallow: /
+
+Sitemap: https://mcaleadsprovider.com/sitemap.xml
+

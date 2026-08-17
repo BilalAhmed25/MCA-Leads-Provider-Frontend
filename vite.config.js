@@ -8,4 +8,17 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
+  server: {
+    proxy: {
+      '/sitemap.xml': {
+        target: 'http://localhost:3000',
+        rewrite: () => '/noAuth/mca-sitemap.xml',
+        changeOrigin: true
+      },
+      '/mca-sitemap.xml': {
+        target: 'http://localhost:3000',
+        changeOrigin: true
+      }
+    }
+  }
 })

@@ -31,7 +31,7 @@ const NotFound = () => {
                     <div className="notfound-suggestions">
                         <h3 className="suggestions-title">Or visit one of our main sections</h3>
                         <div className="suggestions-grid">
-                            <Link to="/services" className="suggestion-card">
+                            <Link to="/services/" className="suggestion-card">
                                 <div className="suggestion-icon-wrapper">
                                     <FiLayers />
                                 </div>
@@ -41,7 +41,7 @@ const NotFound = () => {
                                 </div>
                             </Link>
 
-                            <Link to="/pricing" className="suggestion-card">
+                            <Link to="/pricing/" className="suggestion-card">
                                 <div className="suggestion-icon-wrapper">
                                     <FiTag />
                                 </div>
@@ -51,7 +51,7 @@ const NotFound = () => {
                                 </div>
                             </Link>
 
-                            <Link to="/blog" className="suggestion-card">
+                            <Link to="/blog/" className="suggestion-card">
                                 <div className="suggestion-icon-wrapper">
                                     <FiBookOpen />
                                 </div>

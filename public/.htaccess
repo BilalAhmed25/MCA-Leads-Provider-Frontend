@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Direct sitemap.xml to dynamic sitemap.php
+  RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+  # 2. Redirect URLs without trailing slash to trailing slash (301 Permanent Redirect)
+  # Excludes static files (.png, .jpg, .svg, .xml, .txt, .php, .js, .css, etc.)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !index\.html
+  RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,5}$
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [L,R=301]
+
+  # 3. Don't rewrite actual files or directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 4. Rewrite all other routes to index.html for Single Page Application routing
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Security & MIME Type Headers
+<IfModule mod_headers.c>
+  <FilesMatch "\.(xml)$">
+    Header set Content-Type "application/xml; charset=utf-8"
+  </FilesMatch>
+</IfModule>

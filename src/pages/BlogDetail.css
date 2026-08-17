@@ -45,18 +45,141 @@
 }
 
 .blog-detail-content ul {
-    list-style-type: disc;
-    margin-left: 2rem;
-    margin-bottom: 1.5rem;
+    list-style-type: disc !important;
+    margin-left: 2rem !important;
+    margin-bottom: 1.5rem !important;
 }
 
-.blog-detail-content li {
-    margin-bottom: 0.5rem;
+.blog-detail-content ul li {
+    list-style-type: disc !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.blog-detail-content ol {
+    list-style-type: decimal !important;
+    margin-left: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    padding-left: 0.5rem !important;
+}
+
+.blog-detail-content ol li {
+    list-style-type: decimal !important;
+    margin-bottom: 0.65rem !important;
+    padding-left: 0.25rem !important;
+    color: #1e293b !important;
+    font-weight: 600 !important;
 }
 
 .blog-detail-content strong {
     font-weight: 700;
     color: #0f172a;
+}
+
+/* Blog Content Tables (Strength & Details, Data Listings) */
+.blog-detail-content figure.wp-block-table,
+.blog-detail-content .table-responsive {
+    width: 100% !important;
+    overflow-x: auto !important;
+    margin: 1.75rem 0 2.25rem !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: 18px !important;
+}
+
+.blog-detail-content table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04) !important;
+    margin: 0 !important;
+}
+
+/* Header Row ONLY (The very first row of the table) */
+.blog-detail-content table thead tr:first-child,
+.blog-detail-content table tbody tr:first-child {
+    background: linear-gradient(135deg, #601FEA 0%, #4a15ba 100%) !important;
+}
+
+.blog-detail-content table thead tr:first-child th,
+.blog-detail-content table thead tr:first-child td,
+.blog-detail-content table tbody tr:first-child td,
+.blog-detail-content table tbody tr:first-child th {
+    background: linear-gradient(135deg, #601FEA 0%, #4a15ba 100%) !important;
+    color: #ffffff !important;
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    padding: 16px 22px !important;
+    border: none !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+    vertical-align: middle !important;
+}
+
+.blog-detail-content table tr:first-child td strong,
+.blog-detail-content table tr:first-child th strong {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+.blog-detail-content table tr:first-child th:last-child,
+.blog-detail-content table tr:first-child td:last-child {
+    border-right: none !important;
+}
+
+/* Data Rows (Every row after the first row) */
+.blog-detail-content table tr:not(:first-child) {
+    background: #ffffff !important;
+    border-bottom: 1px solid #edf2f7 !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.blog-detail-content table tr:not(:first-child):hover {
+    background-color: #f8fafc !important;
+}
+
+.blog-detail-content table tr:not(:first-child) td,
+.blog-detail-content table tr:not(:first-child) th {
+    padding: 15px 22px !important;
+    font-size: 0.925rem !important;
+    line-height: 1.65 !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    border-right: 1px solid #f1f5f9 !important;
+    vertical-align: top !important;
+    color: #475569 !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    background: transparent !important;
+}
+
+/* First Column (Strength / Criteria) */
+.blog-detail-content table tr:not(:first-child) td:first-child,
+.blog-detail-content table tr:not(:first-child) th:first-child {
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    background: #fafbff !important;
+    width: 28% !important;
+    min-width: 150px !important;
+}
+
+.blog-detail-content table tr:not(:first-child) td:first-child strong,
+.blog-detail-content table tr:not(:first-child) th:first-child strong {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+.blog-detail-content table tr:not(:first-child) td:last-child,
+.blog-detail-content table tr:not(:first-child) th:last-child {
+    border-right: none !important;
+}
+
+.blog-detail-content table tr:last-child td,
+.blog-detail-content table tr:last-child th {
+    border-bottom: none !important;
 }
 
 /* Explicit Blog CTA Card & Button Styles */
