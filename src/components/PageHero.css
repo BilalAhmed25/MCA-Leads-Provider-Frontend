@@ -65,11 +65,13 @@
 .hero-btn-primary {
     background-color: var(--primary);
     color: white;
+    box-shadow: none !important;
 }
 
 .hero-btn-primary:hover {
     background-color: var(--primary-hover);
-    transform: translateY(-2px);
+    transform: none !important;
+    box-shadow: none !important;
     color: white;
 }
 
@@ -77,12 +79,14 @@
     background-color: white;
     color: var(--text-dark);
     border: 1px solid #e5e7eb;
+    box-shadow: none !important;
 }
 
 .hero-btn-secondary:hover {
     border-color: var(--primary);
     color: var(--primary);
-    transform: translateY(-2px);
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 .page-hero-image-wrapper {
@@ -97,6 +101,16 @@
     border-radius: 20px;
     object-fit: cover;
     max-height: 450px;
+    box-shadow: none !important;
+    transition: none !important;
+}
+
+.page-hero-image:hover,
+.page-hero-image-wrapper:hover,
+.page-hero:hover {
+    box-shadow: none !important;
+    filter: none !important;
+    transform: none !important;
 }
 
 @media (max-width: 992px) {
