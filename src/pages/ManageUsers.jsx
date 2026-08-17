@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useNoIndex } from '../hooks/useNoIndex';
 import { API_BASE_URL } from '../config';
 import { FiSearch, FiUser, FiCheckCircle, FiSlash, FiTrash2, FiUserCheck, FiShield } from 'react-icons/fi';
 import './ManageUsers.css';
 
 const ManageUsers = () => {
+    useNoIndex();
     const { user } = useAuth();
     const [users, setUsers] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');

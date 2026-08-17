@@ -3,18 +3,17 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
-
-    useEffect(() => {
+    const [user, setUser] = useState(() => {
         const storedUser = localStorage.getItem('mca_user');
         if (storedUser) {
             try {
-                setUser(JSON.parse(storedUser));
+                return JSON.parse(storedUser);
             } catch (e) {
-                console.error(e);
+                return null;
             }
         }
-    }, []);
+        return null;
+    });
 
     const login = (token, userData) => {
         localStorage.setItem('mca_token', token);

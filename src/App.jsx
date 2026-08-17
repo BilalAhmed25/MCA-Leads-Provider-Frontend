@@ -13,6 +13,9 @@ import B2BEmailLists from './pages/B2BEmailLists';
 import DigitalMarketing from './pages/DigitalMarketing';
 import BusinessLoans from './pages/BusinessLoans';
 import Pricing from './pages/Pricing';
+import Checkout from './pages/Checkout';
+import ThankYou from './pages/ThankYou';
+import PurchaseHistory from './pages/PurchaseHistory';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Login from './pages/Login';
@@ -20,6 +23,7 @@ import Register from './pages/Register';
 import ManageUsers from './pages/ManageUsers';
 import ManageBlogs from './pages/ManageBlogs';
 import CreateBlog from './pages/CreateBlog';
+import AddLeads from './pages/AddLeads';
 import ContactPage from './pages/ContactPage';
 import SitemapXml from './pages/SitemapXml';
 import NotFound from './pages/NotFound';
@@ -51,6 +55,12 @@ function App() {
                 <Route path="/b2b-email-lists/" element={<B2BEmailLists />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/pricing/" element={<Pricing />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/checkout/" element={<Checkout />} />
+                <Route path="/thank-you" element={<ThankYou />} />
+                <Route path="/thank-you/" element={<ThankYou />} />
+                <Route path="/purchase-history" element={<PurchaseHistory />} />
+                <Route path="/purchase-history/" element={<PurchaseHistory />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/" element={<Blog />} />
                 <Route path="/login" element={<Login />} />
@@ -61,6 +71,10 @@ function App() {
                 <Route path="/manage-users/" element={<ManageUsers />} />
                 <Route path="/manage-blogs" element={<ManageBlogs />} />
                 <Route path="/manage-blogs/" element={<ManageBlogs />} />
+                <Route path="/add-leads" element={<AddLeads />} />
+                <Route path="/add-leads/" element={<AddLeads />} />
+                <Route path="/edit-lead/:id" element={<AddLeads />} />
+                <Route path="/edit-lead/:id/" element={<AddLeads />} />
                 <Route path="/create-blog" element={<CreateBlog />} />
                 <Route path="/create-blog/" element={<CreateBlog />} />
                 <Route path="/edit-blog/:id" element={<CreateBlog />} />

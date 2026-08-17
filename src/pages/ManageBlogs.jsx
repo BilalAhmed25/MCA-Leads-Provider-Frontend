@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { useAuth } from '../context/AuthContext';
+import { useNoIndex } from '../hooks/useNoIndex';
 import { API_BASE_URL } from '../config';
 import { FiSearch, FiPlus, FiCheckCircle, FiEdit, FiTrash2, FiExternalLink, FiX, FiShield } from 'react-icons/fi';
 import './ManageBlogs.css';
 
 const ManageBlogs = () => {
+    useNoIndex();
     const { user } = useAuth();
     const [blogs, setBlogs] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');

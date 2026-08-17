@@ -101,12 +101,12 @@ const Header = () => {
                                 </NavLink>
                                 {/* Dropdown Menu */}
                                 <div className="dropdown-menu">
-                                    <Link to="/mca-live-transfer-leads/" className="dropdown-item">MCA Live Transfer Leads</Link>
-                                    <Link to="/mca-callback-leads/" className="dropdown-item">MCA Callback Leads</Link>
-                                    <Link to="/aged-mca-leads/" className="dropdown-item">Aged MCA Leads</Link>
-                                    <Link to="/business-loan-leads/" className="dropdown-item">Business Loan Leads</Link>
-                                    <Link to="/digital-marketing-leads/" className="dropdown-item">MCA Digital Marketing Leads</Link>
-                                    <Link to="/b2b-email-lists/" className="dropdown-item">B2B Email Leads</Link>
+                                    <NavLink to="/mca-live-transfer-leads/" className="dropdown-item">MCA Live Transfer Leads</NavLink>
+                                    <NavLink to="/mca-callback-leads/" className="dropdown-item">MCA Callback Leads</NavLink>
+                                    <NavLink to="/aged-mca-leads/" className="dropdown-item">Aged MCA Leads</NavLink>
+                                    <NavLink to="/business-loan-leads/" className="dropdown-item">Business Loan Leads</NavLink>
+                                    <NavLink to="/digital-marketing-leads/" className="dropdown-item">MCA Digital Marketing Leads</NavLink>
+                                    <NavLink to="/b2b-email-lists/" className="dropdown-item">B2B Email Leads</NavLink>
                                 </div>
                             </li>
                             <li className="nav-item">
@@ -153,12 +153,16 @@ const Header = () => {
                                         <div className="profile-menu-items space-y-1">
                                             {user?.email === 'zunairkhan742@gmail.com' && (
                                                 <>
-                                                    <button className="profile-menu-item flex items-center gap-3.5 w-full text-left px-3 py-2.5 rounded-2xl hover:bg-slate-50 transition-colors text-slate-700 font-semibold text-sm">
+                                                    <Link
+                                                        to="/add-leads/"
+                                                        onClick={() => setIsProfileOpen(false)}
+                                                        className="profile-menu-item flex items-center gap-3.5 w-full text-left px-3 py-2.5 rounded-2xl hover:bg-slate-50 transition-colors text-slate-700 font-semibold text-sm"
+                                                    >
                                                         <div className="menu-icon-box bg-slate-100 text-slate-600 p-2 rounded-xl">
                                                             <FiPlusCircle className="w-4 h-4" />
                                                         </div>
                                                         <span>Add Leads</span>
-                                                    </button>
+                                                    </Link>
 
                                                     <Link
                                                         to="/manage-blogs/"
@@ -184,19 +188,27 @@ const Header = () => {
                                                 </>
                                             )}
 
-                                            <button className="profile-menu-item flex items-center gap-3.5 w-full text-left px-3 py-2.5 rounded-2xl hover:bg-slate-50 transition-colors text-slate-700 font-semibold text-sm">
+                                            <Link 
+                                                to="/purchase-history/"
+                                                onClick={() => setIsProfileOpen(false)}
+                                                className="profile-menu-item flex items-center gap-3.5 w-full text-left px-3 py-2.5 rounded-2xl hover:bg-slate-50 transition-colors text-slate-700 font-semibold text-sm"
+                                            >
                                                 <div className="menu-icon-box bg-slate-100 text-slate-600 p-2 rounded-xl">
                                                     <FiClock className="w-4 h-4" />
                                                 </div>
                                                 <span>Purchase History</span>
-                                            </button>
+                                            </Link>
 
-                                            <button className="profile-menu-item flex items-center gap-3.5 w-full text-left px-3 py-2.5 rounded-2xl hover:bg-slate-50 transition-colors text-slate-700 font-semibold text-sm">
+                                            <Link 
+                                                to="/checkout/"
+                                                onClick={() => setIsProfileOpen(false)}
+                                                className="profile-menu-item flex items-center gap-3.5 w-full text-left px-3 py-2.5 rounded-2xl hover:bg-slate-50 transition-colors text-slate-700 font-semibold text-sm"
+                                            >
                                                 <div className="menu-icon-box bg-slate-100 text-slate-600 p-2 rounded-xl">
                                                     <FiShoppingCart className="w-4 h-4" />
                                                 </div>
                                                 <span>My Leads / Checkout</span>
-                                            </button>
+                                            </Link>
                                         </div>
 
                                         {/* Sign Out Button */}

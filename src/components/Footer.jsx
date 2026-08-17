@@ -13,31 +13,30 @@ const Footer = () => {
             <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
             <div className="absolute bottom-0 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[150px] pointer-events-none"></div>
 
-            {/* Background Grid Lines starting from right and fading to left */}
+            {/* Background Subtle Lite Dots Pattern */}
             <div className="footer-vector-bg">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        {/* Grid Pattern definition */}
-                        <pattern id="footer-grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#22d3ee" strokeWidth="1" />
-                            <circle cx="0" cy="0" r="1.5" fill="#601fea" />
+                        {/* Lite Dots Pattern definition */}
+                        <pattern id="footer-dots-pattern" width="26" height="26" patternUnits="userSpaceOnUse">
+                            <circle cx="13" cy="13" r="1.5" fill="#601FEA" opacity="0.5" />
                         </pattern>
 
-                        {/* Mask Gradient (Solid White on Right, Transparent Black/White on Left) */}
-                        <linearGradient id="grid-mask-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        {/* Mask Gradient (Fade to Left) */}
+                        <linearGradient id="dots-mask-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
-                            <stop offset="40%" stopColor="#ffffff" stopOpacity="0.15" />
-                            <stop offset="100%" stopColor="#ffffff" stopOpacity="0.45" />
+                            <stop offset="35%" stopColor="#ffffff" stopOpacity="0.25" />
+                            <stop offset="100%" stopColor="#ffffff" stopOpacity="0.85" />
                         </linearGradient>
 
                         {/* Mask applying the gradient */}
-                        <mask id="footer-grid-mask">
-                            <rect width="100%" height="100%" fill="url(#grid-mask-gradient)" />
+                        <mask id="footer-dots-mask">
+                            <rect width="100%" height="100%" fill="url(#dots-mask-gradient)" />
                         </mask>
                     </defs>
 
-                    {/* Grid Rectangle using the pattern and mask */}
-                    <rect width="100%" height="100%" fill="url(#footer-grid-pattern)" mask="url(#footer-grid-mask)" />
+                    {/* Dots Rectangle using pattern and mask */}
+                    <rect width="100%" height="100%" fill="url(#footer-dots-pattern)" mask="url(#footer-dots-mask)" />
                 </svg>
             </div>
 

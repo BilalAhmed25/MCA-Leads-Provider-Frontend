@@ -1,0 +1,180 @@
+.thank-you-page-wrapper {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 90px;
+}
+
+.thank-you-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 28px;
+    padding: 36px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    margin-bottom: 30px;
+}
+
+.thank-you-hero-card {
+    text-align: center;
+    padding: 44px 24px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 28px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+.success-icon-badge {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(22, 163, 74, 0.2);
+}
+
+.thank-you-main-heading {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+
+.thank-you-subheading {
+    font-size: 1rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+}
+
+/* Download Actions Grid */
+.download-actions-grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.btn-download-excel {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #16a34a;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 800;
+    padding: 16px 28px;
+    border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(22, 163, 74, 0.35);
+    transition: all 0.2s ease;
+}
+
+.btn-download-excel:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(22, 163, 74, 0.45);
+    color: #ffffff;
+}
+
+.btn-download-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary, #601FEA);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 800;
+    padding: 16px 28px;
+    border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(96, 31, 234, 0.35);
+    transition: all 0.2s ease;
+}
+
+.btn-download-pdf:hover {
+    background: var(--primary-hover, #4a15ba);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(96, 31, 234, 0.45);
+    color: #ffffff;
+}
+
+/* Order Details Grid */
+.order-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 28px;
+}
+
+.order-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.order-detail-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.order-detail-value {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.order-detail-value.paid-pill {
+    color: #16a34a;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Records Preview in Thank You */
+.thank-you-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+}
+
+.thank-you-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.thank-you-table th {
+    padding: 12px 16px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 0.725rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.thank-you-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+}

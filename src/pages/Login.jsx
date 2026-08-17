@@ -1,17 +1,23 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FiMail, FiLock, FiArrowRight, FiCheckCircle } from 'react-icons/fi';
 import { API_BASE_URL } from '../config';
 import { useAuth } from '../context/AuthContext';
+import { useNoIndex } from '../hooks/useNoIndex';
 import './Auth.css';
 
 const Login = () => {
+    useNoIndex();
     const navigate = useNavigate();
+    const location = useLocation();
     const { login } = useAuth();
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+
+    const searchParams = new URLSearchParams(location.search);
+    const redirectParam = searchParams.get('redirect') || localStorage.getItem('mca_redirect_after_login') || '/';
 
     const handleChange = (e) => {
         setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -34,9 +40,10 @@ const Login = () => {
             if (res.ok && data.success) {
                 setSuccess('Login successful! Redirecting...');
                 login(data.token, data.user);
+                localStorage.removeItem('mca_redirect_after_login');
                 setTimeout(() => {
-                    navigate('/');
-                }, 800);
+                    navigate(redirectParam);
+                }, 700);
             } else {
                 setError(data.message || 'Login failed. Please try again.');
             }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { useAuth } from '../context/AuthContext';
+import { useNoIndex } from '../hooks/useNoIndex';
 import { API_BASE_URL } from '../config';
 import {
     FiArrowLeft, FiEye, FiPlus, FiType, FiLink, FiImage, FiFileText,
@@ -10,6 +11,7 @@ import {
 import './CreateBlog.css';
 
 const CreateBlog = () => {
+    useNoIndex();
     const { id } = useParams(); // If present, edit mode
     const navigate = useNavigate();
     const { user } = useAuth();
