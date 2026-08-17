@@ -45,7 +45,7 @@ const LiveTransfers = () => {
 
             <LiveTransfersCTA
                 heading="Contact Us Today and Get Your Exclusive Live Transfers"
-                buttonText="GET LEADS NOW"
+                buttonText="Get Leads Now"
                 showIcon={true}
                 className="mt-4 sm:mt-12 lg:mt-0 mb-6 sm:mb-8 relative z-20"
             />

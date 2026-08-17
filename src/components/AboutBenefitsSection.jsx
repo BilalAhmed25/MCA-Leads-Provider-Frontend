@@ -48,7 +48,7 @@ const AboutBenefitsSection = () => {
                         Benefits Of Purchasing <span className="text-primary">MCA Leads</span> From Us
                     </h3>
                     <p className="text-fluid-base text-slate-300 leading-relaxed max-w-3xl mx-auto">
-                        Our lead generation process is designed to help lenders achieve better results, reduce wasteful outreach, and attract more qualified borrowers. Here's how our service helps you go forward more quickly:
+                        At <a href="/" className='text-primary'>MCA Leads Provider</a>, we go beyond just lead creation. Our MCA leads are tailored to your precise finance requirements, allowing you to target businesses that are actively looking for merchant cash advances. Here’s why partnering with us is a wise investment:
                     </p>
                 </div>
 

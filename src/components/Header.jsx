@@ -226,7 +226,7 @@ const Header = () => {
                             </div>
                         ) : (
                             <Link to="/contact-us/" className="cta-button">
-                                Get your leads now
+                                Get Your Leads Now
                             </Link>
                         )}
 
@@ -253,7 +253,7 @@ const Header = () => {
                             <li className="mobile-nav-item"><NavLink to="/contact-us/" className="mobile-nav-link" onClick={toggleMobileMenu}>Contact</NavLink></li>
                         </ul>
                         <Link to="/contact-us/" className="mobile-cta-button" onClick={toggleMobileMenu}>
-                            Get your leads now
+                            Get Your Leads Now
                         </Link>
                     </div>
                 )}

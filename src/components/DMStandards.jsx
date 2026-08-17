@@ -46,7 +46,7 @@ const DMStandards = () => {
                             to="/contact-us/"
                             className="inline-flex items-center justify-center px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-primary/20 hover:shadow-xl group"
                         >
-                            GET LEADS NOW
+                            Get Leads Now
                             <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                     </div>

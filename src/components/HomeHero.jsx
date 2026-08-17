@@ -29,10 +29,10 @@ const HomeHero = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-2">
                             <Link to="/contact-us/" className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-base transition-all duration-300 hover:-translate-y-1">
-                                Get your leads now
+                                Get Your Leads Now
                             </Link>
                             <a href="tel:3477849496" className="flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-transparent border border-slate-300 hover:border-primary text-slate-800 hover:text-primary rounded-full font-bold text-fluid-base transition-all duration-300">
-                                Call us
+                                Call Us
                             </a>
                         </div>
                     </div>
@@ -80,8 +80,8 @@ const HomeHero = () => {
                         <div className="flex items-center justify-center mb-4">
                             <FiCheckCircle className="w-12 h-12 text-primary" />
                         </div>
-                        <h3 className="text-fluid-4xl font-extrabold text-primary mb-2">10K+</h3>
-                        <p className="text-fluid-base text-slate-700 font-medium">Leads Delivered</p>
+                        <h3 className="text-fluid-4xl font-extrabold text-primary mb-2">30K+</h3>
+                        <h3 className="text-fluid-base text-slate-700 font-medium">Leads Delivered</h3>
                     </div>
 
                     {/* Card 3: Primary Color Card */}
@@ -90,7 +90,7 @@ const HomeHero = () => {
                             <FiTrendingUp className="text-2xl text-white" />
                         </div>
                         <h3 className="text-fluid-3xl font-bold mb-1">95%</h3>
-                        <p className="text-fluid-xs text-white/80">Client Retention</p>
+                        <h3 className="text-fluid-xs text-white/80">Client Retention</h3>
                     </div>
 
                 </div>

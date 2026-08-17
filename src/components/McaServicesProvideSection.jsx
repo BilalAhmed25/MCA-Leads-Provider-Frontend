@@ -15,37 +15,37 @@ const McaServicesProvideSection = ({ className = "py-20 lg:py-28 bg-slate-950" }
             icon: <FiPhoneCall className="w-6 h-6" />,
             title: "MCA Live Transfer Leads",
             description: "Connect instantly with pre-qualified business owners who need the funding. They are eager to get financing, so it increases the likelihood of conversion.",
-            link: "/live-transfers"
+            link: "/mca-live-transfer-leads/"
         },
         {
             icon: <FiPhoneIncoming className="w-6 h-6" />,
             title: "MCA Callback Leads",
             description: "Obtain a list of qualified business owners who have expressed interest and requested a follow-up. Warm leads provide efficient engagement.",
-            link: "/call-backs"
+            link: "/mca-callback-leads/"
         },
         {
             icon: <FiDatabase className="w-6 h-6" />,
             title: "Aged MCA Leads",
             description: "Get cost-effective aged leads for MCA. Reach more borrowers as this service connects lenders with merchants who were previously looking for finance.",
-            link: "/aged-leads"
+            link: "/aged-mca-leads/"
         },
         {
             icon: <FiMail className="w-6 h-6" />,
             title: "B2B Email Lists",
             description: "For focused efforts, Get access to validated business email lists. Ideal for contacting owners who require financial choices.",
-            link: "/b2b-email-lists"
+            link: "/b2b-email-lists/"
         },
         {
             icon: <FiGlobe className="w-6 h-6" />,
             title: "MCA Digital Marketing Leads",
             description: "Leads with high intent are gathered via landing sites, SEO, and paid advertisements. They are always looking for ways to get money.",
-            link: "/digital-marketing"
+            link: "/digital-marketing-leads/"
         },
         {
             icon: <FiBriefcase className="w-6 h-6" />,
             title: "Business Loan Leads",
             description: "Get business loan leads to connect lenders and brokers with pre-qualified merchants seeking working capital.",
-            link: "/business-loans"
+            link: "/business-loan-leads/"
         }
     ];
 

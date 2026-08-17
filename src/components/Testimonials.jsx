@@ -114,7 +114,7 @@ const Testimonials = ({
                                 <div className="testimonial-image-container">
                                     <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
                                 </div>
-                                <h3 className="testimonial-name">{testimonial.name}</h3>
+                                <h5 className="testimonial-name">{testimonial.name}</h5>
                                 <span className="testimonial-position">{testimonial.position}</span>
                                 <p className="testimonial-text">{testimonial.text}</p>
                                 <div className="testimonial-stars">

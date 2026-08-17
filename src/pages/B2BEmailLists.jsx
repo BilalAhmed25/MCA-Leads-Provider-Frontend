@@ -45,7 +45,7 @@ const B2BEmailLists = () => {
 
             <LiveTransfersCTA
                 heading="Contact Us Today and Get Exclusive Leads!"
-                buttonText="GET LEADS NOW"
+                buttonText="Get Leads Now"
                 showIcon={true}
                 className="mt-4 sm:mt-12 lg:mt-0 mb-6 sm:mb-8 relative z-20"
             />
@@ -67,8 +67,10 @@ const B2BEmailLists = () => {
             <B2BFeatures />
 
             <B2BWhyChoose />
-            <LiveTransfersCTA heading="Give Us a Call and
-Let’s Talk Leads Today!" buttonText="GET LEADS NOW" />
+            <LiveTransfersCTA 
+                heading="Give Us a Call and Let’s Talk Leads Today!" 
+                buttonText="Get Leads Now" 
+            />
 
             <B2BBenefits />
 

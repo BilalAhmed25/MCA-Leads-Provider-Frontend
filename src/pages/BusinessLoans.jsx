@@ -45,7 +45,7 @@ const BusinessLoans = () => {
 
             <LiveTransfersCTA
                 heading="Contact Us Today for Live Transfer and Aged Business Loan Leads!"
-                buttonText="GET LEADS NOW"
+                buttonText="Get Leads Now"
                 showIcon={true}
                 className="mt-4 sm:mt-12 lg:mt-0 mb-6 sm:mb-8 relative z-20"
             />
@@ -71,7 +71,7 @@ const BusinessLoans = () => {
 
             <LiveTransfersCTA
                 heading="Give Us a Call and Let’s Talk Leads Today!"
-                buttonText="GET LEADS NOW"
+                buttonText="Get Leads Now"
             />
 
 

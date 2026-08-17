@@ -156,7 +156,7 @@ const BlogSection = ({ limit }) => {
                                                     Loading...
                                                 </span>
                                             ) : (
-                                                'Read more'
+                                                'Read More'
                                             )}
                                         </button>
                                     </div>
@@ -172,7 +172,7 @@ const BlogSection = ({ limit }) => {
                             to="/blog/"
                             className="inline-flex items-center justify-center px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-base transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                         >
-                            View more blogs
+                            View More Blogs
                         </Link>
                     </div>
                 )}

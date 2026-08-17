@@ -7,22 +7,26 @@ const ServicesSection = () => {
         {
             icon: <FiPhoneCall className="w-7 h-7" />,
             title: "MCA Live Transfer Leads",
-            description: "We connect lenders with pre-qualified business owners who are actively looking for cash. These prospects are eager to communicate, making live transfers a dependable alternative for faster transaction closes."
+            description: "We connect lenders with pre-qualified business owners who are actively looking for cash. These prospects are eager to communicate, making live transfers a dependable alternative for faster transaction closes.",
+            link: "/mca-live-transfer-leads/"
         },
         {
             icon: <FiPhoneIncoming className="w-7 h-7" />,
             title: "MCA Callback Leads",
-            description: "Our call-back leads connect lenders with prospective merchants who have sought contact. Your chances of a successful follow-up are increased because these leads are ready to proceed and have already worked with finance offers."
+            description: "Our call-back leads connect lenders with prospective merchants who have sought contact. Your chances of a successful follow-up are increased because these leads are ready to proceed and have already worked with finance offers.",
+            link: "/mca-callback-leads/"
         },
         {
             icon: <FiMonitor className="w-7 h-7" />,
             title: "MCA Aged Leads",
-            description: "Looking for cost-effective options? MCA aged leads allow you to reach a greater range of possible borrowers. These contacts have previously expressed interest in funding and may still be in need."
+            description: "Looking for cost-effective options? MCA aged leads allow you to reach a greater range of possible borrowers. These contacts have previously expressed interest in funding and may still be in need.",
+            link: "/aged-mca-leads/"
         },
         {
             icon: <FiMessageSquare className="w-7 h-7" />,
             title: "MCA Digital Marketing Leads",
-            description: "Our MCA digital marketing lead generation service connects you with qualified MCA sales leads, including aged, live transfer, and callback types. With the correct data and intent, you can buy leads for MCA that meet your sales objectives while also reaching out to businesses looking for finance."
+            description: "Our MCA digital marketing lead generation service connects you with qualified MCA sales leads, including aged, live transfer, and callback types. With the correct data and intent, you can buy leads for MCA that meet your sales objectives while also reaching out to businesses looking for finance.",
+            link: "/digital-marketing-leads/"
         }
     ];
 
@@ -64,27 +68,34 @@ const ServicesSection = () => {
                         </div>
                         
                         <Link to="/services/" className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 shadow-[0_0_20px_rgba(96,31,234,0.4)] hover:-translate-y-1">
-                            EXPLORE MORE LEADS
+                            Explore More Leads
                         </Link>
                     </div>
 
                     {/* Right Column: Cards Grid */}
                     <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         {services.map((service, index) => (
-                            <div 
+                            <Link 
+                                to={service.link}
                                 key={index}
-                                className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl hover:-translate-y-2 transition-all duration-300 group border border-transparent hover:border-primary/20 flex flex-col"
+                                className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl hover:-translate-y-2 transition-all duration-300 group border border-transparent hover:border-primary/20 flex flex-col justify-between"
                             >
-                                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300">
-                                    {service.icon}
+                                <div>
+                                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300">
+                                        {service.icon}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-4 pb-4 border-b border-slate-100 group-hover:text-primary group-hover:border-primary/20 transition-colors duration-300">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                        {service.description}
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-4 pb-4 border-b border-slate-100 group-hover:border-primary/20 transition-colors duration-300">
-                                    {service.title}
-                                </h3>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    {service.description}
-                                </p>
-                            </div>
+                                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform duration-200">
+                                    <span>Learn More</span>
+                                    <span className="ml-2 font-bold">&rarr;</span>
+                                </div>
+                            </Link>
                         ))}
                     </div>
 

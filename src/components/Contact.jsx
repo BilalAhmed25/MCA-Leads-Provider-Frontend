@@ -276,39 +276,50 @@ const Contact = ({ className = "" }) => {
                     {/* Bottom Row: 3 Address Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mt-18">
                         {/* Phone Card */}
-                        <div className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30">
+                        <a 
+                            href="tel:3477849496"
+                            className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30 hover:-translate-y-1 hover:shadow-md cursor-pointer"
+                        >
                             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <FiPhone className="w-5 h-5" />
                             </div>
                             <div className="text-left">
                                 <p className="text-sm font-bold text-slate-900 mb-0.5">Call Us</p>
-                                <a href="tel:3477849496" className="text-sm text-slate-600 hover:text-primary transition-colors duration-300 font-medium">347-784-9496</a>
+                                <span className="text-sm text-slate-600 group-hover:text-primary transition-colors duration-300 font-medium">347-784-9496</span>
                             </div>
-                        </div>
+                        </a>
 
                         {/* Email Card */}
-                        <div className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30">
+                        <a 
+                            href="mailto:info@mcaleadsprovider.com"
+                            className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30 hover:-translate-y-1 hover:shadow-md cursor-pointer"
+                        >
                             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <FiMail className="w-5 h-5" />
                             </div>
                             <div className="text-left">
                                 <p className="text-sm font-bold text-slate-900 mb-0.5">Email Us</p>
-                                <a href="mailto:info@mcaleadsprovider.com" className="text-sm text-slate-600 hover:text-primary transition-colors duration-300 font-medium break-all">info@mcaleadsprovider.com</a>
+                                <span className="text-sm text-slate-600 group-hover:text-primary transition-colors duration-300 font-medium break-all">info@mcaleadsprovider.com</span>
                             </div>
-                        </div>
+                        </a>
 
                         {/* Address Card */}
-                        <div className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30">
+                        <a 
+                            href="https://maps.google.com/?q=7901+4th+St+N+STE+22726+St.+Petersburg,+FL+33702"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30 hover:-translate-y-1 hover:shadow-md cursor-pointer"
+                        >
                             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <FiMapPin className="w-5 h-5" />
                             </div>
                             <div className="text-left">
                                 <p className="text-sm font-bold text-slate-900 mb-0.5">Location</p>
-                                <span className="text-sm text-slate-600 leading-snug font-medium block">
+                                <span className="text-sm text-slate-600 group-hover:text-primary leading-snug font-medium block transition-colors duration-300">
                                     7901 4th St N STE 22726 St. Petersburg, FL 33702
                                 </span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 

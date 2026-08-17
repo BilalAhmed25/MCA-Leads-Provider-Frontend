@@ -9,8 +9,8 @@ const LiveTransfersCTA = ({
         </>
     ),
     phone = "3477849496",
-    callText = "CALL NOW",
-    buttonText = "GET YOUR LEADS",
+    callText = "Call Now",
+    buttonText = "Get Your Leads",
     buttonLink = "/contact-us/",
     showIcon = false,
     className = "pb-20 lg:pb-28 pt-4 bg-white relative overflow-hidden"
@@ -51,13 +51,13 @@ const LiveTransfersCTA = ({
                         <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-3 sm:gap-4 shrink-0 w-full sm:w-auto">
                             <a
                                 href={`tel:${phone}`}
-                                className="w-full sm:w-auto inline-flex items-center justify-center h-12 sm:h-[52px] px-6 sm:px-8 rounded-full bg-black hover:bg-[#1e1e1e] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 box-border leading-none"
+                                className="w-full sm:w-auto inline-flex items-center justify-center h-12 sm:h-[52px] px-6 sm:px-8 rounded-full bg-black hover:bg-[#1e1e1e] text-white font-extrabold text-xs sm:text-sm tracking-wider transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 box-border leading-none"
                             >
                                 {callText}
                             </a>
                             <Link
                                 to={buttonLink}
-                                className="w-full sm:w-auto inline-flex items-center justify-center h-12 sm:h-[52px] px-6 sm:px-8 rounded-full bg-white hover:bg-slate-100 text-slate-900 font-extrabold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 gap-2.5 box-border leading-none"
+                                className="w-full sm:w-auto inline-flex items-center justify-center h-12 sm:h-[52px] px-6 sm:px-8 rounded-full bg-white hover:bg-slate-100 text-slate-900 font-extrabold text-xs sm:text-sm tracking-wider transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 gap-2.5 box-border leading-none"
                             >
                                 {showIcon && (
                                     <span className="w-6 h-6 rounded-full bg-[#646BF6] text-white flex items-center justify-center text-xs shrink-0 shadow-xs">

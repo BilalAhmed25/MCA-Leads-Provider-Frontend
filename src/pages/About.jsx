@@ -21,7 +21,7 @@ const About = () => {
                     "We believe that lead creation should be unique, parallel, and in line with your growth objectives. That is the reason we collaborate extensively with each client to fully understand their needs and give MCA leads that meet their specific criteria. From call-verified prospects to proven UCC lists, we want to provide you with the highest opportunity of closing business.",
                     "The MCA leads provider is committed to innovation, service excellence, and ongoing improvement. As your go-to source for MCA leads, we want to be more than simply a provider; we want to be a long-term collaborator in your success."
                 ]}
-                buttonText="Get your leads"
+                buttonText="Get Your Leads"
                 buttonLink="/contact-us/"
             />
             <Contact />

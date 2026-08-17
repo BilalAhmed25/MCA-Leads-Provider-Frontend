@@ -111,7 +111,7 @@ const Login = () => {
                     </form>
 
                     <div className="auth-footer">
-                        Don't have an account? <Link to="/register" className="auth-link">Sign up now</Link>
+                        Don't have an account? <Link to="/register" className="auth-link">Sign Up Now</Link>
                     </div>
                 </div>
             </div>

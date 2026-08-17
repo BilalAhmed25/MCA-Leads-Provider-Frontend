@@ -133,7 +133,7 @@ const Footer = () => {
                                     <FiPhone className="icon" />
                                 </div>
                                 <div className="contact-text">
-                                    <h6 className="contact-label">Call us</h6>
+                                    <h6 className="contact-label">Call Us</h6>
                                     <a href="tel:3477849496" className="contact-link">347-784-9496</a>
                                 </div>
                             </div>

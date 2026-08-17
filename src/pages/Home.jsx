@@ -19,10 +19,10 @@ const Home = () => {
             <DriveResultsSection />
             <WhyChooseUsSection />
             <ServicesSection />
+            <Testimonials />
             <LeadGenerationSection />
             <BenefitsSection />
             <StorySection />
-            <Testimonials />
             <FAQs />
             <Contact />
             <BlogSection limit={3} />

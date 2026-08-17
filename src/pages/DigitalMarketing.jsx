@@ -44,7 +44,7 @@ const DigitalMarketing = () => {
             />
             <LiveTransfersCTA
                 heading="Contact Us Today and Get Exclusive Leads!"
-                buttonText="GET LEADS NOW"
+                buttonText="Get Leads Now"
                 showIcon={true}
                 className="mt-4 sm:mt-12 lg:mt-0 mb-6 sm:mb-8 relative z-20"
             />
@@ -58,13 +58,13 @@ const DigitalMarketing = () => {
                     </>
                 ]}
                 buttonText="Order Digital Marketing Leads"
-                buttonLink="/contact"
+                buttonLink="/contact-us/"
             />
 
             <DMFeatures />
             <LiveTransfersCTA
                 heading="Give Us a Call and Let’s Talk Leads Today!"
-                buttonText="GET LEADS NOW"
+                buttonText="Get Leads Now"
             />
             <DMBenefits />
 
