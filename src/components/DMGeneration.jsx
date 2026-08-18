@@ -74,9 +74,9 @@ const DMGeneration = () => {
                     {/* Right Column */}
                     <div className="lg:col-span-6 flex flex-col gap-8 text-left">
                         <div className="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-xl border border-slate-100/80">
-                            <h3 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
+                            <h2 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
                                 Why Buy MCA Digital Marketing Leads From <span className="text-primary">MCA Leads Provider?</span>
-                            </h3>
+                            </h2>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed mb-8">
                                 Getting MCA digital marketing leads from us gives you direct access to merchants who are looking for finance. Our leads are produced using targeted internet advertising, as opposed to generic data lists. You save your team time and increase your chances of closing more business by using our tried-and-true methods to generate qualified MCA prospects who are prepared for follow-up visits.
 

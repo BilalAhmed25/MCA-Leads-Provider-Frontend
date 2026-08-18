@@ -20,16 +20,16 @@ $dbName = getenv('DB_NAME') ?: 'u475043867_mca_leads';
 $staticPages = [
     ['loc' => $baseUrl . '/', 'priority' => '1.0', 'changefreq' => 'daily', 'lastmod' => $today],
     ['loc' => $baseUrl . '/about/', 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => '2026-06-24'],
-    ['loc' => $baseUrl . '/services/', 'priority' => '0.9', 'changefreq' => 'weekly', 'lastmod' => '2026-07-11'],
-    ['loc' => $baseUrl . '/mca-live-transfer-leads/', 'priority' => '0.9', 'changefreq' => 'weekly', 'lastmod' => '2026-07-11'],
-    ['loc' => $baseUrl . '/mca-callback-leads/', 'priority' => '0.9', 'changefreq' => 'weekly', 'lastmod' => '2026-07-11'],
-    ['loc' => $baseUrl . '/aged-mca-leads/', 'priority' => '0.9', 'changefreq' => 'weekly', 'lastmod' => '2026-07-11'],
-    ['loc' => $baseUrl . '/business-loan-leads/', 'priority' => '0.9', 'changefreq' => 'weekly', 'lastmod' => '2026-07-11'],
-    ['loc' => $baseUrl . '/digital-marketing-leads/', 'priority' => '0.9', 'changefreq' => 'weekly', 'lastmod' => '2026-07-11'],
-    ['loc' => $baseUrl . '/b2b-email-lists/', 'priority' => '0.9', 'changefreq' => 'weekly', 'lastmod' => '2026-07-11'],
-    ['loc' => $baseUrl . '/pricing/', 'priority' => '0.8', 'changefreq' => 'weekly', 'lastmod' => $today],
-    ['loc' => $baseUrl . '/blog/', 'priority' => '0.8', 'changefreq' => 'daily', 'lastmod' => $today],
-    ['loc' => $baseUrl . '/contact-us/', 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => '2026-07-11']
+    ['loc' => $baseUrl . '/services/', 'priority' => '0.5', 'changefreq' => 'monthly', 'lastmod' => '2026-07-11'],
+    ['loc' => $baseUrl . '/mca-live-transfer-leads/', 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => '2026-07-11'],
+    ['loc' => $baseUrl . '/mca-callback-leads/', 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => '2026-07-11'],
+    ['loc' => $baseUrl . '/aged-mca-leads/', 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => '2026-07-11'],
+    ['loc' => $baseUrl . '/business-loan-leads/', 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => '2026-07-11'],
+    ['loc' => $baseUrl . '/digital-marketing-leads/', 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => '2026-07-11'],
+    ['loc' => $baseUrl . '/b2b-email-lists/', 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => '2026-07-11'],
+    ['loc' => $baseUrl . '/pricing/', 'priority' => '0.5', 'changefreq' => 'monthly', 'lastmod' => $today],
+    ['loc' => $baseUrl . '/blog/', 'priority' => '0.9', 'changefreq' => 'daily', 'lastmod' => $today],
+    ['loc' => $baseUrl . '/contact-us/', 'priority' => '0.5', 'changefreq' => 'monthly', 'lastmod' => '2026-07-11']
 ];
 
 // Fetch Blogs from Database or API

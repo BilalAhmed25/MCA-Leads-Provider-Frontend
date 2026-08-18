@@ -109,9 +109,9 @@ const B2BProcess = () => {
                         <div className="bg-slate-50 border border-slate-100 p-8 sm:p-10 rounded-[2.5rem] shadow-sm text-left relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
 
-                            <h3 className="text-fluid-xl lg:text-fluid-2xl font-black text-slate-900 mb-6 leading-tight relative z-10">
+                            <h2 className="text-fluid-xl lg:text-fluid-2xl font-black text-slate-900 mb-6 leading-tight relative z-10">
                                 B2B Email Marketing Leads <span className="text-primary">Verification Process</span>
-                            </h3>
+                            </h2>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed mb-6 relative z-10">
                                 Our verification process is very professional, and it helps us to guarantee that every email contact we deliver is verified, and now you can send them emails for marketing. We consider multiple data quality indicators to recognize the campaign-ready prospects who are in need of funding capital.
 

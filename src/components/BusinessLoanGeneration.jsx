@@ -71,9 +71,9 @@ const BusinessLoanGeneration = () => {
                     <div className="lg:col-span-6 flex flex-col gap-8 text-left">
                         {/* White Card */}
                         <div className="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-xl border border-slate-100/80">
-                            <h3 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
-                                Live Transfer and <span className="text-primary">Aged Business Loan Leads</span>To Generate Revenue
-                            </h3>
+                            <h2 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
+                                Live Transfer and <span className="text-primary">Aged Business Loan Leads</span> To Generate Revenue
+                            </h2>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed mb-8">
                                 We offer exclusive business loan leads specifically for lenders and brokers who require constant access to business owners looking for funding. Our strategy focuses on lead accuracy, regulated distribution, and pre-qualified leads standards to support everyday sales activities.
                             </p>
