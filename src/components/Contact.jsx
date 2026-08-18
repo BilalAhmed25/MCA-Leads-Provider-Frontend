@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { FiPhone, FiMail, FiMapPin, FiUser, FiBarChart2, FiCalendar, FiClock, FiMessageSquare, FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import Swal from 'sweetalert2';
+import { API_BASE_URL } from '../config';
 import Recaptcha from './Recaptcha';
 import './Contact.css';
 
@@ -16,6 +18,7 @@ const LEAD_TYPE_OPTIONS = [
 
 const Contact = ({ className = "" }) => {
     const [captchaToken, setCaptchaToken] = useState(null);
+    const [submitting, setSubmitting] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -46,20 +49,55 @@ const Contact = ({ className = "" }) => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert(`Thank you, ${formData.name}! Your message has been sent successfully.`);
-        setFormData({
-            name: '',
-            phone: '',
-            email: '',
-            leadType: '',
-            preferredDate: '',
-            preferredTimeHour: '09',
-            preferredTimeMinute: '00',
-            preferredTimeAmPm: 'AM',
-            message: ''
-        });
+        setSubmitting(true);
+
+        try {
+            const res = await fetch(`${API_BASE_URL}/noAuth/mca-contact`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            const data = await res.json();
+
+            if (data.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent!',
+                    text: 'Thank you! Your consultation request has been sent successfully.',
+                    confirmButtonColor: '#601FEA'
+                });
+                setFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    leadType: '',
+                    preferredDate: '',
+                    preferredTimeHour: '09',
+                    preferredTimeMinute: '00',
+                    preferredTimeAmPm: 'AM',
+                    message: ''
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Submission Error',
+                    text: data.message || 'Failed to send message. Please try again.',
+                    confirmButtonColor: '#601FEA'
+                });
+            }
+        } catch (err) {
+            console.error('Contact form submit error:', err);
+            Swal.fire({
+                icon: 'error',
+                title: 'Submission Error',
+                text: 'Could not connect to server. Please try again later.',
+                confirmButtonColor: '#601FEA'
+            });
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     return (
@@ -267,9 +305,10 @@ const Contact = ({ className = "" }) => {
                                     <Recaptcha onChange={(token) => setCaptchaToken(token)} />
                                     <button
                                         type="submit"
-                                        className="px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                                        disabled={submitting}
+                                        className="px-8 py-3.5 bg-primary hover:bg-primary-hover disabled:opacity-60 text-white rounded-full font-bold text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
                                     >
-                                        Send Message
+                                        {submitting ? 'Sending...' : 'Send Message'}
                                     </button>
                                 </div>
                             </form>
