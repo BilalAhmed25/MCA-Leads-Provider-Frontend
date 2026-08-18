@@ -39,15 +39,13 @@ const Pricing = () => {
 
     // Modal state for description / data mapping preview
     const [modalLead, setModalLead] = useState(null);
-    const [modalSampleRecord, setModalSampleRecord] = useState(null);
-    const [loadingSample, setLoadingSample] = useState(false);
 
     // Fetch lead listings exclusively from database (with user availability if logged in)
     const fetchLeads = async () => {
         setLoading(true);
         try {
             const userEmail = user?.email || '';
-            const url = userEmail 
+            const url = userEmail
                 ? `${API_BASE_URL}/noAuth/mca-leads?user_email=${encodeURIComponent(userEmail)}`
                 : `${API_BASE_URL}/noAuth/mca-leads`;
             const res = await fetch(url);
@@ -153,26 +151,9 @@ const Pricing = () => {
 
     const grandTotal = calculateGrandTotal();
 
-    // Open Description & Data Mapping Modal (Fetches sample records from database)
-    const handleOpenDescriptionModal = async (lead) => {
+    // Open Description & Data Mapping Modal
+    const handleOpenDescriptionModal = (lead) => {
         setModalLead(lead);
-        setLoadingSample(true);
-        setModalSampleRecord(null);
-
-        try {
-            const res = await fetch(`${API_BASE_URL}/noAuth/mca-leads/${lead.id}`);
-            const data = await res.json();
-            if (data.success && data.records && data.records.length > 0) {
-                setModalSampleRecord(data.records[0]);
-            } else {
-                setModalSampleRecord(null);
-            }
-        } catch (e) {
-            console.error("Error loading database lead sample:", e);
-            setModalSampleRecord(null);
-        } finally {
-            setLoadingSample(false);
-        }
     };
 
     // Delete Lead from Database (Admin Only)
@@ -215,30 +196,6 @@ const Pricing = () => {
                 console.error("Delete error:", err);
             }
         }
-    };
-
-    // Mask sensitive fields for preview
-    const maskText = (text, type = 'general') => {
-        if (!text) return '—';
-        const str = String(text).trim();
-        if (type === 'phone') {
-            if (str.length <= 4) return str + '****';
-            return str.slice(0, 4) + '****';
-        }
-        if (type === 'email') {
-            const parts = str.split('@');
-            if (parts.length === 2) {
-                const name = parts[0];
-                const domain = parts[1];
-                return (name.length > 3 ? name.slice(0, 3) : name) + '***@' + domain;
-            }
-            return str.slice(0, 3) + '***';
-        }
-        if (type === 'revenue') {
-            if (str.length <= 4) return str + '***';
-            return str.slice(0, 4) + '***';
-        }
-        return str;
     };
 
     // Checkout Proceed Handler
@@ -440,8 +397,8 @@ const Pricing = () => {
                                     </thead>
                                     <tbody>
                                         {filteredLeads.map((lead, index) => {
-                                            const availableMax = lead.user_available_quantity !== undefined 
-                                                ? Math.max(0, parseInt(lead.user_available_quantity) || 0) 
+                                            const availableMax = lead.user_available_quantity !== undefined
+                                                ? Math.max(0, parseInt(lead.user_available_quantity) || 0)
                                                 : (parseInt(lead.quantity) || 0);
                                             const currentQty = selectedQuantities[lead.id] || 0;
                                             const rowTotal = getRowTotal(lead);
@@ -600,7 +557,7 @@ const Pricing = () => {
                         </button>
                     </div>
 
-                    {/* MODAL 1: Description & Data Mapping Modal (Pure Database Data) */}
+                    {/* MODAL: Description & Data Mapping Modal */}
                     {modalLead && (
                         <div className="custom-modal-overlay" onClick={() => setModalLead(null)}>
                             <div className="description-modal-box" onClick={(e) => e.stopPropagation()}>
@@ -608,7 +565,7 @@ const Pricing = () => {
                                     <div>
                                         <h3 className="modal-title-bold">{modalLead.list_name}</h3>
                                         <span className="modal-category-subbadge">
-                                            {modalLead.category || 'General'}
+                                            {modalLead.category || 'MCA Leads'}
                                         </span>
                                     </div>
                                     <button
@@ -622,18 +579,18 @@ const Pricing = () => {
 
                                 <div className="modal-body-scroll">
                                     {/* Description Box */}
-                                    <div className="mb-6">
+                                    <div className="modal-section-wrapper">
                                         <div className="modal-section-title">
                                             <div className="section-bar-blue" />
                                             <span>DESCRIPTION</span>
                                         </div>
                                         <p className="modal-desc-text">
-                                            {modalLead.description || 'No description available for this lead list.'}
+                                            {modalLead.description || 'Looking to buy MCA leads? Explore lead types, costs & conversion rates for 2026, plus how to get verified, exclusive, TCPA compliant leads that convert.'}
                                         </p>
                                     </div>
 
                                     {/* Data Mapping Preview Box */}
-                                    <div>
+                                    <div className="modal-section-wrapper">
                                         <div className="modal-section-title">
                                             <div className="section-bar-green" />
                                             <span>DATA MAPPING PREVIEW</span>
@@ -643,62 +600,30 @@ const Pricing = () => {
                                         </p>
 
                                         <div className="mapping-preview-table-container">
-                                            {loadingSample ? (
-                                                <div className="p-6 text-center text-slate-400">
-                                                    <FiLoader className="spinner-icon text-xl text-blue-600 inline-block mb-1" />
-                                                    <p className="text-xs">Loading database preview...</p>
-                                                </div>
-                                            ) : modalSampleRecord ? (
-                                                <table className="mapping-preview-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>PHONE NUMBER / MOBILE PHONE</th>
-                                                            <th>FIRST NAME</th>
-                                                            <th>LAST NAME</th>
-                                                            <th>EMAIL</th>
-                                                            <th>COMPANY</th>
-                                                            <th>REVENUE</th>
-                                                            <th>STATE</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>{maskText(modalSampleRecord.phone_number, 'phone')}</td>
-                                                            <td>{modalSampleRecord.first_name || '—'}</td>
-                                                            <td>{modalSampleRecord.last_name || '—'}</td>
-                                                            <td className="email-cell">{maskText(modalSampleRecord.email, 'email')}</td>
-                                                            <td>{modalSampleRecord.company || '—'}</td>
-                                                            <td>{maskText(modalSampleRecord.revenue, 'revenue')}</td>
-                                                            <td>{modalSampleRecord.state || '—'}</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            ) : (
-                                                <table className="mapping-preview-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>PHONE NUMBER / MOBILE PHONE</th>
-                                                            <th>FIRST NAME</th>
-                                                            <th>LAST NAME</th>
-                                                            <th>EMAIL</th>
-                                                            <th>COMPANY</th>
-                                                            <th>REVENUE</th>
-                                                            <th>STATE</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>8888****</td>
-                                                            <td>Jhon</td>
-                                                            <td>Devid</td>
-                                                            <td className="email-cell">jhon***@gmail.com</td>
-                                                            <td>Microsoft</td>
-                                                            <td>2335***</td>
-                                                            <td>California</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            )}
+                                            <table className="mapping-preview-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>PHONE NUMBER / MOBILE PHONE</th>
+                                                        <th>FIRST NAME</th>
+                                                        <th>LAST NAME</th>
+                                                        <th>EMAIL</th>
+                                                        <th>COMPANY</th>
+                                                        <th>REVENUE</th>
+                                                        <th>STATE</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>8888****</td>
+                                                        <td>Jhon</td>
+                                                        <td>Devid</td>
+                                                        <td className="email-cell">jhon***@gmail.com</td>
+                                                        <td>Microsoft</td>
+                                                        <td>2335***</td>
+                                                        <td>California</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>

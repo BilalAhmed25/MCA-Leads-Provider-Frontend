@@ -104,9 +104,9 @@ const BusinessLoanProcess = () => {
                     <div className="lg:col-span-5 text-left h-full flex">
                         <div className="bg-white p-8 sm:p-10 rounded-[2.5rem] border border-slate-100/80 shadow-md flex flex-col justify-between w-full h-full">
                             <div>
-                                <h3 className="text-xl font-extrabold text-slate-900 mb-4 border-b border-slate-100 pb-4">
+                                <h2 className="text-xl font-extrabold text-slate-900 mb-4 border-b border-slate-100 pb-4">
                                     Safe and Verified Business Loan Leads
-                                </h3>
+                                </h2>
                                 <p className="text-fluid-sm text-slate-600 leading-relaxed mb-6">
                                     We offer real-time, verified leads that have been tested to follow quality lead standards. This ensures that the data is reliable, with improved engagement and consistent performance throughout your marketing and sales campaigns. This strategy helps companies to maintain confidence, uphold their brand, and deliver consistent outreach results.
                                 </p>

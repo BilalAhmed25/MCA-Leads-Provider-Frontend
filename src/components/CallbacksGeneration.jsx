@@ -32,7 +32,7 @@ const CallbacksGeneration = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Reliable Lead Generation</h4>
+                                        <h3 className="text-lg font-bold mb-2">Reliable Lead Generation</h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             We use ethical lead generation strategies to maintain a consistent and predictable flow of quality prospects.
                                         </p>
@@ -41,7 +41,7 @@ const CallbacksGeneration = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Exclusivity</h4>
+                                        <h3 className="text-lg font-bold mb-2">Exclusivity</h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             We present exclusive leads so that you do not have to compete with multiple providers for the same opportunity.
                                         </p>
@@ -62,9 +62,9 @@ const CallbacksGeneration = () => {
                     <div className="lg:col-span-6 flex flex-col gap-8 text-left">
                         {/* White Card */}
                         <div className="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-xl border border-slate-100/80">
-                            <h3 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
+                            <h2 className="text-fluid-2xl lg:text-fluid-3xl font-extrabold text-slate-900 mb-6 leading-tight">
                                 MCA Call Back Leads At <span className="text-primary">Our Company Come With</span>:
-                            </h3>
+                            </h2>
                             <p className="text-fluid-sm text-slate-600 leading-relaxed mb-8">
                                 You invest in a complete solution when you partner with us. We aim for the best outcomes when we provide you with our leads. Our complete approach presents quality results that drive long-term success and growth for your MCA business.
                             </p>
@@ -75,7 +75,7 @@ const CallbacksGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Better Relationships With Merchants</h4>
+                                        <h3 className="text-base font-bold text-slate-900 mb-2">Better Relationships With Merchants</h3>
                                         <p className="text-sm text-slate-600 leading-relaxed">
                                             Our pre-qualified leads have trust and genuine interest, so it becomes easy for you to build lasting partnerships with merchants.
                                         </p>
@@ -86,7 +86,7 @@ const CallbacksGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Higher Revenue</h4>
+                                        <h3 className="text-base font-bold text-slate-900 mb-2">Higher Revenue</h3>
                                         <p className="text-sm text-slate-600 leading-relaxed">
                                             You can get more revenue growth through our high-converting leads that are targeted to match your lending criteria.
                                         </p>

@@ -57,12 +57,13 @@ const ManageBlogs = () => {
 
     const handleOpenEditModal = (blog) => {
         setEditingBlog(blog);
+        const cleanT = (blog.title || '').replace(/\s*\|\s*MCA Leads Provider/gi, '').replace(/\s*-\s*MCA Leads Provider/gi, '');
         setFormData({
-            title: blog.title || '',
+            title: cleanT,
             slug: blog.slug || '',
             image: blog.image || '',
             content: blog.content || '',
-            excerpt: blog.excerpt || ''
+            excerpt: blog.excerpt || blog.meta_description || ''
         });
         setIsModalOpen(true);
     };

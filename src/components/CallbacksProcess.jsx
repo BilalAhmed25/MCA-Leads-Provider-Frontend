@@ -41,7 +41,7 @@ const CallbacksProcess = () => {
             <div className="absolute bottom-[20%] right-[-5%] w-80 h-80 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
 
             <div className="container-custom relative z-10">
-                
+
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                     <span className="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary font-semibold text-fluid-xs tracking-widest uppercase mb-4">
@@ -57,7 +57,7 @@ const CallbacksProcess = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-                    
+
                     {/* Left Column: Timeline Steps (spans 7 columns on lg) */}
                     <div className="lg:col-span-7 relative text-left">
                         {/* Vertical connection line running through the center of icons */}
@@ -103,9 +103,9 @@ const CallbacksProcess = () => {
                     <div className="lg:col-span-5 text-left h-full flex">
                         <div className="bg-white p-8 sm:p-10 rounded-[2.5rem] border border-slate-100/80 shadow-md flex flex-col justify-between w-full h-full">
                             <div>
-                                <h3 className="text-xl font-extrabold text-slate-900 mb-4 border-b border-slate-100 pb-4">
+                                <h2 className="text-xl font-extrabold text-slate-900 mb-4 border-b border-slate-100 pb-4">
                                     MCA Call Back Leads Verification Process
-                                </h3>
+                                </h2>
                                 <p className="text-fluid-sm text-slate-600 leading-relaxed mb-6">
                                     Our complete verification process makes sure that every lead we deliver is thoroughly screened and validated. We focus on multiple quality indicators and provide only the most conversion-ready prospects for your business.
                                 </p>

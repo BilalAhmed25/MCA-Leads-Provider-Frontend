@@ -5,18 +5,18 @@ const BusinessLoanWhyChoose = () => {
     const listItems = [
         {
             icon: <FiAward />,
-            title: "Boost the Success Ratio",
-            description: "Our business loan leads are curated to match your specific underwriting criteria, improving the overall efficiency of your sales pipeline. Connecting with businesses actively looking for funding drives higher conversion rates."
+            title: "Focused Lead Qualification",
+            description: "Each lead is screened according to established parameters such as time in business, revenue range, and funding intent. This reduces unqualified submissions and allows your team to focus more time on lenders who match your loan requirements."
         },
         {
             icon: <FiSliders />,
-            title: "Quality Over Quantity",
-            description: "We prioritize validated, high-intent financial records over raw lead volume. Every business lead undergoes pre-qualification to ensure accurate contact information, time in business, and financial validity."
+            title: "Flexible Lead Delivery Options",
+            description: "Choose how your business loan leads are given, whether through real-time form submissions, live transfer calls, or dated leads. This flexibility enables you to align lead delivery with your internal sales process and staffing model."
         },
         {
             icon: <FiCheckCircle />,
-            title: "Authentic Results",
-            description: "No false promises or unverified lists—only real commercial borrowers. Our business loan data is designed to put you directly in touch with merchant applicants ready for funding discussions."
+            title: "Controlled Lead Flow",
+            description: "Business loan leads we provide are exclusive to reduce competition and repetitive outreach. Lead volume can be modified based on performance and capacity, providing you with complete flexibility over intake without requiring long-term commitments."
         }
     ];
 

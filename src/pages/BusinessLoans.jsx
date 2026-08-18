@@ -17,20 +17,20 @@ import LiveTransfersCTA from '../components/LiveTransfersCTA';
 
 const businessLoanFaqs = [
     {
-        question: "What are business loan leads?",
-        answer: "Business loan leads are pre-screened contact records of business owners who are actively seeking commercial financing, term loans, lines of credit, or working capital."
+        question: "What form of business loan leads do you offer?",
+        answer: "We offer business loan leads in a variety of formats, including real-time form submissions, live transfer calls, and aged business loan leads. Lead type and volume can be chosen according to your sales process and staffing style."
     },
     {
-        question: "How are these business loan leads qualified?",
-        answer: "Each lead is filtered according to criteria such as time in business, monthly gross revenue, funding purpose, and credit profile ranges."
+        question: "Are these business loan leads exclusive?",
+        answer: "Exclusive business financing leads are provided and supplied to one buyer. Shared lead options may also be available based on volume and cost preferences."
     },
     {
-        question: "Can I filter business loan leads by industry or state?",
-        answer: "Yes, you can customize your lead order by state, region, industry type, and funding amount preferences."
+        question: "How are business loan leads qualified before delivery?",
+        answer: "Before delivery, leads are judged using basic criteria such as time in business, monthly revenue range, funding amount requested, and stated finance needs."
     },
     {
-        question: "Are business loan leads exclusive to my business?",
-        answer: "We offer exclusive live transfer and targeted lead packages to ensure your team has the best conversion advantage."
+        question: "How quickly do leads arrive following submission?",
+        answer: "Real-time leads and live transfers are supplied immediately upon verification. Aged business loan leads are given on a regular basis according to the timeframe chosen."
     }
 ];
 

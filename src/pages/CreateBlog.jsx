@@ -61,11 +61,12 @@ const CreateBlog = () => {
             const data = await res.json();
             if (data.success && data.blog) {
                 const b = data.blog;
-                setTitle(b.title || '');
-                setMetaTitle(b.title || '');
+                const cleanT = (b.title || '').replace(/\s*\|\s*MCA Leads Provider/gi, '').replace(/\s*-\s*MCA Leads Provider/gi, '');
+                setTitle(cleanT);
+                setMetaTitle(b.meta_title || cleanT);
                 setSlug(b.slug || '');
                 setImage(b.image || '');
-                setExcerpt(b.excerpt || '');
+                setExcerpt(b.excerpt || b.meta_description || '');
                 setContent(b.content || '');
             }
         } catch (err) {
@@ -236,7 +237,7 @@ const CreateBlog = () => {
         }
 
         setSaving(true);
-        const blogPayload = { title, slug, image, content, excerpt };
+        const blogPayload = { title, meta_title: metaTitle || title, slug, image, content, excerpt };
         const url = id
             ? `${API_BASE_URL}/noAuth/mca-blogs/${id}`
             : `${API_BASE_URL}/noAuth/mca-blogs`;

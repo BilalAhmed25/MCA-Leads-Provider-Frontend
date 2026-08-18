@@ -34,9 +34,9 @@ const ServicesSection = () => {
         <section className="relative py-20 lg:py-28 bg-slate-900 overflow-hidden">
             {/* Background Image with Dark Overlay */}
             <div className="absolute inset-0 z-0">
-                <img 
-                    src="https://images.unsplash.com/photo-1528659169600-b8c2c8f654b0?auto=format&fit=crop&w=2000&q=80" 
-                    alt="Strategic Planning" 
+                <img
+                    src="https://images.unsplash.com/photo-1528659169600-b8c2c8f654b0?auto=format&fit=crop&w=2000&q=80"
+                    alt="Strategic Planning"
                     className="w-full h-full object-cover opacity-[0.15]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/50"></div>
@@ -44,14 +44,14 @@ const ServicesSection = () => {
 
             <div className="container-custom relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                    
+
                     {/* Left Column: Text */}
                     <div className="lg:col-span-5 flex flex-col items-start text-left">
                         <h2 className="text-fluid-3xl lg:text-fluid-5xl font-extrabold text-white leading-tight mb-8">
-                            Our <span className="text-primary">MCA Leads</span> <br className="hidden lg:block"/>
+                            Our <span className="text-primary">MCA Leads</span> <br className="hidden lg:block" />
                             Generation Services
                         </h2>
-                        
+
                         <div className="space-y-6 text-slate-300 text-fluid-sm lg:text-fluid-base leading-relaxed mb-10">
                             <p>
                                 Our lead-generating services are designed specifically for the merchant cash advance business. Our priority is to provide the best leads that enable lenders and funders to interact with qualified borrowers more quickly and efficiently.
@@ -66,7 +66,7 @@ const ServicesSection = () => {
                                 Our mission is straightforward: provide you with the pre qualified business loan leads and working capital leads you require to close more business, boost efficiency, and scale confidently.
                             </p>
                         </div>
-                        
+
                         <Link to="/services/" className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-fluid-sm transition-all duration-300 shadow-[0_0_20px_rgba(96,31,234,0.4)] hover:-translate-y-1">
                             Explore More Leads
                         </Link>
@@ -75,7 +75,7 @@ const ServicesSection = () => {
                     {/* Right Column: Cards Grid */}
                     <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         {services.map((service, index) => (
-                            <Link 
+                            <Link
                                 to={service.link}
                                 key={index}
                                 className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl hover:-translate-y-2 transition-all duration-300 group border border-transparent hover:border-primary/20 flex flex-col justify-between"
@@ -91,10 +91,7 @@ const ServicesSection = () => {
                                         {service.description}
                                     </p>
                                 </div>
-                                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform duration-200">
-                                    <span>Learn More</span>
-                                    <span className="ml-2 font-bold">&rarr;</span>
-                                </div>
+
                             </Link>
                         ))}
                     </div>

@@ -557,34 +557,37 @@
 .custom-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(4px);
-    z-index: 60;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px;
+    padding: 20px;
 }
 
 .description-modal-box {
     background: #ffffff;
-    border-radius: 28px;
-    max-width: 760px;
+    border-radius: 24px;
+    max-width: 1000px;
     width: 100%;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    animation: modalPop 0.2s ease;
+    animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
 }
 
 @keyframes modalPop {
     from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: scale(0.96) translateY(6px);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateY(0);
     }
 }
 
@@ -592,47 +595,60 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 28px 16px;
+    padding: 28px 32px 18px;
+    border-bottom: 1px solid #f1f5f9;
 }
 
 .modal-title-bold {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     font-weight: 800;
     color: #0c2a70;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.modal-category-subbadge {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
 }
 
 .modal-close-btn {
     background: #f1f5f9;
     border: none;
     border-radius: 50%;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #475569;
     cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.15s ease;
+    font-size: 1.15rem;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
 }
 
 .modal-close-btn:hover {
     background: #e2e8f0;
     color: #0f172a;
+    transform: rotate(90deg);
 }
 
-.modal-body-content {
-    padding: 0 28px 28px;
+.modal-body-scroll {
+    padding: 24px 32px 32px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 22px;
+    overflow-y: auto;
 }
 
-.modal-section-box {
-    background: #fafbff;
-    border: 1px solid #e0e7ff;
-    border-radius: 18px;
-    padding: 18px 22px;
+.modal-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .modal-section-title {
@@ -644,7 +660,7 @@
     color: #1e1b4b;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .section-bar-blue {
@@ -662,22 +678,25 @@
 }
 
 .modal-desc-text {
-    font-size: 0.9rem;
+    font-size: 0.925rem;
     color: #475569;
     line-height: 1.6;
+    margin: 0;
 }
 
 .mapping-preview-note {
-    font-size: 0.8rem;
+    font-size: 0.825rem;
     color: #64748b;
-    margin-bottom: 12px;
+    margin: 0 0 10px 0;
+    line-height: 1.5;
 }
 
 /* Sample Mapping Table */
 .mapping-preview-table-container {
-    border-radius: 14px;
+    border-radius: 12px;
     overflow-x: auto;
-    border: 1px solid #c7d2fe;
+    border: 1px solid #dbeafe;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .mapping-preview-table {
@@ -693,11 +712,12 @@
 }
 
 .mapping-preview-table th {
-    padding: 10px 12px;
+    padding: 12px 14px;
     font-weight: 800;
     border-right: 1px solid rgba(255, 255, 255, 0.15);
     white-space: nowrap;
     text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 .mapping-preview-table th:last-child {
@@ -705,11 +725,12 @@
 }
 
 .mapping-preview-table td {
-    padding: 14px 12px;
+    padding: 14px 14px;
     background: #ffffff;
     border-right: 1px solid #e2e8f0;
     color: #334155;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .mapping-preview-table td:last-child {
@@ -719,4 +740,20 @@
 .mapping-preview-table .email-cell {
     font-style: italic;
     color: #2563eb;
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .modal-header-flex {
+        padding: 20px 20px 14px;
+    }
+
+    .modal-body-scroll {
+        padding: 16px 20px 24px;
+        gap: 18px;
+    }
+
+    .modal-title-bold {
+        font-size: 1.25rem;
+    }
 }

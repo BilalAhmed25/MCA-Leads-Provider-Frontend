@@ -32,7 +32,7 @@ const BusinessLoanGeneration = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Data Quality Assurance</h4>
+                                        <h3 className="text-lg font-bold mb-2">Data Quality Assurance</h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             Our quality control processes remove disqualified leads and outdated contact information that helps you to increase sales flow.
                                         </p>
@@ -41,7 +41,7 @@ const BusinessLoanGeneration = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Fresh and Exclusive Contact</h4>
+                                        <h3 className="text-lg font-bold mb-2">Fresh and Exclusive Contact</h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             We provide unique databases to help you access fresh contacts without any competition with multiple providers for the same prospects.
                                         </p>
@@ -50,7 +50,7 @@ const BusinessLoanGeneration = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Sustainable Growth</h4>
+                                        <h3 className="text-lg font-bold mb-2">Sustainable Growth</h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             We use ethical data acquisition practices to generate reliable leads so that you can have a trustworthy list.
                                         </p>
@@ -84,7 +84,7 @@ const BusinessLoanGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Industry-Aligned Lead Criteria</h4>
+                                        <h3 className="text-base font-bold text-slate-900 mb-2">Industry-Aligned Lead Criteria</h3>
                                         <p className="text-sm text-slate-600 leading-relaxed">
                                             Business loan lead generation is based on common company funding methods such as time in business, revenue range, and funding goal. This ensures that outreach efforts are directed toward the most relevant candidates.
                                         </p>
@@ -95,7 +95,7 @@ const BusinessLoanGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Reliable Data Handling</h4>
+                                        <h3 className="text-base font-bold text-slate-900 mb-2">Reliable Data Handling</h3>
                                         <p className="text-sm text-slate-600 leading-relaxed">
                                             Before delivery, each lead is checked for legitimate contact information and basic business information. This decreases the amount of incorrect data and allows for better follow-up.
                                         </p>

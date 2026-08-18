@@ -34,8 +34,8 @@ const DMGeneration = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Recognize the Needs Of the Business
-                                        </h4>
+                                        <h3 className="text-lg font-bold mb-2">Recognize the Needs Of the Business
+                                        </h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             We examine each lead's funding objective to make sure it fits your loan requirements and financial solutions.
                                         </p>
@@ -44,8 +44,8 @@ const DMGeneration = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Make the Correct Connections
-                                        </h4>
+                                        <h3 className="text-lg font-bold mb-2">Make the Correct Connections
+                                        </h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             By providing leads that fit your ideal client profile, our digital marketing initiatives enable you to concentrate on companies that have the highest conversion rates.
                                         </p>
@@ -54,7 +54,7 @@ const DMGeneration = () => {
                                 <li className="flex items-start gap-4">
                                     <FiCheckCircle className="w-6 h-6 text-primary shrink-0 mt-1" />
                                     <div>
-                                        <h4 className="text-lg font-bold mb-2">Encourage Smart Financing Choices</h4>
+                                        <h3 className="text-lg font-bold mb-2">Encourage Smart Financing Choices</h3>
                                         <p className="text-sm text-slate-300 leading-relaxed">
                                             Our leads provide you with the information you need to present the appropriate MCA product at the appropriate moment, according to precise data and precise purpose.
                                         </p>
@@ -87,8 +87,8 @@ const DMGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">Real Time Qualified Prospects
-                                        </h4>
+                                        <h3 className="text-base font-bold text-slate-900 mb-2">Real Time Qualified Prospects
+                                        </h3>
                                         <p className="text-sm text-slate-600 leading-relaxed">
                                             Our MCA digital marketing leads are sourced from actual campaigns targeting organizations for funding, giving you access to prospects that are ready to interact.
                                         </p>
@@ -99,8 +99,8 @@ const DMGeneration = () => {
                                         <FiCheckCircle className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-900 mb-2">No Guesswork or Cold Outreach
-                                        </h4>
+                                        <h3 className="text-base font-bold text-slate-900 mb-2">No Guesswork or Cold Outreach
+                                        </h3>
                                         <p className="text-sm text-slate-600 leading-relaxed">
                                             Each lead is created through digital channels with proven interest in merchant cash advances, eliminating the need for cold calling and increasing closing rates.
                                         </p>

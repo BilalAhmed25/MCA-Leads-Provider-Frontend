@@ -105,7 +105,8 @@ const BlogDetail = () => {
         }
 
         const cleanTitle = (currentBlog.title || '').replace(/&amp;/g, '&');
-        const cleanExcerpt = (currentBlog.excerpt || '').replace(/&amp;/g, '&');
+        const dbExcerpt = currentBlog.excerpt || currentBlog.meta_description || currentBlog.metaDescription || currentBlog.short_description || currentBlog.description || '';
+        const cleanExcerpt = dbExcerpt.replace(/&amp;/g, '&').replace(/<[^>]*>/g, '').trim();
 
         const blogObj = {
             ...currentBlog,
@@ -139,8 +140,29 @@ const BlogDetail = () => {
         setActiveFaqIndex(null);
         setBlog(blogObj);
 
-        // Update Document Title
-        document.title = `${blogObj.title} | MCA Leads Provider`;
+        // 1. Format Meta Title (Remove "| MCA Leads Provider" suffix)
+        const rawTitle = currentBlog.meta_title || currentBlog.metaTitle || currentBlog.title || '';
+        const cleanMetaTitle = rawTitle
+            .replace(/\s*\|\s*MCA Leads Provider/gi, '')
+            .replace(/\s*-\s*MCA Leads Provider/gi, '')
+            .replace(/&amp;/g, '&')
+            .trim();
+
+        // 2. Format Meta Description from database fields
+        const rawDesc = currentBlog.excerpt || 
+                        currentBlog.meta_description || 
+                        currentBlog.metaDescription || 
+                        currentBlog.short_description || 
+                        currentBlog.description || 
+                        '';
+        const cleanMetaDesc = rawDesc
+            .replace(/<[^>]*>/g, '')
+            .replace(/&amp;/g, '&')
+            .replace(/\s+/g, ' ')
+            .trim();
+
+        // Update Document Title (without | MCA Leads Provider)
+        document.title = cleanMetaTitle;
 
         // Update Meta Description
         let metaDescriptionTag = document.querySelector('meta[name="description"]');
@@ -149,7 +171,7 @@ const BlogDetail = () => {
             metaDescriptionTag.setAttribute('name', 'description');
             document.head.appendChild(metaDescriptionTag);
         }
-        metaDescriptionTag.setAttribute('content', blogObj.excerpt || `Read ${blogObj.title} on MCA Leads Provider.`);
+        metaDescriptionTag.setAttribute('content', cleanMetaDesc);
 
         // Update OpenGraph Title & Description
         let ogTitleTag = document.querySelector('meta[property="og:title"]');
@@ -158,7 +180,7 @@ const BlogDetail = () => {
             ogTitleTag.setAttribute('property', 'og:title');
             document.head.appendChild(ogTitleTag);
         }
-        ogTitleTag.setAttribute('content', `${blogObj.title} | MCA Leads Provider`);
+        ogTitleTag.setAttribute('content', cleanMetaTitle);
 
         let ogDescTag = document.querySelector('meta[property="og:description"]');
         if (!ogDescTag) {
@@ -166,7 +188,24 @@ const BlogDetail = () => {
             ogDescTag.setAttribute('property', 'og:description');
             document.head.appendChild(ogDescTag);
         }
-        ogDescTag.setAttribute('content', blogObj.excerpt || `Read ${blogObj.title} on MCA Leads Provider.`);
+        ogDescTag.setAttribute('content', cleanMetaDesc);
+
+        // Update Twitter Meta Tags
+        let twitterTitleTag = document.querySelector('meta[name="twitter:title"]');
+        if (!twitterTitleTag) {
+            twitterTitleTag = document.createElement('meta');
+            twitterTitleTag.setAttribute('name', 'twitter:title');
+            document.head.appendChild(twitterTitleTag);
+        }
+        twitterTitleTag.setAttribute('content', cleanMetaTitle);
+
+        let twitterDescTag = document.querySelector('meta[name="twitter:description"]');
+        if (!twitterDescTag) {
+            twitterDescTag = document.createElement('meta');
+            twitterDescTag.setAttribute('name', 'twitter:description');
+            document.head.appendChild(twitterDescTag);
+        }
+        twitterDescTag.setAttribute('content', cleanMetaDesc);
 
         // Update Canonical Link
         let canonicalTag = document.querySelector('link[rel="canonical"]');
@@ -183,13 +222,6 @@ const BlogDetail = () => {
         // Scroll to top when switching blogs
         window.scrollTo(0, 0);
 
-        const cleanPrefetchedSlug = (prefetched?.slug || '').replace(/^\/+|\/+$/g, '');
-        if (prefetched && (cleanPrefetchedSlug === slug || prefetched.id === slug)) {
-            processBlogData(prefetched);
-            setLoading(false);
-            return;
-        }
-
         setLoading(true);
         fetch(`${API_BASE_URL}/noAuth/mca-blogs/${slug}`)
             .then(res => res.json())
@@ -197,16 +229,23 @@ const BlogDetail = () => {
                 if (data.success && data.blog) {
                     processBlogData(data.blog);
                     setLoading(false);
+                } else if (prefetched) {
+                    processBlogData(prefetched);
+                    setLoading(false);
                 } else {
                     throw new Error("Blog not found in database");
                 }
             })
             .catch(err => {
                 console.error("Failed to fetch blog from database API:", err);
-                setBlog(null);
+                if (prefetched) {
+                    processBlogData(prefetched);
+                } else {
+                    setBlog(null);
+                }
                 setLoading(false);
             });
-    }, [slug, prefetched]);
+    }, [slug]);
 
     const handleTocClick = (e, headingId) => {
         e.preventDefault();

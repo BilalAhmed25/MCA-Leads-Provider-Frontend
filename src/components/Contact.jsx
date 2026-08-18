@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { FiPhone, FiMail, FiMapPin, FiUser, FiBarChart2, FiCalendar, FiClock, FiMessageSquare, FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import Recaptcha from './Recaptcha';
 import './Contact.css';
 
 const LEAD_TYPE_OPTIONS = [
@@ -14,6 +15,7 @@ const LEAD_TYPE_OPTIONS = [
 ];
 
 const Contact = ({ className = "" }) => {
+    const [captchaToken, setCaptchaToken] = useState(null);
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -82,8 +84,8 @@ const Contact = ({ className = "" }) => {
                             <div className="contact-social-section">
                                 <span className="social-section-title">Follow Our Social Account :</span>
                                 <div className="contact-social-icons">
-                                    <a href="https://twitter.com" target="_blank" rel="noreferrer" className="contact-social-link" aria-label="Twitter">
-                                        <FaTwitter />
+                                    <a href="https://www.facebook.com/mcaleadsprovider" target="_blank" rel="noreferrer" className="contact-social-link" aria-label="Facebook">
+                                        <FaFacebookF />
                                     </a>
                                     <a href="https://www.linkedin.com/company/mcaleadsprovider/" target="_blank" rel="noreferrer" className="contact-social-link" aria-label="LinkedIn">
                                         <FaLinkedinIn />
@@ -261,10 +263,11 @@ const Contact = ({ className = "" }) => {
 
                                 </div>
 
-                                <div className="mt-6 flex justify-start">
+                                <div className="mt-6 flex flex-col items-start gap-4">
+                                    <Recaptcha onChange={(token) => setCaptchaToken(token)} />
                                     <button
                                         type="submit"
-                                        className="px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                                        className="px-8 py-3.5 bg-primary hover:bg-primary-hover text-white rounded-full font-bold text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
                                     >
                                         Send Message
                                     </button>
