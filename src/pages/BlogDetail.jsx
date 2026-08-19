@@ -3,7 +3,7 @@ import { useParams, Link, useLocation } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import BlogSection from '../components/BlogSection';
 import NotFound from './NotFound';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { FiChevronDown, FiChevronUp, FiPhoneCall, FiArrowRight } from 'react-icons/fi';
 import { API_BASE_URL } from '../config';
 import '../components/FAQs.css';
 import './BlogDetail.css';
@@ -272,18 +272,24 @@ const BlogDetail = () => {
 
                 <section className="py-8 lg:py-12">
                     <div className="container-custom">
-                        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-                            <aside className="hidden lg:block w-full lg:w-[30%] shrink-0">
-                                <div className="bg-white p-8 rounded-4xl border border-slate-100 space-y-4">
+                        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
+                            <aside className="hidden lg:flex lg:flex-col w-full lg:w-[280px] xl:w-[320px] shrink-0 gap-6 self-stretch">
+                                <div className="bg-white p-6 lg:p-8 rounded-4xl border border-slate-100 space-y-4">
                                     <div className="skeleton-box h-6 w-1/2 mb-6"></div>
                                     <div className="skeleton-box h-4 w-5/6"></div>
                                     <div className="skeleton-box h-4 w-4/6"></div>
                                     <div className="skeleton-box h-4 w-5/6"></div>
                                     <div className="skeleton-box h-4 w-3/4"></div>
                                 </div>
+                                <div className="bg-slate-900 p-6 lg:p-7 rounded-4xl border border-slate-800 space-y-4">
+                                    <div className="skeleton-box h-5 w-1/3 bg-slate-700/60 rounded-full"></div>
+                                    <div className="skeleton-box h-6 w-4/5 bg-slate-700/60"></div>
+                                    <div className="skeleton-box h-4 w-full bg-slate-700/40"></div>
+                                    <div className="skeleton-box h-10 w-full bg-slate-700/60 rounded-full mt-4"></div>
+                                </div>
                             </aside>
 
-                            <article className="w-full lg:w-[70%] bg-white p-8 lg:p-14 rounded-4xl border border-slate-100 space-y-4">
+                            <article className="w-full flex-1 min-w-0 bg-white p-6 sm:p-8 lg:p-12 rounded-4xl border border-slate-100 space-y-4">
                                 <div className="skeleton-box h-8 w-2/3 mb-6"></div>
                                 <div className="skeleton-box h-4 w-full"></div>
                                 <div className="skeleton-box h-4 w-full"></div>
@@ -313,30 +319,73 @@ const BlogDetail = () => {
 
             <section className="py-8 lg:py-12">
                 <div className="container-custom">
-                    <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+                    <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
 
-                        {/* Left Side: Table of Contents Sidebar */}
-                        <aside className="hidden lg:block w-full lg:w-[30%] lg:sticky lg:top-28 shrink-0">
-                            <div className="bg-white p-8 rounded-4xl border border-slate-100">
-                                <h3 className="font-extrabold text-slate-900 mb-6 text-xl">Table of Contents</h3>
-                                <ul className="space-y-4">
-                                    {toc.map(item => (
-                                        <li key={item.id} className={item.level === 3 ? "ml-4" : ""}>
-                                            <a
-                                                href={`#${item.id}`}
-                                                onClick={(e) => handleTocClick(e, item.id)}
-                                                className="toc-clean-link cursor-pointer"
-                                            >
-                                                {item.text}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
+                        {/* Left Side: Sidebar with Non-Sticky TOC + Sticky Contact Card */}
+                        <aside className="hidden lg:flex lg:flex-col w-full lg:w-[280px] xl:w-[320px] shrink-0 gap-6 self-stretch">
+                            
+                            {/* Table of Contents (Non-Sticky) */}
+                            {toc && toc.length > 0 && (
+                                <div className="bg-white p-6 lg:p-8 rounded-4xl border border-slate-100 shadow-sm">
+                                    <h3 className="font-extrabold text-slate-900 mb-6 text-xl">Table of Contents</h3>
+                                    <ul className="space-y-4">
+                                        {toc.map(item => (
+                                            <li key={item.id} className={item.level === 3 ? "ml-4" : ""}>
+                                                <a
+                                                    href={`#${item.id}`}
+                                                    onClick={(e) => handleTocClick(e, item.id)}
+                                                    className="toc-clean-link cursor-pointer"
+                                                >
+                                                    {item.text}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                            {/* Sticky Contact CTA Card */}
+                            <div className="sticky-sidebar-card bg-gradient-to-br from-slate-900 via-slate-900 to-[#1e1435] p-6 lg:p-7 rounded-4xl border border-slate-800 text-white shadow-xl shadow-purple-950/20 overflow-hidden relative group">
+                                {/* Ambient Glow */}
+                                <div className="absolute -top-12 -right-12 w-36 h-36 bg-purple-600/20 rounded-full blur-2xl pointer-events-none group-hover:bg-purple-600/35 transition-all duration-500"></div>
+
+                                <div className="relative z-10 space-y-4 text-left">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs font-bold tracking-wider">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                        <span>Direct Access</span>
+                                    </div>
+
+                                    <h4 className="text-lg xl:text-xl font-extrabold text-white leading-snug">
+                                        Contact Us Now for Exclusive MCA &amp; Live Transfer Leads
+                                    </h4>
+
+                                    <p className="text-slate-300 text-xs xl:text-sm leading-relaxed">
+                                        Connect directly with verified business owners actively seeking merchant cash advance funding.
+                                    </p>
+
+                                    <div className="pt-2 space-y-2.5">
+                                        <a
+                                            href="tel:3477849496"
+                                            className="w-full flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-full bg-[#601FEA] hover:bg-[#4a15ba] text-white font-extrabold text-sm shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                                        >
+                                            <FiPhoneCall className="text-base" />
+                                            <span>347-784-9496</span>
+                                        </a>
+
+                                        <Link
+                                            to="/contact"
+                                            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-slate-200 hover:text-white font-semibold text-xs transition-all duration-200"
+                                        >
+                                            <span>Contact Us</span>
+                                            <FiArrowRight className="text-xs" />
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
                         </aside>
 
                         {/* Right Side: Main Content */}
-                        <article className="w-full lg:w-[70%] bg-white p-8 lg:p-14 rounded-4xl border border-slate-100">
+                        <article className="w-full flex-1 min-w-0 bg-white p-6 sm:p-8 lg:p-12 rounded-4xl border border-slate-100">
                             <div
                                 className="blog-detail-content"
                                 dangerouslySetInnerHTML={{ __html: contentWithIds }}

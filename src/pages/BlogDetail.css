@@ -182,14 +182,29 @@
     border-bottom: none !important;
 }
 
-/* Explicit Blog CTA Card & Button Styles */
+/* Explicit Blog CTA Card & Button Styles (Full Width) */
+.blog-detail-content section,
+.blog-detail-content .blog-cta-card,
+.blog-detail-content .dark-cta-card,
+.blog-detail-content [class*="cta"],
+.blog-detail-content [class*="call-to-action"],
+.blog-detail-content [class*="banner"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 .blog-detail-content .blog-cta-card {
     background-color: rgba(96, 31, 234, 0.06) !important;
     border: 1px solid rgba(96, 31, 234, 0.15) !important;
     border-radius: 24px !important;
     padding: 32px !important;
-    margin-top: 2rem !important;
-    margin-bottom: 2rem !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
 }
 
 .blog-detail-content .blog-cta-card h3 {
@@ -254,51 +269,77 @@
     color: #4a15ba !important;
 }
 
-/* Dark CTA Section Banner & Buttons (e.g. Access Premium MCA Leads) */
+/* Dark CTA Section Banner & Buttons (e.g. Access Premium MCA Leads) - Full Width */
 .blog-detail-content section {
     background: #1e293b !important;
     border: 1px solid #334155 !important;
-    border-radius: 20px !important;
-    padding: 36px 28px !important;
+    border-radius: 24px !important;
+    padding: 38px 32px !important;
     margin: 2.5rem 0 !important;
     text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.3) !important;
 }
 
-.blog-detail-content section h2 {
+.blog-detail-content section h2,
+.blog-detail-content section h3,
+.blog-detail-content section h4 {
     color: #ffffff !important;
-    font-size: 1.65rem !important;
+    font-size: 1.75rem !important;
     font-weight: 800 !important;
+    margin-top: 0 !important;
     margin-bottom: 10px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
 }
 
 .blog-detail-content section p {
     color: #cbd5e1 !important;
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
+    margin-top: 0 !important;
     margin-bottom: 24px !important;
+    max-width: 100% !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+}
+
+/* Button Row Container inside Section */
+.blog-detail-content section>div {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    margin-top: 8px !important;
 }
 
 /* Primary Button in Dark Section (Get Leads Now) */
 .blog-detail-content section a:first-of-type,
 .blog-detail-content section a[href*="contact"] {
-    background-color: #601FEA !important;
+    background: linear-gradient(135deg, #601FEA 0%, #4a15ba 100%) !important;
     color: #ffffff !important;
-    padding: 12px 28px !important;
+    padding: 13px 32px !important;
     border-radius: 9999px !important;
     font-weight: 700 !important;
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 0 6px !important;
+    margin: 0 !important;
     text-decoration: none !important;
-    box-shadow: 0 4px 14px rgba(96, 31, 234, 0.4) !important;
-    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 16px rgba(96, 31, 234, 0.4) !important;
+    transition: all 0.25s ease !important;
+    border: none !important;
 }
 
 .blog-detail-content section a:first-of-type:hover,
 .blog-detail-content section a[href*="contact"]:hover {
-    background-color: #4a15ba !important;
-    transform: translateY(-1px) !important;
+    background: linear-gradient(135deg, #4a15ba 0%, #3b0e9c 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(96, 31, 234, 0.5) !important;
 }
 
 /* Secondary Button in Dark Section (Call Now) */
@@ -306,23 +347,25 @@
 .blog-detail-content section a[href*="tel:"] {
     background-color: transparent !important;
     color: #ffffff !important;
-    border: 2px solid #601FEA !important;
-    padding: 10px 26px !important;
+    border: 1.5px solid #475569 !important;
+    padding: 12px 30px !important;
     border-radius: 9999px !important;
     font-weight: 700 !important;
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 0 6px !important;
+    margin: 0 !important;
     text-decoration: none !important;
-    transition: all 0.2s ease !important;
+    transition: all 0.25s ease !important;
 }
 
 .blog-detail-content section a:nth-of-type(2):hover,
 .blog-detail-content section a[href*="tel:"]:hover {
-    background-color: #601FEA !important;
+    background-color: #334155 !important;
+    border-color: #64748b !important;
     color: #ffffff !important;
+    transform: translateY(-2px) !important;
 }
 
 /* Inline FAQ Item Styling inside HTML content */
@@ -459,4 +502,12 @@
         line-height: 1.1;
         margin-bottom: 12px;
     }
+}
+
+/* Sidebar Sticky CTA Card */
+.sticky-sidebar-card {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 5rem !important;
+    z-index: 20 !important;
 }
