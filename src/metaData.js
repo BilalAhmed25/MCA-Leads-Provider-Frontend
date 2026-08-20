@@ -58,5 +58,15 @@ export const PAGE_METADATA = {
         title: "Buy Unlimited MCA B2B Email Lead Generation Database",
         description: "Buy unlimited MCA b2b email leads to power your email marketing B2B lead generation. Get a vast b2b email database for your campaigns & boost your revenue.",
         canonical: "https://mcaleadsprovider.com/b2b-email-lists/"
+    },
+    "/login/": {
+        title: "Login - MCA Leads Provider | Access Your Account",
+        description: "Log in to your MCA Leads Provider account to access premium merchant cash advance leads, live transfers, and manage your dashboard.",
+        canonical: "https://mcaleadsprovider.com/login/"
+    },
+    "/register/": {
+        title: "Register - MCA Leads Provider | Create Your Account",
+        description: "Create an account with MCA Leads Provider to access exclusive, high-converting merchant cash advance and business loan leads.",
+        canonical: "https://mcaleadsprovider.com/register/"
     }
 };

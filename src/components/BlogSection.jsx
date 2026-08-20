@@ -140,7 +140,7 @@ const BlogSection = ({ limit }) => {
                                     />
                                 </div>
                                 <div className="blog-content-wrapper">
-                                    <h5 className="blog-title">{blog.title}</h5>
+                                    <h2 className="blog-title">{blog.title}</h2>
                                     <p className="blog-html-content">
                                         {blog.excerpt || stripHtmlAndTruncate(blog.content)}
                                     </p>

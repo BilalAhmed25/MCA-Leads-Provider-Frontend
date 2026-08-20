@@ -216,8 +216,8 @@ const Contact = ({ className = "" }) => {
                                                                 setIsLeadTypeOpen(false);
                                                             }}
                                                             className={`px-5 py-3 text-sm cursor-pointer transition-colors duration-150 font-medium ${isSelected
-                                                                    ? 'bg-blue-50 text-primary font-semibold'
-                                                                    : 'text-slate-700 hover:bg-slate-50 hover:text-primary'
+                                                                ? 'bg-blue-50 text-primary font-semibold'
+                                                                : 'text-slate-700 hover:bg-slate-50 hover:text-primary'
                                                                 }`}
                                                         >
                                                             {option}
@@ -318,7 +318,7 @@ const Contact = ({ className = "" }) => {
                     {/* Bottom Row: 3 Address Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mt-18">
                         {/* Phone Card */}
-                        <a 
+                        <a
                             href="tel:3477849496"
                             className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30 hover:-translate-y-1 hover:shadow-md cursor-pointer"
                         >
@@ -332,7 +332,7 @@ const Contact = ({ className = "" }) => {
                         </a>
 
                         {/* Email Card */}
-                        <a 
+                        <a
                             href="mailto:info@mcaleadsprovider.com"
                             className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30 hover:-translate-y-1 hover:shadow-md cursor-pointer"
                         >
@@ -346,10 +346,8 @@ const Contact = ({ className = "" }) => {
                         </a>
 
                         {/* Address Card */}
-                        <a 
-                            href="https://maps.google.com/?q=7901+4th+St+N+STE+22726+St.+Petersburg,+FL+33702"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <span
+
                             className="bg-slate-50/50 rounded-2xl p-5 hover:bg-white transition-all duration-300 flex items-center gap-4 group border border-slate-200/60 hover:border-primary/30 hover:-translate-y-1 hover:shadow-md cursor-pointer"
                         >
                             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
@@ -361,7 +359,7 @@ const Contact = ({ className = "" }) => {
                                     7901 4th St N STE 22726 St. Petersburg, FL 33702
                                 </span>
                             </div>
-                        </a>
+                        </span>
                     </div>
                 </div>
 
