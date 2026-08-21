@@ -372,16 +372,6 @@ const AddLeads = () => {
             return;
         }
 
-        // If in create mode and no file is chosen, prompt
-        if (!isEditMode && !selectedFile) {
-            Swal.fire({
-                icon: 'warning',
-                title: 'No Excel File Selected',
-                text: 'Please choose or drag an Excel file (.xlsx, .xls, .csv) to extract records, or use Quick Save (No File) above.'
-            });
-            return;
-        }
-
         setIsUploading(true);
         try {
             const formData = new FormData();
@@ -412,10 +402,12 @@ const AddLeads = () => {
             if (data.success) {
                 Swal.fire({
                     icon: 'success',
-                    title: isEditMode ? 'Lead Listing Updated!' : 'Leads Uploaded & Synced!',
+                    title: isEditMode ? 'Lead Listing Updated!' : (selectedFile ? 'Leads Uploaded & Synced!' : 'Lead Listing Saved!'),
                     html: isEditMode
                         ? `Lead listing <b>${listName}</b> updated successfully!`
-                        : `<b>${data.total_records || previewRowCount}</b> lead records were extracted and saved into the database successfully!`,
+                        : (selectedFile 
+                            ? `<b>${data.total_records || previewRowCount}</b> lead records were extracted and saved into the database successfully!`
+                            : `Lead listing <b>${listName}</b> was created successfully!`),
                     confirmButtonColor: '#601FEA'
                 });
 
@@ -429,7 +421,7 @@ const AddLeads = () => {
                 Swal.fire({
                     icon: 'error',
                     title: 'Sync Failed',
-                    text: data.message || 'Failed to extract and sync leads.'
+                    text: data.message || 'Failed to save leads.'
                 });
             }
         } catch (error) {
@@ -820,10 +812,10 @@ const AddLeads = () => {
                                         <FiUploadCloud />
                                     </div>
                                     <h4 className="dropzone-main-text">
-                                        {isEditMode ? 'Replace dataset file (optional)' : 'Browse Excel file to upload'}
+                                        {isEditMode ? 'Replace dataset file (optional)' : 'Browse Excel file to upload (optional)'}
                                     </h4>
                                     <p className="dropzone-sub-text">
-                                        {isEditMode ? 'Drop new file to overwrite records' : 'Click or drag to upload Excel file'}
+                                        {isEditMode ? 'Drop new file to overwrite records' : 'Click or drag to upload Excel file (Optional)'}
                                     </p>
                                 </div>
                             ) : (
